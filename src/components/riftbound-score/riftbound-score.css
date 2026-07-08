@@ -1,0 +1,743 @@
+﻿/* ======================================================
+   RIFTBOUND SCORE — Setup Screen
+   ====================================================== */
+
+.rb-setup {
+  min-height: 100dvh;
+  background: var(--rb-bg);
+  color: var(--rb-text);
+  padding: 0 0 calc(36px + env(safe-area-inset-bottom));
+  padding-top: env(safe-area-inset-top);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.rb-setup-title {
+  color: var(--rb-text) !important;
+  font-weight: 700 !important;
+  text-align: left !important;
+  letter-spacing: -0.2px !important;
+  font-size: 1.35rem !important;
+  margin: 0 !important;
+}
+
+/* Mode tabs */
+.rb-mode-tabs {
+  display: flex;
+  background: var(--rb-surface2);
+  border-radius: 50px;
+  padding: 4px;
+  margin-bottom: 28px;
+  gap: 2px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
+}
+
+.rb-mode-btn {
+  flex: 1 !important;
+  border-radius: 50px !important;
+  color: var(--rb-text-muted) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  padding: 8px 2px !important;
+  min-width: 0 !important;
+  text-transform: none !important;
+  line-height: 1.3 !important;
+  transition: all 0.2s !important;
+  letter-spacing: 0.1px !important;
+}
+
+.rb-mode-btn--active {
+  background: linear-gradient(135deg, #2979ff 0%, #5c35d4 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 10px rgba(41,121,255,0.45) !important;
+}
+
+/* Section labels */
+.rb-section-label {
+  color: var(--rb-text) !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1px !important;
+  margin-bottom: 10px !important;
+  margin-top: 4px !important;
+}
+
+/* Players list */
+.rb-players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.rb-player-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--rb-surface);
+  border: 1px solid var(--rb-border);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  transition: box-shadow 0.2s;
+}
+
+.rb-player-row:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.28);
+}
+
+.rb-player-avatar {
+  width: 44px;
+  height: 56px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.rb-player-avatar:hover {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.45);
+}
+
+.rb-player-name-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.rb-name-click-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.rb-player-name-text {
+  color: var(--rb-text) !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+}
+
+.rb-edit-icon {
+  font-size: 0.85rem !important;
+  color: var(--rb-icon-color) !important;
+}
+
+.rb-color-swatch {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid var(--rb-swatch-border);
+  flex-shrink: 0;
+  transition: border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.rb-color-swatch:hover {
+  border-color: var(--rb-swatch-hover);
+}
+
+.rb-swatch-chevron {
+  position: absolute !important;
+  bottom: 2px !important;
+  right: 2px !important;
+  font-size: 0.9rem !important;
+  color: rgba(255,255,255,0.65) !important;
+  pointer-events: none;
+}
+
+/* Options card */
+.rb-options-card {
+  background: var(--rb-surface);
+  border: 1px solid var(--rb-border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.rb-option-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--rb-border-subtle);
+}
+
+.rb-option-row--last {
+  border-bottom: none;
+}
+
+.rb-option-label {
+  color: var(--rb-text) !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+/* Stepper */
+.rb-stepper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--rb-surface3);
+  border-radius: 50px;
+  padding: 3px 4px;
+}
+
+.rb-stepper-btn {
+  color: var(--rb-icon-color) !important;
+}
+
+.rb-stepper-value {
+  color: var(--rb-text) !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  min-width: 28px;
+  text-align: center;
+}
+
+/* Bottom actions */
+.rb-bottom-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.rb-launch-btn {
+  width: 100% !important;
+  border-radius: 50px !important;
+  background: linear-gradient(135deg, #2979ff 0%, #5c35d4 100%) !important;
+  color: #fff !important;
+  font-size: 1.1rem !important;
+  font-weight: 800 !important;
+  padding: 16px !important;
+  text-transform: none !important;
+  letter-spacing: 0.3px !important;
+  box-shadow: 0 8px 28px rgba(41, 121, 255, 0.5) !important;
+  transition: box-shadow 0.2s, transform 0.1s !important;
+}
+
+.rb-launch-btn:active {
+  transform: scale(0.97) !important;
+  box-shadow: 0 4px 14px rgba(41, 121, 255, 0.4) !important;
+}
+
+.rb-reset-btn {
+  color: var(--rb-reset-color) !important;
+  font-size: 0.82rem !important;
+  text-transform: none !important;
+}
+
+/* ======================================================
+   RIFTBOUND SCORE — Game Screen
+   ====================================================== */
+
+.rb-game-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 1300;
+  background: var(--rb-bg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
+}
+
+/* Player panel */
+.rb-player-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  user-select: none;
+  isolation: isolate;
+}
+
+.rb-player-panel--flipped {
+  transform: rotate(180deg);
+}
+
+/* Multi-player row */
+.rb-panel-row {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  min-height: 0;
+}
+
+.rb-panel-row > .rb-player-panel {
+  flex: 1;
+}
+
+.rb-panel-row > .rb-player-panel:not(:last-child) {
+  border-right: 1px solid var(--rb-panel-divider);
+}
+
+/* Player name badge */
+.rb-player-badge {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--rb-badge-bg);
+  border: 1.5px solid var(--rb-badge-border);
+  border-radius: 50px;
+  padding: 6px 22px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  white-space: nowrap;
+  z-index: 2;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+.rb-player-badge-text {
+  color: var(--rb-text) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+}
+
+/* XP bar */
+.rb-xp-bar {
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--rb-xp-bg);
+  border: 1.5px solid var(--rb-xp-border);
+  border-radius: 28px;
+  padding: 8px 18px;
+  z-index: 2;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.rb-xp-label {
+  color: #e8c840 !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase;
+}
+
+.rb-xp-value {
+  color: var(--rb-text) !important;
+  font-size: 1.45rem !important;
+  font-weight: 900 !important;
+  min-width: 28px;
+  text-align: center;
+}
+
+.rb-xp-btn {
+  color: var(--rb-text) !important;
+  opacity: 0.75;
+  padding: 6px !important;
+}
+
+.rb-xp-btn:hover {
+  opacity: 1;
+}
+
+/* Score row */
+.rb-score-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+/* Vertical point-fill bar (pinned to the right edge of the panel) */
+.rb-point-bar {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 6px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: stretch;
+  gap: 5px;
+  width: 34px;
+}
+
+.rb-point-seg {
+  flex: 1;
+  min-height: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--rb-score-btn-bg);
+  border: 1.5px solid var(--rb-score-btn-border);
+  transition: background 0.15s, box-shadow 0.15s, transform 0.08s;
+}
+
+.rb-point-seg--filled {
+  border-color: transparent;
+}
+
+.rb-point-seg--last {
+  cursor: pointer;
+}
+
+.rb-point-seg--last:active {
+  transform: scale(0.9);
+}
+
+.rb-point-seg-icon {
+  font-size: 1.05rem !important;
+  color: #ffffff !important;
+}
+
+.rb-score-btn {
+  width: 70px !important;
+  height: 70px !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+  background: var(--rb-score-btn-bg) !important;
+  border: 1.5px solid var(--rb-score-btn-border) !important;
+  color: var(--rb-score-btn-color) !important;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.35) !important;
+  transition: transform 0.08s, box-shadow 0.08s !important;
+}
+
+.rb-score-btn:active {
+  transform: scale(0.88) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25) !important;
+}
+
+.rb-score-icon {
+  font-size: 1.8rem !important;
+}
+
+.rb-score-number {
+  font-size: clamp(4rem, 16vw, 7.5rem) !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: -2px !important;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.55);
+  transition: color 0.3s !important;
+  min-width: 1ch;
+  text-align: center;
+  flex-shrink: 1;
+}
+
+/* Conquer / Hold / Ability action buttons */
+.rb-action-row {
+  display: flex;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.rb-action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.rb-action-label {
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.6px !important;
+  text-transform: uppercase;
+  color: var(--rb-text) !important;
+  opacity: 0.85;
+}
+
+.rb-action-icon {
+  width: 68px !important;
+  height: 68px !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+  transition: transform 0.08s !important;
+}
+
+.rb-action-icon svg {
+  font-size: 2rem !important;
+}
+
+.rb-action-icon:active {
+  transform: scale(0.9) !important;
+}
+
+.rb-conquer-btn {
+  background: rgba(255, 109, 58, 0.92) !important;
+  box-shadow: 0 6px 22px rgba(255, 109, 58, 0.45) !important;
+}
+
+.rb-hold-btn {
+  background: rgba(47, 123, 255, 0.92) !important;
+  box-shadow: 0 6px 22px rgba(47, 123, 255, 0.45) !important;
+}
+
+.rb-ability-btn {
+  background: rgba(164, 75, 255, 0.92) !important;
+  box-shadow: 0 6px 22px rgba(164, 75, 255, 0.45) !important;
+}
+
+/* Middle control bar */
+.rb-middle-bar {
+  height: 60px;
+  min-height: 60px;
+  background: var(--rb-bar-bg);
+  border-top: 1px solid var(--rb-bar-border);
+  border-bottom: 1px solid var(--rb-bar-border);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 4px;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.rb-bar-icon-btn {
+  color: var(--rb-icon-color) !important;
+  padding: 10px !important;
+  border-radius: 12px !important;
+  transition: background 0.15s !important;
+}
+
+.rb-bar-icon-btn:hover {
+  background: rgba(255,255,255,0.07) !important;
+}
+
+.rb-timer-pill {
+  color: var(--rb-pill-color) !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  background: var(--rb-pill-bg) !important;
+  border: 1px solid var(--rb-bar-border) !important;
+  border-radius: 20px !important;
+  padding: 5px 12px !important;
+  min-width: 80px !important;
+  letter-spacing: 0.5px !important;
+}
+
+.rb-toss-pill {
+  color: var(--rb-pill-color) !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  background: var(--rb-pill-bg) !important;
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
+}
+
+/* Flipped panel: name badge near divider (= CSS top, same as Player 1) */
+.rb-player-panel--flipped .rb-player-badge {
+  top: 0px;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  width: auto;
+  margin: 0;
+  transform: translateX(-50%);
+}
+
+/* ======================================================
+   Compact vertical layout (3p / 4p)
+   ====================================================== */
+
+/* Outer column: top button | middle (score+badge) | bottom button */
+.rb-vert-layout {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* Middle row: score number + vertical badge pill, side by side */
+.rb-vert-middle {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Vertical name badge — in normal flow, not absolutely positioned */
+.rb-player-badge--vert {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  transform: none;
+  padding: 16px 7px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Flipped panel: XP at physical top-left of screen (= CSS bottom-right after 180deg) */
+.rb-player-panel--flipped .rb-xp-bar {
+  bottom: 14px;
+  right: 16px;
+  top: auto;
+  left: auto;
+}
+
+/* ======================================================
+   Responsive
+   ====================================================== */
+
+@media (max-width: 380px) {
+  .rb-score-btn {
+    width: 54px !important;
+    height: 54px !important;
+  }
+  .rb-score-icon {
+    font-size: 1.5rem !important;
+  }
+  .rb-timer-pill {
+    min-width: 68px !important;
+    font-size: 0.7rem !important;
+  }
+  .rb-toss-pill {
+    font-size: 0.7rem !important;
+    padding: 4px 8px !important;
+  }
+  .rb-mode-btn {
+    font-size: 0.62rem !important;
+  }
+}
+
+@media (max-height: 600px) {
+  .rb-player-badge {
+    top: 8px;
+  }
+  .rb-score-btn {
+    width: 56px !important;
+    height: 56px !important;
+  }
+}
+
+/* ======================================================
+   Starter Player — Roulette Highlight
+   ====================================================== */
+
+.rb-player-panel--highlighted::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 0 4px var(--rb-hl-color, #ffd600),
+    inset 0 0 70px var(--rb-hl-color, #ffd600);
+  animation: rb-hl-pulse 0.32s ease-in-out infinite alternate;
+}
+
+@keyframes rb-hl-pulse {
+  from {
+    opacity: 0.45;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ======================================================
+   Utilities Panel — slide-up overlay
+   ====================================================== */
+
+.rb-utilities-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  box-sizing: border-box;
+  /* Slide off-screen downward when closed */
+  transform: translateY(100%);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Only promote to a GPU layer while open, so a full-screen layer
+   isn't kept composited (and burning power) when the panel is hidden. */
+.rb-utilities-panel--open {
+  transform: translateY(0);
+  will-change: transform;
+}
+
+/* ======================================================
+   How To Guide — gesture animations
+   ====================================================== */
+
+@keyframes rb-swipe-h {
+  0%   { transform: translateX(-14px); opacity: 0.3; }
+  50%  { transform: translateX(14px);  opacity: 1;   }
+  100% { transform: translateX(-14px); opacity: 0.3; }
+}
+
+@keyframes rb-swipe-u {
+  0%   { transform: translateY(12px);  opacity: 0.3; }
+  50%  { transform: translateY(-12px); opacity: 1;   }
+  100% { transform: translateY(12px);  opacity: 0.3; }
+}
+
+@keyframes rb-tap-anim {
+  0%, 100% { transform: scale(1);    opacity: 0.6; }
+  40%       { transform: scale(0.78); opacity: 1;   }
+  60%       { transform: scale(1.1);  opacity: 0.9; }
+}
+
+.rb-guide-icon { display: block; }
+.rb-guide-h   { animation: rb-swipe-h  1.7s ease-in-out infinite; }
+.rb-guide-u   { animation: rb-swipe-u  1.7s ease-in-out infinite; }
+.rb-guide-tap { animation: rb-tap-anim 1.7s ease-in-out infinite; }
+
+/* Respect reduced-motion: stop continuous animations to save battery */
+@media (prefers-reduced-motion: reduce) {
+  .rb-guide-h,
+  .rb-guide-u,
+  .rb-guide-tap,
+  .rb-player-panel--highlighted::after {
+    animation: none !important;
+  }
+}

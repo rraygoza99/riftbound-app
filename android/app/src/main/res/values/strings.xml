@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Riftbound Score</string>
+    <string name="title_activity_main">Riftbound Score</string>
+    <string name="package_name">com.riftbound.score</string>
+    <string name="custom_url_scheme">com.riftbound.score</string>
+</resources>
