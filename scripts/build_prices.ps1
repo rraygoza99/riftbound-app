@@ -40,6 +40,8 @@ foreach ($abbr in $targetSets) {
     if (-not $numExt) { continue }  # skip sealed / non-cards
     $numPart = ($numExt.value -split "/")[0].Trim()
     if (-not $numPart) { continue }
+    # TCGplayer marks signature cards with '*'; our catalog uses an 's' suffix.
+    $numPart = $numPart -replace '\*', 's'
     $id = "$abbr-$numPart"
     $normal = $priceMap["$($p.productId)|Normal"]
     $foil = $priceMap["$($p.productId)|Foil"]

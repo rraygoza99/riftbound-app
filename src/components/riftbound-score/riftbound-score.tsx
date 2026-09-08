@@ -34,6 +34,9 @@ import GradeIcon from "@mui/icons-material/Grade";
 import TouchAppIcon from "@mui/icons-material/TouchApp";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutlined";
 import HistoryIcon from "@mui/icons-material/History";
+import UndoIcon from "@mui/icons-material/Undo";
+import RedoIcon from "@mui/icons-material/Redo";
+import SaveIcon from "@mui/icons-material/Save";
 import SettingsIcon from "@mui/icons-material/Settings";
 import TuneIcon from "@mui/icons-material/Tune";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
@@ -144,6 +147,15 @@ const TRANSLATIONS: Record<string, Record<Lang, string>> = {
   price_source_market: { en: "Market · TCGplayer", es: "Mercado · TCGplayer", it: "Mercato · TCGplayer", de: "Markt · TCGplayer", cs: "Trh · TCGplayer" },
   price_source_soon: { en: "Live sync · soon", es: "Sinc. en vivo · pronto", it: "Sinc. live · presto", de: "Live-Sync · bald", cs: "Živá synch. · brzy" },
   prices_updated: { en: "Prices: TCGplayer · {date}", es: "Precios: TCGplayer · {date}", it: "Prezzi: TCGplayer · {date}", de: "Preise: TCGplayer · {date}", cs: "Ceny: TCGplayer · {date}" },
+  currency: { en: "Currency", es: "Moneda", it: "Valuta", de: "Währung", cs: "Měna" },
+  undo: { en: "Undo", es: "Deshacer", it: "Annulla", de: "Rückgängig", cs: "Zpět" },
+  redo: { en: "Redo", es: "Rehacer", it: "Ripeti", de: "Wiederholen", cs: "Znovu" },
+  save_trade: { en: "Save", es: "Guardar", it: "Salva", de: "Speichern", cs: "Uložit" },
+  past_trades: { en: "Past trades", es: "Intercambios guardados", it: "Scambi salvati", de: "Gespeicherte Trades", cs: "Uložené výměny" },
+  trade_saved: { en: "Trade saved", es: "Intercambio guardado", it: "Scambio salvato", de: "Trade gespeichert", cs: "Výměna uložena" },
+  no_saved_trades: { en: "No saved trades", es: "Sin intercambios guardados", it: "Nessuno scambio salvato", de: "Keine gespeicherten Trades", cs: "Žádné uložené výměny" },
+  load_trade: { en: "Load", es: "Cargar", it: "Carica", de: "Laden", cs: "Načíst" },
+  n_cards: { en: "{n} cards", es: "{n} cartas", it: "{n} carte", de: "{n} Karten", cs: "{n} karet" },
   side_give: { en: "You Give", es: "Tú das", it: "Tu dai", de: "Du gibst", cs: "Ty dáváš" },
   side_receive: { en: "You Receive", es: "Tú recibes", it: "Tu ricevi", de: "Du erhältst", cs: "Ty dostáváš" },
   add_card: { en: "Add Card", es: "Añadir carta", it: "Aggiungi carta", de: "Karte hinzufügen", cs: "Přidat kartu" },
@@ -420,7 +432,12 @@ function usePriceBook() {
 
 // Market price is condition-agnostic (~NM); users can still override per item.
 function lookupPrice(book: PriceBook | null, cardId: string, foil: boolean): number | null {
-  const e = book?.prices[cardId];
+  let e = book?.prices[cardId];
+  // Fall back to the base printing when a specific variant (e.g. "-007b") isn't priced.
+  if (!e) {
+    const base = cardId.replace(/[a-z]$/i, "");
+    if (base !== cardId) e = book?.prices[base];
+  }
   if (!e) return null;
   return foil ? e.foil : e.normal;
 }
@@ -2999,8 +3016,41 @@ const CONDITION_COLORS: Record<CardCondition, string> = {
   DMG: "#ef5350",
 };
 
-function formatMoney(n: number): string {
-  return `$${n.toFixed(2)}`;
+type Currency = "USD" | "EUR" | "MXN";
+const CURRENCIES: Currency[] = ["USD", "EUR", "MXN"];
+const CURRENCY_SYMBOL: Record<Currency, string> = { USD: "$", EUR: "€", MXN: "MX$" };
+const FALLBACK_RATES: Record<Currency, number> = { USD: 1, EUR: 0.92, MXN: 18.5 };
+const RATES_CACHE_KEY = "riftbound-fx-rates";
+const RATES_TTL_MS = 24 * 60 * 60 * 1000;
+
+// USD-based FX rates for display currencies (ECB via frankfurter.app, cached daily).
+function useRates(): Record<Currency, number> {
+  const [rates, setRates] = useState<Record<Currency, number>>(FALLBACK_RATES);
+  useEffect(() => {
+    let alive = true;
+    let fresh = false;
+    try {
+      const raw = localStorage.getItem(RATES_CACHE_KEY);
+      if (raw) {
+        const c = JSON.parse(raw);
+        if (c?.rates) setRates({ USD: 1, EUR: c.rates.EUR ?? FALLBACK_RATES.EUR, MXN: c.rates.MXN ?? FALLBACK_RATES.MXN });
+        fresh = c && Date.now() - c.fetchedAt < RATES_TTL_MS;
+      }
+    } catch { /* ignore */ }
+    if (!fresh) {
+      fetch("https://api.frankfurter.app/latest?from=USD&to=EUR,MXN", { cache: "no-store" })
+        .then((r) => (r.ok ? r.json() : Promise.reject(new Error("fx"))))
+        .then((j: { rates?: { EUR?: number; MXN?: number } }) => {
+          if (!alive || !j?.rates) return;
+          const next: Record<Currency, number> = { USD: 1, EUR: j.rates.EUR ?? FALLBACK_RATES.EUR, MXN: j.rates.MXN ?? FALLBACK_RATES.MXN };
+          setRates(next);
+          try { localStorage.setItem(RATES_CACHE_KEY, JSON.stringify({ fetchedAt: Date.now(), rates: next })); } catch { /* ignore */ }
+        })
+        .catch(() => { /* keep fallback/cached */ });
+    }
+    return () => { alive = false; };
+  }, []);
+  return rates;
 }
 
 function itemTotal(it: TradeItem): number {
@@ -3011,6 +3061,13 @@ function sideCardsTotal(items: TradeItem[]): number {
   return items.reduce((s, it) => s + itemTotal(it), 0);
 }
 
+interface TradeSnap { give: TradeItem[]; receive: TradeItem[]; cashGive: number; cashReceive: number; }
+interface SavedTrade extends TradeSnap { id: string; savedAt: number; }
+const TRADES_KEY = "riftbound-trades";
+function loadSavedTrades(): SavedTrade[] {
+  try { return JSON.parse(localStorage.getItem(TRADES_KEY) ?? "[]"); } catch { return []; }
+}
+
 function TradingView({ onBack }: { onBack: () => void }) {
   const theme = useTheme();
   const isDark = theme.palette.mode === "dark";
@@ -3019,6 +3076,12 @@ function TradingView({ onBack }: { onBack: () => void }) {
   const priceBook = usePriceBook();
   const priceBookRef = useRef<PriceBook | null>(null);
   priceBookRef.current = priceBook;
+  const rates = useRates();
+  const [currency, setCurrency] = useState<Currency>(() => {
+    try { return (localStorage.getItem("riftbound-trade-currency") as Currency) || "USD"; } catch { return "USD"; }
+  });
+  const formatMoney = (usd: number) => `${CURRENCY_SYMBOL[currency]}${(usd * rates[currency]).toFixed(2)}`;
+  useEffect(() => { try { localStorage.setItem("riftbound-trade-currency", currency); } catch { /* ignore */ } }, [currency]);
 
   const [give, setGive] = useState<TradeItem[]>([]);
   const [receive, setReceive] = useState<TradeItem[]>([]);
@@ -3028,6 +3091,11 @@ function TradingView({ onBack }: { onBack: () => void }) {
   const [resetOpen, setResetOpen] = useState(false);
   const [snack, setSnack] = useState("");
   const [shareAnchor, setShareAnchor] = useState<null | HTMLElement>(null);
+  const [hist, setHist] = useState<{ stack: TradeSnap[]; idx: number }>({ stack: [{ give: [], receive: [], cashGive: 0, cashReceive: 0 }], idx: 0 });
+  const applyingRef = useRef(false);
+  const histMounted = useRef(false);
+  const [trades, setTrades] = useState<SavedTrade[]>(loadSavedTrades);
+  const [tradesOpen, setTradesOpen] = useState(false);
 
   // Card search sheet
   const [searchSide, setSearchSide] = useState<TradeSide | null>(null);
@@ -3063,6 +3131,41 @@ function TradingView({ onBack }: { onBack: () => void }) {
     if (itemCount > 0) tryVibrate(8);
   }, [net, itemCount]);
 
+  // Undo/redo: snapshot the trade on every change, unless we're applying one.
+  useEffect(() => {
+    if (!histMounted.current) { histMounted.current = true; return; }
+    if (applyingRef.current) { applyingRef.current = false; return; }
+    setHist((h) => {
+      const stack = h.stack.slice(0, h.idx + 1);
+      stack.push({ give, receive, cashGive, cashReceive });
+      const capped = stack.length > 40 ? stack.slice(stack.length - 40) : stack;
+      return { stack: capped, idx: capped.length - 1 };
+    });
+  }, [give, receive, cashGive, cashReceive]);
+
+  useEffect(() => { try { localStorage.setItem(TRADES_KEY, JSON.stringify(trades)); } catch { /* ignore */ } }, [trades]);
+
+  const canUndo = hist.idx > 0;
+  const canRedo = hist.idx < hist.stack.length - 1;
+  function applySnap(s: TradeSnap) {
+    applyingRef.current = true;
+    setGive(s.give); setReceive(s.receive); setCashGive(s.cashGive); setCashReceive(s.cashReceive);
+  }
+  function undo() { if (!canUndo) return; const idx = hist.idx - 1; setHist((h) => ({ ...h, idx })); applySnap(hist.stack[idx]); tryVibrate(10); }
+  function redo() { if (!canRedo) return; const idx = hist.idx + 1; setHist((h) => ({ ...h, idx })); applySnap(hist.stack[idx]); tryVibrate(10); }
+
+  function saveTrade() {
+    if (give.length === 0 && receive.length === 0 && cashGive === 0 && cashReceive === 0) return;
+    setTrades((prev) => [{ id: genId(), savedAt: Date.now(), give, receive, cashGive, cashReceive }, ...prev].slice(0, 50));
+    setSnack(t("trade_saved"));
+    tryVibrate(15);
+  }
+  function loadTrade(tr: SavedTrade) {
+    setGive(tr.give); setReceive(tr.receive); setCashGive(tr.cashGive); setCashReceive(tr.cashReceive);
+    setTradesOpen(false);
+  }
+  function deleteTrade(id: string) { setTrades((prev) => prev.filter((x) => x.id !== id)); }
+
   function addCard(card: CatalogCard) {
     if (!searchSide) return;
     const price = lookupPrice(priceBookRef.current, card.id, addFoil);
@@ -3092,21 +3195,23 @@ function TradingView({ onBack }: { onBack: () => void }) {
 
   function openPriceEdit(side: TradeSide, it: TradeItem) {
     setPriceEdit({ side, key: it.key });
-    setNumInput(it.price != null ? String(it.price) : "");
+    setNumInput(it.price != null ? (it.price * rates[currency]).toFixed(2) : "");
   }
 
   function openCashEdit(side: TradeSide) {
     setCashEdit(side);
-    setNumInput(String(side === "give" ? cashGive : cashReceive) === "0" ? "" : String(side === "give" ? cashGive : cashReceive));
+    const usd = side === "give" ? cashGive : cashReceive;
+    setNumInput(usd === 0 ? "" : (usd * rates[currency]).toFixed(2));
   }
 
   function commitNumDialog() {
-    const val = Math.max(0, parseFloat(numInput.replace(",", ".")) || 0);
+    const disp = Math.max(0, parseFloat(numInput.replace(",", ".")) || 0);
+    const usd = Math.round((disp / rates[currency]) * 100) / 100;
     if (priceEdit) {
-      updateItem(priceEdit.side, priceEdit.key, { price: numInput.trim() === "" ? null : val });
+      updateItem(priceEdit.side, priceEdit.key, { price: numInput.trim() === "" ? null : usd });
       setPriceEdit(null);
     } else if (cashEdit) {
-      (cashEdit === "give" ? setCashGive : setCashReceive)(val);
+      (cashEdit === "give" ? setCashGive : setCashReceive)(usd);
       setCashEdit(null);
     }
     setNumInput("");
@@ -3379,18 +3484,39 @@ function TradingView({ onBack }: { onBack: () => void }) {
         </IconButton>
         <Typography sx={{ flex: 1, fontWeight: 800, fontSize: "1.05rem" }}>{t("trading_title")}</Typography>
         <Select
-          value="market"
+          value={currency}
           size="small"
-          title={priceBook ? t("prices_updated").replace("{date}", (priceBook.sourceUpdated || priceBook.generatedAt).slice(0, 10)) : t("price_source")}
+          onChange={(e) => setCurrency(e.target.value as Currency)}
+          title={t("currency")}
           MenuProps={{ slotProps: { paper: { sx: { background: isDark ? "#14142a" : "#fff", color: textPrimary } } } }}
-          sx={{ fontSize: "0.72rem", fontWeight: 700, color: textMuted, mr: 0.5, "& .MuiOutlinedInput-notchedOutline": { borderColor: border }, "& .MuiSvgIcon-root": { color: textMuted }, "& .MuiSelect-select": { py: 0.5, pl: 1 } }}
+          sx={{ fontSize: "0.72rem", fontWeight: 800, color: textPrimary, mr: 0.5, "& .MuiOutlinedInput-notchedOutline": { borderColor: border }, "& .MuiSvgIcon-root": { color: textMuted }, "& .MuiSelect-select": { py: 0.5, pl: 1 } }}
         >
-          <MenuItem value="market" sx={{ fontSize: "0.78rem" }}>{t("price_source_market")}</MenuItem>
-          <MenuItem value="soon" disabled sx={{ fontSize: "0.78rem" }}>{t("price_source_soon")}</MenuItem>
+          {CURRENCIES.map((c) => (<MenuItem key={c} value={c} sx={{ fontSize: "0.78rem" }}>{c}</MenuItem>))}
         </Select>
         <Button size="small" startIcon={<RefreshIcon sx={{ fontSize: 15 }} />} onClick={() => setResetOpen(true)} sx={{ color: textMuted, textTransform: "none", fontWeight: 700, fontSize: "0.72rem", minWidth: 0 }}>
           {t("trade_reset")}
         </Button>
+      </Box>
+
+      {/* Toolbar: undo / redo + save / past trades */}
+      <Box sx={{ display: "flex", alignItems: "center", gap: 0.25, px: 1, py: 0.5, borderBottom: `1px solid ${border}` }}>
+        <IconButton size="small" onClick={undo} disabled={!canUndo} title={t("undo")} sx={{ color: textPrimary, "&.Mui-disabled": { color: isDark ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.2)" } }}>
+          <UndoIcon sx={{ fontSize: 20 }} />
+        </IconButton>
+        <IconButton size="small" onClick={redo} disabled={!canRedo} title={t("redo")} sx={{ color: textPrimary, "&.Mui-disabled": { color: isDark ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.2)" } }}>
+          <RedoIcon sx={{ fontSize: 20 }} />
+        </IconButton>
+        {priceBook ? (
+          <Typography sx={{ flex: 1, ml: 0.75, fontSize: "0.6rem", color: textMuted, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+            {t("prices_updated").replace("{date}", (priceBook.sourceUpdated || priceBook.generatedAt).slice(0, 10))}
+          </Typography>
+        ) : <Box sx={{ flex: 1 }} />}
+        <Button size="small" startIcon={<SaveIcon sx={{ fontSize: 15 }} />} onClick={saveTrade} sx={{ color: "#2979ff", textTransform: "none", fontWeight: 700, fontSize: "0.72rem", minWidth: 0, px: 0.75 }}>
+          {t("save_trade")}
+        </Button>
+        <IconButton size="small" onClick={() => setTradesOpen(true)} title={t("past_trades")} sx={{ color: textPrimary }}>
+          <HistoryIcon sx={{ fontSize: 20 }} />
+        </IconButton>
       </Box>
 
       {/* Trade body */}
@@ -3535,7 +3661,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
             onChange={(e) => setNumInput(e.target.value)}
             onKeyDown={(e) => { if (e.key === "Enter") commitNumDialog(); }}
             placeholder="0.00"
-            slotProps={{ input: { startAdornment: (<InputAdornment position="start"><AttachMoneyIcon sx={{ fontSize: 18, color: textMuted }} /></InputAdornment>), inputProps: { min: 0, step: 0.25 } } }}
+            slotProps={{ input: { startAdornment: (<InputAdornment position="start"><Typography sx={{ fontSize: "0.9rem", fontWeight: 700, color: textMuted }}>{CURRENCY_SYMBOL[currency]}</Typography></InputAdornment>), inputProps: { min: 0, step: 0.25 } } }}
             sx={{ mt: 0.5, "& .MuiOutlinedInput-root": { borderRadius: "10px", background: surface, "& fieldset": { borderColor: border } }, "& .MuiOutlinedInput-input": { color: textPrimary, fontSize: "1.1rem", fontWeight: 700 } }}
           />
         </DialogContent>
@@ -3561,6 +3687,51 @@ function TradingView({ onBack }: { onBack: () => void }) {
           <Button onClick={() => setResetOpen(false)} sx={{ color: textMuted, textTransform: "none", fontWeight: 700 }}>{t("cancel")}</Button>
           <Button onClick={resetTrade} sx={{ color: "#ef5350", textTransform: "none", fontWeight: 800 }}>{t("trade_reset_yes")}</Button>
         </DialogActions>
+      </Dialog>
+
+      {/* Past trades */}
+      <Dialog
+        open={tradesOpen}
+        onClose={() => setTradesOpen(false)}
+        fullWidth
+        maxWidth="xs"
+        slotProps={{ paper: { sx: { background: isDark ? "#0f0f22" : "#f4f4f8", borderRadius: 3, m: 2, maxHeight: "80vh" } } }}
+      >
+        <DialogTitle sx={{ color: textPrimary, fontWeight: 700, pb: 1, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          {t("past_trades")}
+          <IconButton size="small" onClick={() => setTradesOpen(false)} sx={{ color: textMuted }}>
+            <CloseIcon sx={{ fontSize: 18 }} />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent sx={{ pt: 0 }}>
+          {trades.length === 0 ? (
+            <Typography sx={{ textAlign: "center", color: textMuted, py: 3, fontSize: "0.9rem" }}>{t("no_saved_trades")}</Typography>
+          ) : trades.map((tr) => {
+            const g = sideCardsTotal(tr.give) + tr.cashGive;
+            const r = sideCardsTotal(tr.receive) + tr.cashReceive;
+            const n = r - g;
+            const nCards = tr.give.length + tr.receive.length;
+            return (
+              <Box key={tr.id} sx={{ display: "flex", alignItems: "center", gap: 1, py: 1, borderBottom: `1px solid ${border}` }}>
+                <Box sx={{ flex: 1, minWidth: 0, cursor: "pointer" }} onClick={() => loadTrade(tr)}>
+                  <Typography sx={{ fontSize: "0.82rem", fontWeight: 700, color: textPrimary }}>
+                    {formatMoney(g)} → {formatMoney(r)}
+                    <Typography component="span" sx={{ ml: 0.75, fontSize: "0.72rem", fontWeight: 800, color: Math.abs(n) < 0.005 ? textMuted : (n > 0 ? "#4caf50" : "#ef5350") }}>
+                      {n > 0 ? "+" : n < 0 ? "−" : ""}{formatMoney(Math.abs(n))}
+                    </Typography>
+                  </Typography>
+                  <Typography sx={{ fontSize: "0.64rem", color: textMuted }}>
+                    {new Date(tr.savedAt).toLocaleDateString()} {new Date(tr.savedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} · {t("n_cards").replace("{n}", String(nCards))}
+                  </Typography>
+                </Box>
+                <Button size="small" onClick={() => loadTrade(tr)} sx={{ color: "#2979ff", textTransform: "none", fontWeight: 700, fontSize: "0.72rem", minWidth: 0 }}>{t("load_trade")}</Button>
+                <IconButton size="small" onClick={() => deleteTrade(tr.id)} sx={{ color: textMuted }}>
+                  <DeleteOutlineIcon sx={{ fontSize: 18 }} />
+                </IconButton>
+              </Box>
+            );
+          })}
+        </DialogContent>
       </Dialog>
 
       <Snackbar open={!!snack} autoHideDuration={2000} onClose={() => setSnack("")} message={snack} anchorOrigin={{ vertical: "bottom", horizontal: "center" }} />
