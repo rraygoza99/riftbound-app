@@ -1,0 +1,34 @@
+name: Update prices
+
+on:
+  schedule:
+    # Daily at 22:00 UTC (after TCGCSV's daily build). Cron is UTC.
+    - cron: "0 22 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-prices
+  cancel-in-progress: true
+
+jobs:
+  update-prices:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate prices.json
+        shell: pwsh
+        run: ./scripts/build_prices.ps1
+
+      - name: Publish to prices-data branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public/prices
+          publish_branch: prices-data
+          force_orphan: true
+          commit_message: "Update prices"

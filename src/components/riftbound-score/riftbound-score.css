@@ -716,9 +716,9 @@
 }
 
 @keyframes rb-swipe-u {
-  0%   { transform: translateY(12px);  opacity: 0.3; }
-  50%  { transform: translateY(-12px); opacity: 1;   }
-  100% { transform: translateY(12px);  opacity: 0.3; }
+  0%   { transform: translateY(-12px); opacity: 0.3; }
+  50%  { transform: translateY(12px);  opacity: 1;   }
+  100% { transform: translateY(-12px); opacity: 0.3; }
 }
 
 @keyframes rb-tap-anim {
@@ -731,6 +731,20 @@
 .rb-guide-h   { animation: rb-swipe-h  1.7s ease-in-out infinite; }
 .rb-guide-u   { animation: rb-swipe-u  1.7s ease-in-out infinite; }
 .rb-guide-tap { animation: rb-tap-anim 1.7s ease-in-out infinite; }
+
+.rb-guide-chip {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.rb-guide-chip--bar {
+  border-radius: 8px;
+}
 
 /* Respect reduced-motion: stop continuous animations to save battery */
 @media (prefers-reduced-motion: reduce) {
