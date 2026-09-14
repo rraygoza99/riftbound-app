@@ -3168,7 +3168,8 @@ function TradingView({ onBack }: { onBack: () => void }) {
 
   function addCard(card: CatalogCard) {
     if (!searchSide) return;
-    const price = lookupPrice(priceBookRef.current, card.id, addFoil);
+    // Prefer the selected printing's price; fall back to the other (e.g. foil-only champions).
+    const price = lookupPrice(priceBookRef.current, card.id, addFoil) ?? lookupPrice(priceBookRef.current, card.id, !addFoil);
     tryVibrate();
     setterFor(searchSide)((prev) => {
       const existing = prev.find((it) => it.card.id === card.id && it.condition === addCondition && it.foil === addFoil);
@@ -3625,20 +3626,25 @@ function TradingView({ onBack }: { onBack: () => void }) {
           {!loading && !error && results.length === 0 && <Typography sx={{ textAlign: "center", color: textMuted, mt: 3, fontSize: "0.9rem" }}>{t("no_matches")}</Typography>}
 
           <Box sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "8px", pb: 1 }}>
-            {results.map((c) => (
+            {results.map((c) => {
+              const primary = lookupPrice(priceBook, c.id, addFoil);
+              const shown = primary ?? lookupPrice(priceBook, c.id, !addFoil);
+              const shownIsFoil = primary != null ? addFoil : true;
+              return (
               <Box key={c.id} onClick={() => addCard(c)} sx={{ cursor: "pointer", borderRadius: 2, overflow: "hidden", border: `1px solid ${border}`, "&:hover": { borderColor: "#2979ff" }, transition: "border-color 0.15s" }}>
                 <img src={getCardThumbUrl(c.id)} alt={c.name} loading="lazy" style={{ width: "100%", aspectRatio: "63/88", objectFit: "cover", objectPosition: "top", display: "block" }} />
                 <Box sx={{ px: 0.5, py: 0.4 }}>
                   <Typography sx={{ fontSize: "0.62rem", fontWeight: 700, color: textPrimary, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.name}</Typography>
                   <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 0.5 }}>
                     <Typography sx={{ fontSize: "0.56rem", color: textMuted }}>{c.id}</Typography>
-                    {lookupPrice(priceBook, c.id, addFoil) != null && (
-                      <Typography sx={{ fontSize: "0.58rem", fontWeight: 800, color: "#4caf50" }}>{formatMoney(lookupPrice(priceBook, c.id, addFoil)!)}</Typography>
+                    {shown != null && (
+                      <Typography sx={{ fontSize: "0.58rem", fontWeight: 800, color: shownIsFoil ? "#ce93d8" : "#4caf50" }}>{formatMoney(shown)}{shownIsFoil ? " ◆" : ""}</Typography>
                     )}
                   </Box>
                 </Box>
               </Box>
-            ))}
+              );
+            })}
           </Box>
         </DialogContent>
       </Dialog>

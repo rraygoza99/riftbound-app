@@ -24,11 +24,12 @@ jobs:
         shell: pwsh
         run: ./scripts/build_prices.ps1
 
-      - name: Publish to prices-data branch
+      - name: Publish prices data to dedicated branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public/prices
           publish_branch: prices-data
-          force_orphan: true
+          # Keep this branch dedicated to price-data only and avoid destructive resets.
+          # This must not target the main app code branch.
           commit_message: "Update prices"
