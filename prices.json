@@ -1,25 +1,25 @@
 {
-  "generatedAt": "2026-09-27",
+  "generatedAt": "2026-09-28",
   "source": "tcgcsv.com (TCGplayer Market Price)",
-  "sourceUpdated": "2026-09-27T20:04:59+0000",
+  "sourceUpdated": "2026-09-28T20:05:54+0000",
   "currency": "USD",
   "count": 1237,
   "prices": {
     "OGN-001": {
       "normal": 0.06,
-      "foil": 0.21
+      "foil": 0.2
     },
     "OGN-002": {
       "normal": 0.06,
-      "foil": 0.16
+      "foil": 0.15
     },
     "OGN-003": {
       "normal": 0.04,
       "foil": 0.14
     },
     "OGN-004": {
-      "normal": 0.19,
-      "foil": 0.35
+      "normal": 0.17,
+      "foil": 0.36
     },
     "OGN-005": {
       "normal": 0.05,
@@ -27,7 +27,7 @@
     },
     "OGN-006": {
       "normal": 0.09,
-      "foil": 0.23
+      "foil": 0.22
     },
     "OGN-007": {
       "normal": 0.1,
@@ -35,7 +35,7 @@
     },
     "OGN-007a": {
       "normal": null,
-      "foil": 2.49
+      "foil": 2.47
     },
     "OGN-008": {
       "normal": 0.05,
@@ -43,27 +43,27 @@
     },
     "OGN-009": {
       "normal": 0.16,
-      "foil": 0.64
+      "foil": 0.6
     },
     "OGN-010": {
       "normal": 0.11,
       "foil": 0.29
     },
     "OGN-011": {
-      "normal": 0.03,
+      "normal": 0.04,
       "foil": 0.17
     },
     "OGN-012": {
       "normal": 0.49,
-      "foil": 5.19
+      "foil": 4.96
     },
     "OGN-013": {
-      "normal": 0.09,
+      "normal": 0.08,
       "foil": 0.31
     },
     "OGN-014": {
-      "normal": 0.09,
-      "foil": 0.39
+      "normal": 0.1,
+      "foil": 0.36
     },
     "OGN-015": {
       "normal": 0.09,
@@ -71,11 +71,11 @@
     },
     "OGN-016": {
       "normal": 0.06,
-      "foil": 0.21
+      "foil": 0.2
     },
     "OGN-017": {
       "normal": 0.18,
-      "foil": 0.43
+      "foil": 0.42
     },
     "OGN-018": {
       "normal": 0.12,
@@ -83,10 +83,10 @@
     },
     "OGN-019": {
       "normal": 0.05,
-      "foil": 0.26
+      "foil": 0.27
     },
     "OGN-020": {
-      "normal": 0.11,
+      "normal": 0.12,
       "foil": 0.31
     },
     "OGN-021": {
@@ -94,16 +94,16 @@
       "foil": 0.59
     },
     "OGN-022": {
-      "normal": 0.33,
-      "foil": 2.3
+      "normal": 0.31,
+      "foil": 2.18
     },
     "OGN-023": {
       "normal": 0.14,
-      "foil": 0.27
+      "foil": 0.26
     },
     "OGN-024": {
-      "normal": 0.21,
-      "foil": 0.51
+      "normal": 0.22,
+      "foil": 0.5
     },
     "OGN-025": {
       "normal": null,
@@ -111,15 +111,15 @@
     },
     "OGN-026": {
       "normal": null,
-      "foil": 1.69
+      "foil": 1.66
     },
     "OGN-027": {
       "normal": null,
-      "foil": 1.52
+      "foil": 1.48
     },
     "OGN-027a": {
       "normal": null,
-      "foil": 6.72
+      "foil": 6.66
     },
     "OGN-028": {
       "normal": null,
@@ -127,15 +127,15 @@
     },
     "OGN-029": {
       "normal": null,
-      "foil": 13.17
+      "foil": 12.65
     },
     "OGN-030": {
       "normal": null,
-      "foil": 0.27
+      "foil": 0.24
     },
     "OGN-030a": {
       "normal": null,
-      "foil": 3.77
+      "foil": 3.85
     },
     "OGN-031": {
       "normal": null,
@@ -143,7 +143,7 @@
     },
     "OGN-032": {
       "normal": null,
-      "foil": 0.18
+      "foil": 0.17
     },
     "OGN-033": {
       "normal": null,
@@ -151,7 +151,7 @@
     },
     "OGN-034": {
       "normal": null,
-      "foil": 0.27
+      "foil": 0.25
     },
     "OGN-035": {
       "normal": null,
@@ -159,66 +159,66 @@
     },
     "OGN-036": {
       "normal": null,
-      "foil": 0.4
+      "foil": 0.41
     },
     "OGN-037": {
       "normal": null,
-      "foil": 4.23
+      "foil": 4.3
     },
     "OGN-038": {
       "normal": null,
-      "foil": 5.94
+      "foil": 5.66
     },
     "OGN-039": {
       "normal": null,
-      "foil": 69.24
+      "foil": 69.26
     },
     "OGN-039a": {
       "normal": null,
-      "foil": 72.99
+      "foil": 73.53
     },
     "OGN-040": {
       "normal": null,
-      "foil": 21.59
+      "foil": 26.52
     },
     "OGN-041": {
       "normal": null,
-      "foil": 0.8
+      "foil": 0.75
     },
     "OGN-041a": {
       "normal": null,
-      "foil": 2.66
+      "foil": 2.57
     },
     "OGN-042": {
-      "normal": 0.13,
+      "normal": 0.12,
       "foil": null
     },
     "OGN-042a": {
       "normal": null,
-      "foil": 5.96
+      "foil": 5.99
     },
     "OGN-043": {
-      "normal": 0.5,
-      "foil": 4.19
+      "normal": 0.47,
+      "foil": 4.05
     },
     "OGN-044": {
-      "normal": 0.09,
-      "foil": 0.31
+      "normal": 0.1,
+      "foil": 0.3
     },
     "OGN-045": {
-      "normal": 2.22,
-      "foil": 5.53
+      "normal": 2.31,
+      "foil": 5.55
     },
     "OGN-046": {
-      "normal": 0.25,
+      "normal": 0.22,
       "foil": 0.6
     },
     "OGN-047": {
       "normal": 0.21,
-      "foil": 0.58
+      "foil": 0.57
     },
     "OGN-048": {
-      "normal": 0.15,
+      "normal": 0.14,
       "foil": 0.35
     },
     "OGN-049": {
@@ -226,40 +226,40 @@
       "foil": 0.1
     },
     "OGN-050": {
-      "normal": 0.12,
-      "foil": 0.29
+      "normal": 0.11,
+      "foil": 0.28
     },
     "OGN-051": {
       "normal": 0.09,
       "foil": 0.21
     },
     "OGN-052": {
-      "normal": 0.13,
-      "foil": 0.37
+      "normal": 0.12,
+      "foil": 0.35
     },
     "OGN-053": {
       "normal": 0.06,
       "foil": 0.2
     },
     "OGN-054": {
-      "normal": 0.12,
-      "foil": 0.23
+      "normal": 0.1,
+      "foil": 0.24
     },
     "OGN-055": {
       "normal": 0.05,
       "foil": 0.21
     },
     "OGN-056": {
-      "normal": 0.3,
-      "foil": 2.53
+      "normal": 0.27,
+      "foil": 2.4
     },
     "OGN-057": {
-      "normal": 0.23,
-      "foil": 0.81
+      "normal": 0.24,
+      "foil": 0.73
     },
     "OGN-058": {
-      "normal": 0.87,
-      "foil": 2.27
+      "normal": 0.84,
+      "foil": 2.28
     },
     "OGN-059": {
       "normal": 0.1,
@@ -267,23 +267,23 @@
     },
     "OGN-060": {
       "normal": 0.59,
-      "foil": 4.32
+      "foil": 4.3
     },
     "OGN-061": {
       "normal": 0.14,
-      "foil": 0.36
+      "foil": 0.37
     },
     "OGN-062": {
       "normal": 0.11,
-      "foil": 0.42
+      "foil": 0.41
     },
     "OGN-063": {
-      "normal": 0.16,
+      "normal": 0.15,
       "foil": 0.42
     },
     "OGN-064": {
-      "normal": 0.34,
-      "foil": 1.14
+      "normal": 0.33,
+      "foil": 1.18
     },
     "OGN-065": {
       "normal": 0.07,
@@ -291,15 +291,15 @@
     },
     "OGN-066": {
       "normal": null,
-      "foil": 1.0
+      "foil": 0.96
     },
     "OGN-066a": {
       "normal": null,
-      "foil": 5.84
+      "foil": 5.97
     },
     "OGN-067": {
       "normal": null,
-      "foil": 2.6
+      "foil": 2.66
     },
     "OGN-068": {
       "normal": null,
@@ -307,7 +307,7 @@
     },
     "OGN-069": {
       "normal": null,
-      "foil": 0.28
+      "foil": 0.27
     },
     "OGN-070": {
       "normal": null,
@@ -315,15 +315,15 @@
     },
     "OGN-071": {
       "normal": null,
-      "foil": 0.3
+      "foil": 0.32
     },
     "OGN-072": {
       "normal": null,
-      "foil": 0.15
+      "foil": 0.14
     },
     "OGN-073": {
       "normal": null,
-      "foil": 1.69
+      "foil": 1.57
     },
     "OGN-074": {
       "normal": null,
@@ -331,59 +331,59 @@
     },
     "OGN-075": {
       "normal": null,
-      "foil": 0.65
+      "foil": 0.67
     },
     "OGN-076": {
       "normal": null,
-      "foil": 0.3
+      "foil": 0.31
     },
     "OGN-076a": {
       "normal": null,
-      "foil": 2.4
+      "foil": 2.38
     },
     "OGN-077": {
       "normal": null,
-      "foil": 16.83
+      "foil": 16.3
     },
     "OGN-078": {
       "normal": null,
-      "foil": 0.61
+      "foil": 0.63
     },
     "OGN-078a": {
       "normal": null,
-      "foil": 4.79
+      "foil": 4.82
     },
     "OGN-079": {
       "normal": null,
-      "foil": 1.96
+      "foil": 1.86
     },
     "OGN-079a": {
       "normal": null,
-      "foil": 6.99
+      "foil": 7.12
     },
     "OGN-080": {
       "normal": null,
-      "foil": 1.11
+      "foil": 1.08
     },
     "OGN-081": {
       "normal": null,
-      "foil": 17.55
+      "foil": 18.17
     },
     "OGN-082": {
       "normal": null,
-      "foil": 3.56
+      "foil": 3.34
     },
     "OGN-083": {
-      "normal": 0.19,
-      "foil": 0.48
+      "normal": 0.2,
+      "foil": 0.47
     },
     "OGN-084": {
       "normal": 0.06,
-      "foil": 0.22
+      "foil": 0.23
     },
     "OGN-085": {
-      "normal": 0.13,
-      "foil": 0.32
+      "normal": 0.12,
+      "foil": 0.33
     },
     "OGN-086": {
       "normal": 0.02,
@@ -394,48 +394,48 @@
       "foil": 0.52
     },
     "OGN-088": {
-      "normal": 0.06,
-      "foil": 0.17
+      "normal": 0.05,
+      "foil": 0.16
     },
     "OGN-089": {
-      "normal": 0.12,
+      "normal": 0.11,
       "foil": 0.1
     },
     "OGN-089a": {
       "normal": null,
-      "foil": 4.92
+      "foil": 4.98
     },
     "OGN-090": {
       "normal": 0.1,
       "foil": 0.2
     },
     "OGN-091": {
-      "normal": 0.21,
+      "normal": 0.2,
       "foil": 0.52
     },
     "OGN-092": {
-      "normal": 0.12,
+      "normal": 0.11,
       "foil": 0.24
     },
     "OGN-093": {
-      "normal": 0.18,
-      "foil": 0.82
+      "normal": 0.17,
+      "foil": 0.77
     },
     "OGN-094": {
-      "normal": 0.15,
-      "foil": 0.33
+      "normal": 0.14,
+      "foil": 0.34
     },
     "OGN-095": {
-      "normal": 0.26,
-      "foil": 1.0
+      "normal": 0.25,
+      "foil": 1.03
     },
     "OGN-096": {
-      "normal": 0.15,
-      "foil": 1.46
+      "normal": 0.14,
+      "foil": 1.48
     },
     "OGN-097": {
-      "normal": 0.14,
-      "foil": 0.37
+      "normal": 0.15,
+      "foil": 0.38
     },
     "OGN-098": {
       "normal": 0.15,
@@ -446,8 +446,8 @@
       "foil": 1.35
     },
     "OGN-100": {
-      "normal": 0.11,
-      "foil": 0.26
+      "normal": 0.1,
+      "foil": 0.25
     },
     "OGN-101": {
       "normal": 0.13,
@@ -455,43 +455,43 @@
     },
     "OGN-102": {
       "normal": 0.17,
-      "foil": 0.33
+      "foil": 0.34
     },
     "OGN-103": {
-      "normal": 0.29,
-      "foil": 0.59
+      "normal": 0.24,
+      "foil": 0.57
     },
     "OGN-104": {
-      "normal": 0.86,
-      "foil": 2.55
+      "normal": 0.65,
+      "foil": 2.63
     },
     "OGN-105": {
-      "normal": 0.81,
-      "foil": 3.9
+      "normal": 0.72,
+      "foil": 3.83
     },
     "OGN-106": {
-      "normal": 0.2,
-      "foil": 0.5
+      "normal": 0.21,
+      "foil": 0.51
     },
     "OGN-107": {
       "normal": null,
-      "foil": 0.23
+      "foil": 0.24
     },
     "OGN-108": {
       "normal": null,
-      "foil": 0.17
+      "foil": 0.16
     },
     "OGN-109": {
       "normal": null,
-      "foil": 0.35
+      "foil": 0.33
     },
     "OGN-110": {
       "normal": null,
-      "foil": 0.65
+      "foil": 0.58
     },
     "OGN-111": {
       "normal": null,
-      "foil": 0.42
+      "foil": 0.43
     },
     "OGN-112": {
       "normal": null,
@@ -507,50 +507,50 @@
     },
     "OGN-114": {
       "normal": null,
-      "foil": 0.8
+      "foil": 0.71
     },
     "OGN-115": {
       "normal": null,
-      "foil": 0.94
+      "foil": 0.98
     },
     "OGN-116": {
       "normal": null,
-      "foil": 20.72
+      "foil": 20.0
     },
     "OGN-117": {
       "normal": null,
-      "foil": 0.23
+      "foil": 0.22
     },
     "OGN-118": {
       "normal": null,
-      "foil": 0.22
+      "foil": 0.2
     },
     "OGN-119": {
       "normal": null,
-      "foil": 6.98
+      "foil": 6.95
     },
     "OGN-120": {
       "normal": null,
-      "foil": 14.47
+      "foil": 15.02
     },
     "OGN-121": {
       "normal": null,
-      "foil": 3.23
+      "foil": 3.36
     },
     "OGN-121a": {
       "normal": null,
-      "foil": 6.04
+      "foil": 6.14
     },
     "OGN-122": {
       "normal": null,
-      "foil": 41.6
+      "foil": 42.81
     },
     "OGN-123": {
       "normal": null,
-      "foil": 25.65
+      "foil": 25.57
     },
     "OGN-124": {
-      "normal": 0.1,
+      "normal": 0.11,
       "foil": 0.26
     },
     "OGN-125": {
@@ -563,66 +563,66 @@
     },
     "OGN-126a": {
       "normal": null,
-      "foil": 3.01
+      "foil": 3.15
     },
     "OGN-127": {
       "normal": 0.1,
       "foil": 0.21
     },
     "OGN-128": {
-      "normal": 0.23,
+      "normal": 0.22,
       "foil": 0.58
     },
     "OGN-129": {
-      "normal": 0.08,
-      "foil": 0.28
+      "normal": 0.09,
+      "foil": 0.27
     },
     "OGN-130": {
       "normal": 0.06,
       "foil": 0.14
     },
     "OGN-131": {
-      "normal": 0.06,
-      "foil": 0.29
+      "normal": 0.07,
+      "foil": 0.28
     },
     "OGN-132": {
-      "normal": 0.26,
-      "foil": 1.94
+      "normal": 0.24,
+      "foil": 1.84
     },
     "OGN-133": {
       "normal": 0.13,
       "foil": 0.26
     },
     "OGN-134": {
-      "normal": 0.13,
-      "foil": 0.75
+      "normal": 0.11,
+      "foil": 0.73
     },
     "OGN-135": {
-      "normal": 0.08,
+      "normal": 0.09,
       "foil": 0.22
     },
     "OGN-136": {
-      "normal": 0.18,
-      "foil": 1.42
+      "normal": 0.17,
+      "foil": 1.46
     },
     "OGN-137": {
-      "normal": 0.04,
+      "normal": 0.03,
       "foil": 0.15
     },
     "OGN-138": {
-      "normal": 0.36,
-      "foil": 3.67
+      "normal": 0.32,
+      "foil": 3.62
     },
     "OGN-139": {
-      "normal": 0.11,
-      "foil": 0.22
+      "normal": 0.1,
+      "foil": 0.21
     },
     "OGN-140": {
-      "normal": 0.22,
-      "foil": 0.96
+      "normal": 0.21,
+      "foil": 0.92
     },
     "OGN-141": {
-      "normal": 0.2,
+      "normal": 0.19,
       "foil": 0.5
     },
     "OGN-142": {
@@ -635,11 +635,11 @@
     },
     "OGN-144": {
       "normal": 0.14,
-      "foil": 0.38
+      "foil": 0.37
     },
     "OGN-145": {
-      "normal": 0.55,
-      "foil": 2.07
+      "normal": 0.54,
+      "foil": 2.06
     },
     "OGN-146": {
       "normal": 0.15,
@@ -647,15 +647,15 @@
     },
     "OGN-147": {
       "normal": 0.08,
-      "foil": 0.28
+      "foil": 0.29
     },
     "OGN-148": {
       "normal": null,
-      "foil": 0.38
+      "foil": 0.35
     },
     "OGN-149": {
       "normal": null,
-      "foil": 0.25
+      "foil": 0.23
     },
     "OGN-150": {
       "normal": null,
@@ -663,35 +663,35 @@
     },
     "OGN-151": {
       "normal": null,
-      "foil": 0.22
+      "foil": 0.23
     },
     "OGN-151a": {
       "normal": null,
-      "foil": 1.27
+      "foil": 1.23
     },
     "OGN-152": {
       "normal": null,
-      "foil": 0.13
+      "foil": 0.14
     },
     "OGN-153": {
       "normal": null,
-      "foil": 0.23
+      "foil": 0.22
     },
     "OGN-154": {
       "normal": null,
-      "foil": 0.31
+      "foil": 0.33
     },
     "OGN-155": {
       "normal": null,
-      "foil": 0.54
+      "foil": 0.57
     },
     "OGN-156": {
       "normal": null,
-      "foil": 13.14
+      "foil": 13.55
     },
     "OGN-157": {
       "normal": null,
-      "foil": 0.25
+      "foil": 0.21
     },
     "OGN-158": {
       "normal": null,
@@ -699,19 +699,19 @@
     },
     "OGN-158a": {
       "normal": null,
-      "foil": 0.93
+      "foil": 0.94
     },
     "OGN-159": {
       "normal": null,
-      "foil": 0.41
+      "foil": 0.38
     },
     "OGN-160": {
       "normal": null,
-      "foil": 42.03
+      "foil": 38.4
     },
     "OGN-161": {
       "normal": null,
-      "foil": 1.81
+      "foil": 1.73
     },
     "OGN-162": {
       "normal": null,
@@ -719,59 +719,59 @@
     },
     "OGN-162a": {
       "normal": null,
-      "foil": 13.48
+      "foil": 13.53
     },
     "OGN-163": {
       "normal": null,
-      "foil": 10.41
+      "foil": 10.54
     },
     "OGN-164": {
       "normal": null,
-      "foil": 7.02
+      "foil": 6.82
     },
     "OGN-164a": {
       "normal": null,
-      "foil": 7.99
+      "foil": 7.93
     },
     "OGN-165": {
-      "normal": 0.06,
+      "normal": 0.05,
       "foil": 0.23
     },
     "OGN-166": {
-      "normal": 0.13,
+      "normal": 0.12,
       "foil": null
     },
     "OGN-166a": {
       "normal": null,
-      "foil": 5.62
+      "foil": 5.82
     },
     "OGN-167": {
-      "normal": 0.12,
+      "normal": 0.11,
       "foil": 0.24
     },
     "OGN-168": {
       "normal": 0.09,
-      "foil": 0.2
+      "foil": 0.21
     },
     "OGN-169": {
-      "normal": 0.2,
-      "foil": 0.61
+      "normal": 0.23,
+      "foil": 0.62
     },
     "OGN-170": {
       "normal": 0.1,
-      "foil": 0.31
+      "foil": 0.29
     },
     "OGN-171": {
       "normal": 0.11,
       "foil": 0.27
     },
     "OGN-172": {
-      "normal": 0.28,
-      "foil": 1.27
+      "normal": 0.25,
+      "foil": 1.31
     },
     "OGN-173": {
-      "normal": 0.66,
-      "foil": 8.51
+      "normal": 0.69,
+      "foil": 8.31
     },
     "OGN-174": {
       "normal": 0.04,
@@ -782,11 +782,11 @@
       "foil": 0.17
     },
     "OGN-176": {
-      "normal": 0.17,
+      "normal": 0.16,
       "foil": 0.77
     },
     "OGN-177": {
-      "normal": 0.08,
+      "normal": 0.07,
       "foil": 0.2
     },
     "OGN-178": {
@@ -794,40 +794,40 @@
       "foil": 0.13
     },
     "OGN-179": {
-      "normal": 0.62,
-      "foil": 3.26
+      "normal": 0.56,
+      "foil": 3.1
     },
     "OGN-180": {
-      "normal": 0.12,
+      "normal": 0.11,
       "foil": 0.61
     },
     "OGN-181": {
-      "normal": 0.5,
-      "foil": 3.25
+      "normal": 0.52,
+      "foil": 3.15
     },
     "OGN-182": {
       "normal": 0.12,
       "foil": 0.64
     },
     "OGN-183": {
-      "normal": 0.63,
-      "foil": 6.99
+      "normal": 0.55,
+      "foil": 4.56
     },
     "OGN-184": {
-      "normal": 0.18,
+      "normal": 0.19,
       "foil": 0.62
     },
     "OGN-185": {
-      "normal": 0.22,
-      "foil": 4.89
+      "normal": 0.23,
+      "foil": 4.71
     },
     "OGN-186": {
-      "normal": 0.46,
-      "foil": 3.23
+      "normal": 0.48,
+      "foil": 3.14
     },
     "OGN-187": {
-      "normal": 0.14,
-      "foil": 0.32
+      "normal": 0.13,
+      "foil": 0.33
     },
     "OGN-188": {
       "normal": 0.1,
@@ -835,11 +835,11 @@
     },
     "OGN-189": {
       "normal": null,
-      "foil": 0.25
+      "foil": 0.24
     },
     "OGN-190": {
       "normal": null,
-      "foil": 0.3
+      "foil": 0.27
     },
     "OGN-191": {
       "normal": 0.14,
@@ -847,7 +847,7 @@
     },
     "OGN-192": {
       "normal": null,
-      "foil": 0.73
+      "foil": 0.72
     },
     "OGN-193": {
       "normal": null,
@@ -855,35 +855,35 @@
     },
     "OGN-193a": {
       "normal": null,
-      "foil": 5.74
+      "foil": 5.78
     },
     "OGN-194": {
       "normal": null,
-      "foil": 1.4
+      "foil": 1.16
     },
     "OGN-195": {
       "normal": null,
-      "foil": 1.74
+      "foil": 1.72
     },
     "OGN-196": {
       "normal": null,
-      "foil": 0.4
+      "foil": 0.39
     },
     "OGN-197": {
       "normal": null,
-      "foil": 0.5
+      "foil": 0.48
     },
     "OGN-197a": {
       "normal": null,
-      "foil": 13.29
+      "foil": 13.28
     },
     "OGN-198": {
       "normal": null,
-      "foil": 0.6
+      "foil": 0.68
     },
     "OGN-199": {
       "normal": null,
-      "foil": 1.82
+      "foil": 1.72
     },
     "OGN-200": {
       "normal": null,
@@ -891,71 +891,71 @@
     },
     "OGN-201": {
       "normal": null,
-      "foil": 16.81
+      "foil": 16.7
     },
     "OGN-202": {
       "normal": null,
-      "foil": 2.83
+      "foil": 2.87
     },
     "OGN-202a": {
       "normal": null,
-      "foil": 3.66
+      "foil": 3.71
     },
     "OGN-203": {
       "normal": null,
-      "foil": 1.0
+      "foil": 0.98
     },
     "OGN-204": {
       "normal": null,
-      "foil": 29.52
+      "foil": 30.55
     },
     "OGN-205": {
       "normal": null,
-      "foil": 1.48
+      "foil": 1.3
     },
     "OGN-205a": {
       "normal": null,
-      "foil": 2.91
+      "foil": 2.95
     },
     "OGN-206": {
       "normal": 0.04,
       "foil": 0.18
     },
     "OGN-207": {
-      "normal": 0.22,
-      "foil": 0.48
+      "normal": 0.21,
+      "foil": 0.46
     },
     "OGN-208": {
       "normal": 0.04,
       "foil": 0.22
     },
     "OGN-209": {
-      "normal": 0.48,
-      "foil": 1.68
+      "normal": 0.37,
+      "foil": 1.67
     },
     "OGN-210": {
       "normal": 0.1,
-      "foil": 0.26
+      "foil": 0.25
     },
     "OGN-211": {
       "normal": 0.14,
       "foil": 0.32
     },
     "OGN-212": {
-      "normal": 0.12,
-      "foil": 0.27
+      "normal": 0.13,
+      "foil": 0.3
     },
     "OGN-213": {
-      "normal": 1.0,
-      "foil": 2.49
+      "normal": 0.87,
+      "foil": 2.37
     },
     "OGN-214": {
-      "normal": 0.12,
+      "normal": 0.11,
       "foil": null
     },
     "OGN-214a": {
       "normal": null,
-      "foil": 5.17
+      "foil": 5.2
     },
     "OGN-215": {
       "normal": 0.04,
@@ -966,11 +966,11 @@
       "foil": 1.4
     },
     "OGN-217": {
-      "normal": 0.05,
+      "normal": 0.04,
       "foil": 0.22
     },
     "OGN-218": {
-      "normal": 0.15,
+      "normal": 0.17,
       "foil": 0.3
     },
     "OGN-219": {
@@ -979,30 +979,30 @@
     },
     "OGN-220": {
       "normal": 0.18,
-      "foil": 0.4
+      "foil": 0.41
     },
     "OGN-221": {
-      "normal": 0.6,
-      "foil": 1.52
+      "normal": 0.59,
+      "foil": 1.57
     },
     "OGN-222": {
       "normal": 0.1,
-      "foil": 0.33
+      "foil": 0.32
     },
     "OGN-223": {
       "normal": 0.1,
       "foil": 0.31
     },
     "OGN-224": {
-      "normal": 4.61,
-      "foil": 7.07
+      "normal": 4.37,
+      "foil": 7.24
     },
     "OGN-225": {
       "normal": 0.14,
       "foil": 0.3
     },
     "OGN-226": {
-      "normal": 0.24,
+      "normal": 0.25,
       "foil": 2.34
     },
     "OGN-227": {
@@ -1015,7 +1015,7 @@
     },
     "OGN-229": {
       "normal": 0.19,
-      "foil": 0.6
+      "foil": 0.59
     },
     "OGN-230": {
       "normal": null,
@@ -1023,31 +1023,31 @@
     },
     "OGN-231": {
       "normal": null,
-      "foil": 0.23
+      "foil": 0.2
     },
     "OGN-232": {
       "normal": null,
-      "foil": 1.38
+      "foil": 1.5
     },
     "OGN-233": {
       "normal": null,
-      "foil": 0.39
+      "foil": 0.41
     },
     "OGN-234": {
       "normal": null,
-      "foil": 2.92
+      "foil": 3.05
     },
     "OGN-235": {
       "normal": null,
-      "foil": 0.3
+      "foil": 0.33
     },
     "OGN-236": {
       "normal": null,
-      "foil": 2.69
+      "foil": 2.67
     },
     "OGN-237": {
       "normal": null,
-      "foil": 0.23
+      "foil": 0.22
     },
     "OGN-238": {
       "normal": null,
@@ -1055,11 +1055,11 @@
     },
     "OGN-238a": {
       "normal": null,
-      "foil": 3.26
+      "foil": 3.16
     },
     "OGN-239": {
       "normal": null,
-      "foil": 0.25
+      "foil": 0.29
     },
     "OGN-240": {
       "normal": null,
@@ -1067,79 +1067,79 @@
     },
     "OGN-240a": {
       "normal": null,
-      "foil": 1.25
+      "foil": 1.26
     },
     "OGN-241": {
       "normal": null,
-      "foil": 0.59
+      "foil": 0.55
     },
     "OGN-242": {
       "normal": null,
-      "foil": 62.37
+      "foil": 62.56
     },
     "OGN-243": {
       "normal": null,
-      "foil": 0.83
+      "foil": 0.81
     },
     "OGN-243a": {
       "normal": null,
-      "foil": 2.28
+      "foil": 2.32
     },
     "OGN-244": {
       "normal": null,
-      "foil": 3.98
+      "foil": 3.84
     },
     "OGN-245": {
       "normal": null,
-      "foil": 14.42
+      "foil": 14.6
     },
     "OGN-246": {
       "normal": null,
-      "foil": 2.13
+      "foil": 2.12
     },
     "OGN-246a": {
       "normal": null,
-      "foil": 2.89
+      "foil": 2.68
     },
     "OGN-247": {
       "normal": null,
-      "foil": 0.31
+      "foil": 0.29
     },
     "OGN-248": {
       "normal": null,
-      "foil": 2.84
+      "foil": 2.85
     },
     "OGN-249": {
       "normal": null,
-      "foil": 0.26
+      "foil": 0.24
     },
     "OGN-250": {
       "normal": null,
-      "foil": 1.81
+      "foil": 1.79
     },
     "OGN-251": {
       "normal": null,
-      "foil": 0.26
+      "foil": 0.24
     },
     "OGN-252": {
       "normal": null,
-      "foil": 3.7
+      "foil": 3.54
     },
     "OGN-253": {
       "normal": null,
-      "foil": 0.21
+      "foil": 0.19
     },
     "OGN-254": {
       "normal": null,
-      "foil": 0.68
+      "foil": 0.72
     },
     "OGN-255": {
       "normal": null,
-      "foil": 1.53
+      "foil": 1.83
     },
     "OGN-256": {
       "normal": null,
-      "foil": 3.05
+      "foil": 3.06
     },
     "OGN-257": {
       "normal": null,
@@ -1147,47 +1147,47 @@
     },
     "OGN-258": {
       "normal": null,
-      "foil": 0.97
+      "foil": 0.98
     },
     "OGN-259": {
       "normal": null,
-      "foil": 0.28
+      "foil": 0.26
     },
     "OGN-260": {
       "normal": null,
-      "foil": 1.62
+      "foil": 1.51
     },
     "OGN-261": {
       "normal": null,
-      "foil": 0.3
+      "foil": 0.31
     },
     "OGN-262": {
       "normal": null,
-      "foil": 4.84
+      "foil": 4.41
     },
     "OGN-263": {
       "normal": null,
-      "foil": 0.38
+      "foil": 0.37
     },
     "OGN-264": {
       "normal": null,
-      "foil": 3.77
+      "foil": 3.67
     },
     "OGN-265": {
       "normal": null,
-      "foil": 0.33
+      "foil": 0.34
     },
     "OGN-266": {
       "normal": null,
-      "foil": 1.22
+      "foil": 1.15
     },
     "OGN-267": {
       "normal": null,
-      "foil": 0.26
+      "foil": 0.25
     },
     "OGN-268": {
       "normal": null,
-      "foil": 2.68
+      "foil": 2.63
     },
     "OGN-269": {
       "normal": null,
@@ -1195,38 +1195,38 @@
     },
     "OGN-270": {
       "normal": null,
-      "foil": 4.43
+      "foil": 4.56
     },
     "OGN-275": {
-      "normal": 0.1,
-      "foil": 0.44
+      "normal": 0.09,
+      "foil": 0.43
     },
     "OGN-276": {
       "normal": 0.2,
-      "foil": 1.26
+      "foil": 1.24
     },
     "OGN-277": {
       "normal": 0.17,
-      "foil": 0.5
+      "foil": 0.49
     },
     "OGN-278": {
       "normal": 0.23,
-      "foil": 0.51
+      "foil": 0.49
     },
     "OGN-279": {
-      "normal": 0.16,
+      "normal": 0.15,
       "foil": 0.57
     },
     "OGN-280": {
-      "normal": 0.27,
-      "foil": 1.52
+      "normal": 0.25,
+      "foil": 1.48
     },
     "OGN-281": {
       "normal": 0.18,
-      "foil": 0.44
+      "foil": 0.43
     },
     "OGN-282": {
-      "normal": 0.2,
+      "normal": 0.19,
       "foil": 0.56
     },
     "OGN-283": {
@@ -1239,63 +1239,63 @@
     },
     "OGN-285": {
       "normal": 0.11,
-      "foil": 0.57
+      "foil": 0.58
     },
     "OGN-286": {
       "normal": 0.15,
       "foil": 0.36
     },
     "OGN-287": {
-      "normal": 0.19,
-      "foil": 1.5
+      "normal": 0.2,
+      "foil": 1.43
     },
     "OGN-288": {
-      "normal": 0.29,
+      "normal": 0.28,
       "foil": 0.87
     },
     "OGN-289": {
-      "normal": 0.28,
-      "foil": 3.43
+      "normal": 0.26,
+      "foil": 3.42
     },
     "OGN-290": {
-      "normal": 0.24,
-      "foil": 0.9
-    },
-    "OGN-291": {
-      "normal": 0.27,
+      "normal": 0.23,
       "foil": 0.88
     },
+    "OGN-291": {
+      "normal": 0.26,
+      "foil": 0.89
+    },
     "OGN-292": {
-      "normal": 0.15,
+      "normal": 0.16,
       "foil": 0.67
     },
     "OGN-293": {
-      "normal": 0.14,
-      "foil": 0.31
+      "normal": 0.13,
+      "foil": 0.3
     },
     "OGN-294": {
       "normal": 0.31,
-      "foil": 1.36
+      "foil": 1.37
     },
     "OGN-295": {
-      "normal": 0.3,
-      "foil": 2.04
+      "normal": 0.34,
+      "foil": 1.93
     },
     "OGN-296": {
-      "normal": 0.23,
-      "foil": 1.09
+      "normal": 0.22,
+      "foil": 1.1
     },
     "OGN-297": {
       "normal": 0.3,
-      "foil": 1.31
+      "foil": 1.36
     },
     "OGN-298": {
-      "normal": 0.22,
-      "foil": 3.44
+      "normal": 0.24,
+      "foil": 3.41
     },
     "OGN-299": {
       "normal": null,
-      "foil": 290.71
+      "foil": 285.27
     },
     "OGN-299s": {
       "normal": null,
@@ -1303,7 +1303,7 @@
     },
     "OGN-300": {
       "normal": null,
-      "foil": 69.36
+      "foil": 69.33
     },
     "OGN-300s": {
       "normal": null,
@@ -1311,7 +1311,7 @@
     },
     "OGN-301": {
       "normal": null,
-      "foil": 160.52
+      "foil": 159.0
     },
     "OGN-301s": {
       "normal": null,
@@ -1343,7 +1343,7 @@
     },
     "OGN-305": {
       "normal": null,
-      "foil": 79.7
+      "foil": 79.84
     },
     "OGN-305s": {
       "normal": null,
@@ -1351,7 +1351,7 @@
     },
     "OGN-306": {
       "normal": null,
-      "foil": 88.3
+      "foil": 88.03
     },
     "OGN-306s": {
       "normal": null,
@@ -1359,7 +1359,7 @@
     },
     "OGN-307": {
       "normal": null,
-      "foil": 161.11
+      "foil": 157.6
     },
     "OGN-307s": {
       "normal": null,
@@ -1367,7 +1367,7 @@
     },
     "OGN-308": {
       "normal": null,
-      "foil": 107.13
+      "foil": 106.27
     },
     "OGN-308s": {
       "normal": null,
@@ -1375,7 +1375,7 @@
     },
     "OGN-309": {
       "normal": null,
-      "foil": 181.16
+      "foil": 181.09
     },
     "OGN-309s": {
       "normal": null,
@@ -1383,7 +1383,7 @@
     },
     "OGN-310": {
       "normal": null,
-      "foil": 74.52
+      "foil": 74.47
     },
     "OGN-310s": {
       "normal": null,
@@ -1395,7 +1395,7 @@
     },
     "OGN-119a": {
       "normal": null,
-      "foil": 12.87
+      "foil": 12.96
     },
     "OGN-271": {
       "normal": 0.12,
@@ -1410,11 +1410,11 @@
       "foil": null
     },
     "OGN-274": {
-      "normal": 0.16,
+      "normal": 0.15,
       "foil": null
     },
     "OGS-001": {
-      "normal": 1.72,
+      "normal": 1.8,
       "foil": null
     },
     "OGS-002": {
@@ -1426,11 +1426,11 @@
       "foil": null
     },
     "OGS-004": {
-      "normal": 0.58,
+      "normal": 0.56,
       "foil": null
     },
     "OGS-005": {
-      "normal": 0.24,
+      "normal": 0.25,
       "foil": null
     },
     "OGS-006": {
@@ -1438,7 +1438,7 @@
       "foil": null
     },
     "OGS-007": {
-      "normal": 0.6,
+      "normal": 0.68,
       "foil": null
     },
     "OGS-008": {
@@ -1446,15 +1446,15 @@
       "foil": null
     },
     "OGS-009": {
-      "normal": 0.95,
+      "normal": 0.93,
       "foil": null
     },
     "OGS-010": {
-      "normal": 3.2,
+      "normal": 3.18,
       "foil": null
     },
     "OGS-011": {
-      "normal": 4.84,
+      "normal": 4.78,
       "foil": null
     },
     "OGS-012": {
@@ -1466,11 +1466,11 @@
       "foil": null
     },
     "OGS-014": {
-      "normal": 3.46,
+      "normal": 3.54,
       "foil": null
     },
     "OGS-015": {
-      "normal": 0.88,
+      "normal": 0.87,
       "foil": null
     },
     "OGS-016": {
@@ -1478,11 +1478,11 @@
       "foil": null
     },
     "OGS-017": {
-      "normal": 3.78,
+      "normal": 3.71,
       "foil": null
     },
     "OGS-018": {
-      "normal": 0.58,
+      "normal": 0.59,
       "foil": null
     },
     "OGS-019": {
@@ -1498,11 +1498,11 @@
       "foil": null
     },
     "OGS-022": {
-      "normal": 0.93,
+      "normal": 0.92,
       "foil": null
     },
     "OGS-023": {
-      "normal": 0.94,
+      "normal": 0.91,
       "foil": null
     },
     "OGS-024": {
@@ -1527,31 +1527,31 @@
     },
     "SFD-115": {
       "normal": null,
-      "foil": 0.33
+      "foil": 0.38
     },
     "SFD-186": {
       "normal": null,
-      "foil": 2.39
+      "foil": 2.46
     },
     "SFD-178": {
       "normal": null,
-      "foil": 5.07
+      "foil": 5.46
     },
     "SFD-059": {
       "normal": null,
-      "foil": 9.68
+      "foil": 10.37
     },
     "SFD-056": {
       "normal": null,
-      "foil": 0.37
+      "foil": 0.35
     },
     "SFD-051": {
       "normal": null,
-      "foil": 0.86
+      "foil": 0.95
     },
     "SFD-022": {
       "normal": null,
-      "foil": 0.43
+      "foil": 0.42
     },
     "SFD-033": {
       "normal": 0.1,
@@ -1559,7 +1559,7 @@
     },
     "SFD-203": {
       "normal": null,
-      "foil": 0.16
+      "foil": 0.18
     },
     "SFD-201": {
       "normal": null,
@@ -1567,23 +1567,23 @@
     },
     "SFD-197": {
       "normal": null,
-      "foil": 0.19
+      "foil": 0.2
     },
     "SFD-195": {
       "normal": null,
-      "foil": 0.26
+      "foil": 0.22
     },
     "SFD-185": {
       "normal": null,
       "foil": 0.16
     },
     "SFD-128": {
-      "normal": 0.13,
+      "normal": 0.14,
       "foil": 0.34
     },
     "SFD-113": {
       "normal": null,
-      "foil": 0.29
+      "foil": 0.28
     },
     "SFD-020": {
       "normal": null,
@@ -1591,31 +1591,31 @@
     },
     "SFD-034": {
       "normal": 0.09,
-      "foil": 0.21
+      "foil": 0.23
     },
     "SFD-227": {
       "normal": null,
-      "foil": 663.62
+      "foil": 666.62
     },
     "SFD-246": {
       "normal": null,
-      "foil": 170.76
+      "foil": 170.08
     },
     "SFD-249": {
       "normal": null,
-      "foil": 49.7
+      "foil": 49.69
     },
     "SFD-020a": {
       "normal": null,
-      "foil": 1.78
+      "foil": 1.83
     },
     "SFD-057": {
       "normal": null,
-      "foil": 23.27
+      "foil": 23.18
     },
     "SFD-057a": {
       "normal": null,
-      "foil": 26.6
+      "foil": 26.17
     },
     "SFD-095": {
       "normal": 0.11,
@@ -1623,11 +1623,11 @@
     },
     "SFD-111": {
       "normal": null,
-      "foil": 0.24
+      "foil": 0.22
     },
     "SFD-113a": {
       "normal": null,
-      "foil": 3.68
+      "foil": 3.64
     },
     "SFD-124": {
       "normal": 0.08,
@@ -1635,11 +1635,11 @@
     },
     "SFD-141": {
       "normal": null,
-      "foil": 0.23
+      "foil": 0.21
     },
     "SFD-141a": {
       "normal": null,
-      "foil": 1.74
+      "foil": 1.71
     },
     "SFD-227s": {
       "normal": null,
@@ -1651,23 +1651,23 @@
     },
     "SFD-182": {
       "normal": null,
-      "foil": 0.38
+      "foil": 0.39
     },
     "SFD-183": {
       "normal": null,
-      "foil": 0.19
+      "foil": 0.2
     },
     "SFD-184": {
       "normal": null,
-      "foil": 1.15
+      "foil": 1.28
     },
     "SFD-187": {
       "normal": null,
-      "foil": 0.14
+      "foil": 0.17
     },
     "SFD-188": {
       "normal": null,
-      "foil": 11.26
+      "foil": 11.75
     },
     "SFD-189": {
       "normal": null,
@@ -1679,11 +1679,11 @@
     },
     "SFD-196": {
       "normal": null,
-      "foil": 18.83
+      "foil": 19.9
     },
     "SFD-199": {
       "normal": null,
-      "foil": 0.15
+      "foil": 0.14
     },
     "SFD-205": {
       "normal": null,
@@ -1703,19 +1703,19 @@
     },
     "SFD-240": {
       "normal": null,
-      "foil": 49.49
+      "foil": 49.29
     },
     "SFD-244": {
       "normal": null,
-      "foil": 95.01
+      "foil": 94.45
     },
     "SFD-069": {
-      "normal": 0.14,
+      "normal": 0.13,
       "foil": 0.51
     },
     "SFD-223": {
       "normal": null,
-      "foil": 218.83
+      "foil": 217.65
     },
     "SFD-223s": {
       "normal": null,
@@ -1731,19 +1731,19 @@
     },
     "SFD-226": {
       "normal": null,
-      "foil": 66.15
+      "foil": 66.41
     },
     "SFD-231": {
       "normal": null,
       "foil": 45.25
     },
     "SFD-130": {
-      "normal": 0.15,
-      "foil": 0.27
+      "normal": 0.17,
+      "foil": 0.28
     },
     "SFD-155": {
-      "normal": 0.16,
-      "foil": 0.4
+      "normal": 0.15,
+      "foil": 0.42
     },
     "SFD-112": {
       "normal": null,
@@ -1770,24 +1770,24 @@
       "foil": 0.27
     },
     "SFD-122": {
-      "normal": 0.07,
-      "foil": 0.44
+      "normal": 0.05,
+      "foil": 0.45
     },
     "SFD-086": {
       "normal": null,
-      "foil": 0.2
+      "foil": 0.19
     },
     "SFD-169": {
       "normal": null,
-      "foil": 0.2
+      "foil": 0.19
     },
     "SFD-108": {
       "normal": 0.09,
       "foil": 0.25
     },
     "SFD-161": {
-      "normal": 0.35,
-      "foil": 1.66
+      "normal": 0.32,
+      "foil": 1.67
     },
     "SFD-116": {
       "normal": null,
@@ -1795,23 +1795,23 @@
     },
     "SFD-080": {
       "normal": null,
-      "foil": 3.55
+      "foil": 3.46
     },
     "SFD-119": {
       "normal": null,
-      "foil": 0.68
+      "foil": 0.69
     },
     "SFD-023": {
       "normal": null,
-      "foil": 0.29
+      "foil": 0.3
     },
     "SFD-024": {
       "normal": null,
-      "foil": 0.2
+      "foil": 0.18
     },
     "SFD-087": {
       "normal": null,
-      "foil": 5.5
+      "foil": 5.34
     },
     "SFD-107": {
       "normal": 0.05,
@@ -1819,63 +1819,63 @@
     },
     "SFD-119a": {
       "normal": null,
-      "foil": 1.25
+      "foil": 1.29
     },
     "SFD-126": {
       "normal": 0.04,
-      "foil": 0.22
+      "foil": 0.21
     },
     "SFD-133": {
-      "normal": 0.44,
-      "foil": 2.6
+      "normal": 0.47,
+      "foil": 2.53
     },
     "SFD-138": {
-      "normal": 0.19,
-      "foil": 0.5
+      "normal": 0.18,
+      "foil": 0.49
     },
     "SFD-145": {
       "normal": null,
-      "foil": 3.36
+      "foil": 3.49
     },
     "SFD-148": {
       "normal": null,
-      "foil": 1.1
+      "foil": 1.2
     },
     "SFD-148a": {
       "normal": null,
-      "foil": 1.73
+      "foil": 1.86
     },
     "SFD-150": {
       "normal": null,
-      "foil": 35.7
+      "foil": 34.9
     },
     "SFD-170": {
       "normal": null,
-      "foil": 0.25
+      "foil": 0.23
     },
     "SFD-170a": {
       "normal": null,
-      "foil": 0.86
+      "foil": 0.79
     },
     "SFD-180": {
       "normal": null,
-      "foil": 0.75
+      "foil": 0.7
     },
     "SFD-180a": {
       "normal": null,
-      "foil": 6.29
+      "foil": 6.49
     },
     "SFD-220": {
-      "normal": 0.13,
-      "foil": 0.38
+      "normal": 0.15,
+      "foil": 0.36
     },
     "SFD-242": {
       "normal": null,
-      "foil": 97.29
+      "foil": 96.85
     },
     "SFD-251": {
       "normal": null,
-      "foil": 113.15
+      "foil": 113.25
     },
     "SFD-010": {
       "normal": 0.06,
@@ -1883,19 +1883,19 @@
     },
     "SFD-118": {
       "normal": null,
-      "foil": 3.23
+      "foil": 3.35
     },
     "SFD-171": {
       "normal": null,
-      "foil": 0.22
+      "foil": 0.24
     },
     "SFD-001": {
       "normal": 0.1,
       "foil": 0.27
     },
     "SFD-048": {
-      "normal": 0.71,
-      "foil": 2.13
+      "normal": 0.99,
+      "foil": 2.08
     },
     "SFD-018": {
       "normal": 0.09,
@@ -1903,11 +1903,11 @@
     },
     "SFD-049": {
       "normal": null,
-      "foil": 0.28
+      "foil": 0.27
     },
     "SFD-214": {
       "normal": 0.11,
-      "foil": 0.34
+      "foil": 0.35
     },
     "SFD-146": {
       "normal": null,
@@ -1915,22 +1915,22 @@
     },
     "SFD-082": {
       "normal": null,
-      "foil": 0.24
+      "foil": 0.23
     },
     "SFD-039": {
       "normal": 0.03,
       "foil": 0.19
     },
     "SFD-007": {
-      "normal": 0.08,
+      "normal": 0.07,
       "foil": 0.22
     },
     "SFD-045": {
-      "normal": 1.21,
-      "foil": 3.62
+      "normal": 1.35,
+      "foil": 3.56
     },
     "SFD-215": {
-      "normal": 0.17,
+      "normal": 0.14,
       "foil": 0.52
     },
     "SFD-236": {
@@ -1939,7 +1939,7 @@
     },
     "SFD-236s": {
       "normal": null,
-      "foil": 393.89
+      "foil": 401.93
     },
     "SFD-067": {
       "normal": 0.05,
@@ -1947,22 +1947,22 @@
     },
     "SFD-021": {
       "normal": null,
-      "foil": 2.58
+      "foil": 2.6
     },
     "SFD-025": {
       "normal": null,
-      "foil": 0.61
+      "foil": 0.55
     },
     "SFD-027": {
       "normal": null,
-      "foil": 0.76
+      "foil": 0.93
     },
     "SFD-040": {
       "normal": 0.08,
       "foil": 0.25
     },
     "SFD-042": {
-      "normal": 0.37,
+      "normal": 0.38,
       "foil": 1.5
     },
     "SFD-050a": {
@@ -1975,15 +1975,15 @@
     },
     "SFD-054": {
       "normal": null,
-      "foil": 0.19
+      "foil": 0.18
     },
     "SFD-054a": {
       "normal": null,
-      "foil": 1.23
+      "foil": 1.19
     },
     "SFD-055": {
       "normal": null,
-      "foil": 0.15
+      "foil": 0.13
     },
     "SFD-058": {
       "normal": null,
@@ -1991,15 +1991,15 @@
     },
     "SFD-058a": {
       "normal": null,
-      "foil": 3.38
+      "foil": 3.26
     },
     "SFD-060": {
       "normal": null,
-      "foil": 2.08
+      "foil": 2.1
     },
     "SFD-062": {
-      "normal": 0.1,
-      "foil": 0.24
+      "normal": 0.09,
+      "foil": 0.26
     },
     "SFD-063": {
       "normal": 0.06,
@@ -2010,7 +2010,7 @@
       "foil": 0.28
     },
     "SFD-073": {
-      "normal": 0.09,
+      "normal": 0.1,
       "foil": 0.27
     },
     "SFD-075": {
@@ -2019,11 +2019,11 @@
     },
     "SFD-079": {
       "normal": null,
-      "foil": 0.23
+      "foil": 0.2
     },
     "SFD-082a": {
       "normal": null,
-      "foil": 1.28
+      "foil": 1.24
     },
     "SFD-084": {
       "normal": null,
@@ -2031,11 +2031,11 @@
     },
     "SFD-085": {
       "normal": null,
-      "foil": 0.27
+      "foil": 0.28
     },
     "SFD-085a": {
       "normal": null,
-      "foil": 1.92
+      "foil": 1.9
     },
     "SFD-100": {
       "normal": 0.05,
@@ -2043,7 +2043,7 @@
     },
     "SFD-243": {
       "normal": null,
-      "foil": 98.76
+      "foil": 98.55
     },
     "SFD-241": {
       "normal": null,
@@ -2055,19 +2055,19 @@
     },
     "SFD-233s": {
       "normal": null,
-      "foil": 578.12
+      "foil": 593.04
     },
     "SFD-179": {
       "normal": null,
-      "foil": 5.09
+      "foil": 6.4
     },
     "SFD-177": {
       "normal": null,
-      "foil": 9.3
+      "foil": 9.03
     },
     "SFD-177a": {
       "normal": null,
-      "foil": 8.98
+      "foil": 9.13
     },
     "SFD-171a": {
       "normal": null,
@@ -2075,11 +2075,11 @@
     },
     "SFD-147": {
       "normal": null,
-      "foil": 3.93
+      "foil": 4.02
     },
     "SFD-120": {
       "normal": null,
-      "foil": 0.4
+      "foil": 0.39
     },
     "SFD-120a": {
       "normal": null,
@@ -2087,23 +2087,23 @@
     },
     "SFD-117": {
       "normal": null,
-      "foil": 1.15
+      "foil": 1.17
     },
     "SFD-176": {
       "normal": null,
-      "foil": 0.66
+      "foil": 0.54
     },
     "SFD-175": {
       "normal": null,
-      "foil": 0.32
+      "foil": 0.28
     },
     "SFD-174": {
       "normal": null,
-      "foil": 0.26
+      "foil": 0.22
     },
     "SFD-173": {
       "normal": null,
-      "foil": 0.32
+      "foil": 0.22
     },
     "SFD-172": {
       "normal": null,
@@ -2111,38 +2111,38 @@
     },
     "SFD-142": {
       "normal": null,
-      "foil": 0.13
+      "foil": 0.14
     },
     "SFD-140": {
       "normal": null,
-      "foil": 4.59
+      "foil": 4.85
     },
     "SFD-114": {
       "normal": null,
       "foil": 0.18
     },
     "SFD-061": {
-      "normal": 0.06,
-      "foil": 0.3
+      "normal": 0.07,
+      "foil": 0.33
     },
     "SFD-213": {
-      "normal": 0.09,
-      "foil": 0.38
+      "normal": 0.08,
+      "foil": 0.37
     },
     "SFD-029": {
       "normal": null,
-      "foil": 7.61
+      "foil": 7.71
     },
     "SFD-168": {
-      "normal": 0.21,
-      "foil": 0.88
+      "normal": 0.17,
+      "foil": 0.92
     },
     "SFD-165": {
-      "normal": 0.26,
+      "normal": 0.25,
       "foil": 2.23
     },
     "SFD-164": {
-      "normal": 0.13,
+      "normal": 0.16,
       "foil": 0.42
     },
     "SFD-157": {
@@ -2150,16 +2150,16 @@
       "foil": 0.16
     },
     "SFD-151": {
-      "normal": 0.07,
-      "foil": 0.19
+      "normal": 0.08,
+      "foil": 0.2
     },
     "SFD-136": {
-      "normal": 0.72,
-      "foil": 3.77
+      "normal": 0.77,
+      "foil": 3.58
     },
     "SFD-097": {
-      "normal": 0.25,
-      "foil": 2.36
+      "normal": 0.22,
+      "foil": 2.44
     },
     "SFD-076": {
       "normal": 0.1,
@@ -2170,15 +2170,15 @@
       "foil": 0.81
     },
     "SFD-032": {
-      "normal": 0.14,
+      "normal": 0.15,
       "foil": 0.45
     },
     "SFD-035": {
-      "normal": 0.08,
+      "normal": 0.07,
       "foil": 0.18
     },
     "SFD-036": {
-      "normal": 0.19,
+      "normal": 0.18,
       "foil": 0.74
     },
     "SFD-041": {
@@ -2191,39 +2191,39 @@
     },
     "SFD-053": {
       "normal": null,
-      "foil": 0.42
+      "foil": 0.44
     },
     "SFD-105": {
-      "normal": 0.43,
-      "foil": 2.61
+      "normal": 0.4,
+      "foil": 2.62
     },
     "SFD-081": {
       "normal": null,
-      "foil": 0.25
+      "foil": 0.24
     },
     "SFD-083": {
       "normal": null,
-      "foil": 0.17
+      "foil": 0.16
     },
     "SFD-089": {
       "normal": null,
-      "foil": 0.66
+      "foil": 0.69
     },
     "SFD-089a": {
       "normal": null,
-      "foil": 2.07
+      "foil": 2.05
     },
     "SFD-090": {
       "normal": null,
-      "foil": 7.73
+      "foil": 7.93
     },
     "SFD-110": {
       "normal": null,
-      "foil": 0.27
+      "foil": 0.24
     },
     "SFD-110a": {
       "normal": null,
-      "foil": 3.07
+      "foil": 3.05
     },
     "SFD-139": {
       "normal": null,
@@ -2231,15 +2231,15 @@
     },
     "SFD-143": {
       "normal": null,
-      "foil": 0.19
+      "foil": 0.18
     },
     "SFD-143a": {
       "normal": null,
-      "foil": 1.0
+      "foil": 1.06
     },
     "SFD-028a": {
       "normal": null,
-      "foil": 1.3
+      "foil": 1.31
     },
     "SFD-028": {
       "normal": null,
@@ -2247,7 +2247,7 @@
     },
     "SFD-029a": {
       "normal": null,
-      "foil": 9.0
+      "foil": 8.8
     },
     "SFD-250": {
       "normal": null,
@@ -2259,11 +2259,11 @@
     },
     "SFD-247": {
       "normal": null,
-      "foil": 127.1
+      "foil": 126.76
     },
     "SFD-245": {
       "normal": null,
-      "foil": 61.12
+      "foil": 61.11
     },
     "SFD-239s": {
       "normal": null,
@@ -2275,11 +2275,11 @@
     },
     "SFD-238": {
       "normal": null,
-      "foil": 57.0
+      "foil": 56.08
     },
     "SFD-229": {
       "normal": null,
-      "foil": 50.55
+      "foil": 50.35
     },
     "SFD-224s": {
       "normal": null,
@@ -2287,11 +2287,11 @@
     },
     "SFD-224": {
       "normal": null,
-      "foil": 78.64
+      "foil": 78.82
     },
     "SFD-222": {
       "normal": null,
-      "foil": 57.87
+      "foil": 56.04
     },
     "SFD-002": {
       "normal": 0.04,
@@ -2299,7 +2299,7 @@
     },
     "SFD-190": {
       "normal": null,
-      "foil": 0.53
+      "foil": 0.48
     },
     "SFD-003": {
       "normal": 0.11,
@@ -2310,8 +2310,8 @@
       "foil": 0.23
     },
     "SFD-005": {
-      "normal": 0.07,
-      "foil": 0.24
+      "normal": 0.09,
+      "foil": 0.23
     },
     "SFD-006": {
       "normal": 0.06,
@@ -2319,7 +2319,7 @@
     },
     "SFD-191": {
       "normal": null,
-      "foil": 0.37
+      "foil": 0.31
     },
     "SFD-008": {
       "normal": 0.05,
@@ -2327,7 +2327,7 @@
     },
     "SFD-192": {
       "normal": null,
-      "foil": 0.51
+      "foil": 0.47
     },
     "SFD-009": {
       "normal": 0.07,
@@ -2347,10 +2347,10 @@
     },
     "SFD-014": {
       "normal": 0.11,
-      "foil": 0.3
+      "foil": 0.29
     },
     "SFD-015": {
-      "normal": 0.09,
+      "normal": 0.1,
       "foil": 0.22
     },
     "SFD-016": {
@@ -2359,19 +2359,19 @@
     },
     "SFD-194": {
       "normal": null,
-      "foil": 1.25
+      "foil": 1.22
     },
     "SFD-017": {
-      "normal": 0.13,
+      "normal": 0.12,
       "foil": 0.27
     },
     "SFD-019": {
       "normal": null,
-      "foil": 0.17
+      "foil": 0.16
     },
     "SFD-198": {
       "normal": null,
-      "foil": 26.73
+      "foil": 27.64
     },
     "SFD-026": {
       "normal": null,
@@ -2379,15 +2379,15 @@
     },
     "SFD-026a": {
       "normal": null,
-      "foil": 1.09
+      "foil": 1.22
     },
     "SFD-200": {
       "normal": null,
-      "foil": 0.92
+      "foil": 0.84
     },
     "SFD-030": {
       "normal": null,
-      "foil": 4.23
+      "foil": 4.25
     },
     "SFD-121": {
       "normal": 0.06,
@@ -2395,23 +2395,23 @@
     },
     "SFD-202": {
       "normal": null,
-      "foil": 1.18
+      "foil": 1.16
     },
     "SFD-144": {
       "normal": null,
-      "foil": 0.2
+      "foil": 0.18
     },
     "SFD-204": {
       "normal": null,
-      "foil": 0.65
+      "foil": 0.6
     },
     "SFD-149": {
       "normal": null,
-      "foil": 8.62
+      "foil": 9.8
     },
     "SFD-149a": {
       "normal": null,
-      "foil": 8.66
+      "foil": 8.94
     },
     "SFD-123": {
       "normal": 0.05,
@@ -2419,26 +2419,26 @@
     },
     "SFD-206": {
       "normal": null,
-      "foil": 4.35
+      "foil": 4.36
     },
     "SFD-125": {
       "normal": 0.07,
-      "foil": 0.23
+      "foil": 0.22
     },
     "SFD-031": {
-      "normal": 0.09,
-      "foil": 0.33
+      "normal": 0.08,
+      "foil": 0.34
     },
     "SFD-127": {
       "normal": 0.02,
       "foil": 0.14
     },
     "SFD-037": {
-      "normal": 0.06,
+      "normal": 0.07,
       "foil": 0.15
     },
     "SFD-129": {
-      "normal": 0.07,
+      "normal": 0.06,
       "foil": 0.14
     },
     "SFD-131": {
@@ -2454,43 +2454,43 @@
       "foil": 0.28
     },
     "SFD-134": {
-      "normal": 0.11,
-      "foil": 0.39
+      "normal": 0.1,
+      "foil": 0.35
     },
     "SFD-135": {
       "normal": 0.09,
       "foil": 0.35
     },
     "SFD-043": {
-      "normal": 0.34,
-      "foil": 1.21
+      "normal": 0.31,
+      "foil": 1.22
     },
     "SFD-137": {
       "normal": 0.08,
       "foil": 0.29
     },
     "SFD-046": {
-      "normal": 0.18,
-      "foil": 0.44
+      "normal": 0.17,
+      "foil": 0.47
     },
     "SFD-047": {
-      "normal": 0.09,
+      "normal": 0.06,
       "foil": 0.17
     },
     "SFD-052": {
       "normal": null,
-      "foil": 0.28
+      "foil": 0.29
     },
     "SFD-152": {
       "normal": 0.04,
       "foil": 0.19
     },
     "SFD-153": {
-      "normal": 0.1,
+      "normal": 0.11,
       "foil": 0.27
     },
     "SFD-154": {
-      "normal": 0.1,
+      "normal": 0.09,
       "foil": 0.23
     },
     "SFD-156": {
@@ -2498,19 +2498,19 @@
       "foil": 0.17
     },
     "SFD-064": {
-      "normal": 0.1,
+      "normal": 0.08,
       "foil": 0.22
     },
     "SFD-065": {
       "normal": 0.07,
-      "foil": 0.19
+      "foil": 0.22
     },
     "SFD-158": {
       "normal": 0.05,
       "foil": 0.17
     },
     "SFD-066": {
-      "normal": 0.06,
+      "normal": 0.08,
       "foil": 0.27
     },
     "SFD-068": {
@@ -2522,32 +2522,32 @@
       "foil": 0.21
     },
     "SFD-070": {
-      "normal": 0.18,
-      "foil": 0.72
+      "normal": 0.16,
+      "foil": 0.74
     },
     "SFD-160": {
-      "normal": 0.08,
+      "normal": 0.07,
       "foil": 0.2
     },
     "SFD-072": {
-      "normal": 0.16,
+      "normal": 0.15,
       "foil": 0.33
     },
     "SFD-074": {
-      "normal": 0.25,
-      "foil": 1.19
+      "normal": 0.27,
+      "foil": 1.2
     },
     "SFD-162": {
-      "normal": 0.16,
-      "foil": 0.31
+      "normal": 0.15,
+      "foil": 0.33
     },
     "SFD-078": {
       "normal": 0.11,
       "foil": 0.22
     },
     "SFD-163": {
-      "normal": 0.42,
-      "foil": 2.23
+      "normal": 0.36,
+      "foil": 2.21
     },
     "SFD-166": {
       "normal": 0.18,
@@ -2555,19 +2555,19 @@
     },
     "SFD-088": {
       "normal": null,
-      "foil": 1.02
+      "foil": 0.94
     },
     "SFD-088a": {
       "normal": null,
-      "foil": 2.87
+      "foil": 2.9
     },
     "SFD-092": {
       "normal": 0.04,
       "foil": 0.12
     },
     "SFD-207": {
-      "normal": 0.17,
-      "foil": 0.35
+      "normal": 0.15,
+      "foil": 0.37
     },
     "SFD-208": {
       "normal": 0.09,
@@ -2578,39 +2578,39 @@
       "foil": 0.35
     },
     "SFD-210": {
-      "normal": 0.16,
+      "normal": 0.15,
       "foil": 0.46
     },
     "SFD-211": {
-      "normal": 0.08,
+      "normal": 0.07,
       "foil": 0.32
     },
     "SFD-212": {
-      "normal": 0.09,
-      "foil": 0.35
+      "normal": 0.11,
+      "foil": 0.36
     },
     "SFD-216": {
-      "normal": 0.17,
-      "foil": 0.72
+      "normal": 0.16,
+      "foil": 0.71
     },
     "SFD-217": {
-      "normal": 0.2,
-      "foil": 0.54
+      "normal": 0.16,
+      "foil": 0.59
     },
     "SFD-218": {
-      "normal": 0.18,
-      "foil": 0.8
+      "normal": 0.15,
+      "foil": 0.75
     },
     "SFD-219": {
-      "normal": 0.14,
+      "normal": 0.13,
       "foil": 0.38
     },
     "SFD-221": {
-      "normal": 0.1,
+      "normal": 0.11,
       "foil": 0.44
     },
     "SFD-094": {
-      "normal": 0.08,
+      "normal": 0.09,
       "foil": 0.21
     },
     "SFD-096": {
@@ -2618,28 +2618,28 @@
       "foil": 0.15
     },
     "SFD-098": {
-      "normal": 0.08,
+      "normal": 0.09,
       "foil": 0.24
     },
     "SFD-101": {
-      "normal": 0.11,
+      "normal": 0.1,
       "foil": 0.34
     },
     "SFD-102": {
       "normal": 0.1,
-      "foil": 0.25
+      "foil": 0.29
     },
     "SFD-104": {
       "normal": 0.06,
       "foil": 0.21
     },
     "SFD-106": {
-      "normal": 0.16,
+      "normal": 0.15,
       "foil": 0.42
     },
     "SFD-109": {
       "normal": null,
-      "foil": 0.88
+      "foil": 0.75
     },
     "SFD-237s": {
       "normal": null,
@@ -2647,7 +2647,7 @@
     },
     "SFD-237": {
       "normal": null,
-      "foil": 48.91
+      "foil": 48.96
     },
     "SFD-235": {
       "normal": null,
@@ -2667,14 +2667,14 @@
     },
     "SFD-228": {
       "normal": null,
-      "foil": 71.14
+      "foil": 71.31
     },
     "SFD-228s": {
       "normal": null,
       "foil": 449.62
     },
     "SFD-R04": {
-      "normal": 0.15,
+      "normal": 0.14,
       "foil": null
     },
     "SFD-R02": {
@@ -2690,11 +2690,11 @@
       "foil": null
     },
     "SFD-R06": {
-      "normal": 0.15,
+      "normal": 0.13,
       "foil": null
     },
     "SFD-R03": {
-      "normal": 0.14,
+      "normal": 0.13,
       "foil": null
     },
     "SFD-T01": {
@@ -2702,7 +2702,7 @@
       "foil": null
     },
     "SFD-T02": {
-      "normal": 0.45,
+      "normal": 0.39,
       "foil": null
     },
     "SFD-T03": {
@@ -2711,35 +2711,35 @@
     },
     "SFD-R01a": {
       "normal": null,
-      "foil": 2.24
+      "foil": 2.37
     },
     "SFD-R02a": {
       "normal": null,
-      "foil": 4.98
+      "foil": 5.3
     },
     "SFD-R03a": {
       "normal": null,
-      "foil": 5.25
+      "foil": 5.26
     },
     "SFD-R04a": {
       "normal": null,
-      "foil": 2.82
+      "foil": 2.83
     },
     "SFD-R05a": {
       "normal": null,
-      "foil": 4.69
+      "foil": 5.0
     },
     "SFD-R06a": {
       "normal": null,
-      "foil": 4.66
+      "foil": 4.7
     },
     "SFD-R01b": {
       "normal": null,
-      "foil": 11.28
+      "foil": 11.42
     },
     "SFD-R02b": {
       "normal": null,
-      "foil": 17.06
+      "foil": 17.23
     },
     "SFD-R03b": {
       "normal": null,
@@ -2747,19 +2747,19 @@
     },
     "SFD-R04b": {
       "normal": null,
-      "foil": 5.87
+      "foil": 5.75
     },
     "SFD-R05b": {
       "normal": null,
-      "foil": 17.0
+      "foil": 17.02
     },
     "SFD-R06b": {
       "normal": null,
-      "foil": 8.25
+      "foil": 8.08
     },
     "UNL-147": {
       "normal": null,
-      "foil": 22.36
+      "foil": 22.76
     },
     "UNL-189": {
       "normal": null,
@@ -2771,63 +2771,63 @@
     },
     "UNL-201": {
       "normal": null,
-      "foil": 0.18
+      "foil": 0.17
     },
     "UNL-195": {
       "normal": null,
-      "foil": 0.18
+      "foil": 0.17
     },
     "UNL-102": {
       "normal": 0.04,
       "foil": 0.13
     },
     "UNL-036": {
-      "normal": 0.11,
+      "normal": 0.09,
       "foil": 0.27
     },
     "UNL-060": {
       "normal": null,
-      "foil": 19.38
+      "foil": 19.15
     },
     "UNL-074": {
-      "normal": 0.11,
+      "normal": 0.12,
       "foil": 0.48
     },
     "UNL-061": {
-      "normal": 0.06,
+      "normal": 0.07,
       "foil": 0.23
     },
     "UNL-131": {
-      "normal": 0.46,
-      "foil": 3.87
+      "normal": 0.51,
+      "foil": 3.93
     },
     "UNL-190": {
       "normal": null,
-      "foil": 2.13
+      "foil": 2.07
     },
     "UNL-177": {
       "normal": null,
-      "foil": 1.41
+      "foil": 1.38
     },
     "UNL-059": {
       "normal": null,
-      "foil": 0.98
+      "foil": 0.99
     },
     "UNL-094": {
-      "normal": 0.09,
+      "normal": 0.08,
       "foil": 0.21
     },
     "UNL-114": {
       "normal": null,
-      "foil": 3.28
+      "foil": 3.11
     },
     "UNL-199": {
       "normal": null,
-      "foil": 0.21
+      "foil": 0.22
     },
     "UNL-200": {
       "normal": null,
-      "foil": 19.6
+      "foil": 19.09
     },
     "UNL-236s": {
       "normal": null,
@@ -2835,31 +2835,31 @@
     },
     "UNL-147a": {
       "normal": null,
-      "foil": 28.57
+      "foil": 28.81
     },
     "UNL-047": {
       "normal": 0.07,
       "foil": 0.28
     },
     "UNL-002": {
-      "normal": 0.14,
-      "foil": 0.41
+      "normal": 0.12,
+      "foil": 0.42
     },
     "UNL-193": {
       "normal": null,
-      "foil": 0.22
+      "foil": 0.21
     },
     "UNL-120": {
       "normal": null,
-      "foil": 40.66
+      "foil": 38.39
     },
     "UNL-120a": {
       "normal": null,
-      "foil": 42.53
+      "foil": 42.29
     },
     "UNL-080": {
       "normal": null,
-      "foil": 3.29
+      "foil": 3.18
     },
     "UNL-187": {
       "normal": null,
@@ -2867,35 +2867,35 @@
     },
     "UNL-090": {
       "normal": null,
-      "foil": 4.46
+      "foil": 4.45
     },
     "UNL-182": {
       "normal": null,
-      "foil": 1.22
+      "foil": 1.29
     },
     "UNL-142": {
       "normal": null,
-      "foil": 0.4
+      "foil": 0.41
     },
     "UNL-173": {
       "normal": null,
-      "foil": 5.35
+      "foil": 5.61
     },
     "UNL-007": {
       "normal": 0.07,
-      "foil": 0.19
+      "foil": 0.2
     },
     "UNL-089": {
       "normal": null,
-      "foil": 1.76
+      "foil": 1.8
     },
     "UNL-089a": {
       "normal": null,
-      "foil": 4.13
+      "foil": 4.14
     },
     "UNL-050": {
       "normal": null,
-      "foil": 0.18
+      "foil": 0.16
     },
     "UNL-096": {
       "normal": 0.06,
@@ -2903,11 +2903,11 @@
     },
     "UNL-192": {
       "normal": null,
-      "foil": 3.02
+      "foil": 3.04
     },
     "UNL-115": {
       "normal": null,
-      "foil": 0.25
+      "foil": 0.22
     },
     "UNL-009": {
       "normal": 0.07,
@@ -2919,35 +2919,35 @@
     },
     "UNL-022": {
       "normal": null,
-      "foil": 0.33
+      "foil": 0.3
     },
     "UNL-022a": {
       "normal": null,
-      "foil": 7.13
+      "foil": 7.11
     },
     "UNL-059a": {
       "normal": null,
-      "foil": 3.32
+      "foil": 3.28
     },
     "UNL-060a": {
       "normal": null,
-      "foil": 22.88
+      "foil": 22.81
     },
     "UNL-122": {
       "normal": 0.05,
       "foil": 0.09
     },
     "UNL-135": {
-      "normal": 0.1,
+      "normal": 0.09,
       "foil": 0.28
     },
     "UNL-149": {
       "normal": null,
-      "foil": 0.94
+      "foil": 0.95
     },
     "UNL-149a": {
       "normal": null,
-      "foil": 6.19
+      "foil": 6.22
     },
     "UNL-169": {
       "normal": null,
@@ -2955,19 +2955,19 @@
     },
     "UNL-170": {
       "normal": null,
-      "foil": 0.19
+      "foil": 0.21
     },
     "UNL-177a": {
       "normal": null,
-      "foil": 2.64
+      "foil": 2.67
     },
     "UNL-181": {
       "normal": null,
-      "foil": 0.16
+      "foil": 0.15
     },
     "UNL-230": {
       "normal": null,
-      "foil": 79.05
+      "foil": 78.8
     },
     "UNL-230s": {
       "normal": null,
@@ -2975,7 +2975,7 @@
     },
     "UNL-233": {
       "normal": null,
-      "foil": 65.17
+      "foil": 65.15
     },
     "UNL-233s": {
       "normal": null,
@@ -2995,23 +2995,23 @@
     },
     "UNL-145": {
       "normal": null,
-      "foil": 0.68
+      "foil": 0.87
     },
     "UNL-027": {
       "normal": null,
-      "foil": 0.53
+      "foil": 0.55
     },
     "UNL-051": {
       "normal": null,
-      "foil": 0.2
+      "foil": 0.18
     },
     "UNL-079": {
       "normal": null,
-      "foil": 0.19
+      "foil": 0.18
     },
     "UNL-237": {
       "normal": null,
-      "foil": 43.92
+      "foil": 44.3
     },
     "UNL-237s": {
       "normal": null,
@@ -3019,11 +3019,11 @@
     },
     "UNL-203": {
       "normal": null,
-      "foil": 0.17
+      "foil": 0.15
     },
     "UNL-198": {
       "normal": null,
-      "foil": 11.47
+      "foil": 11.33
     },
     "UNL-011": {
       "normal": 0.09,
@@ -3031,23 +3031,23 @@
     },
     "UNL-056": {
       "normal": null,
-      "foil": 0.22
+      "foil": 0.2
     },
     "UNL-179": {
       "normal": null,
-      "foil": 10.51
+      "foil": 11.44
     },
     "UNL-003": {
       "normal": 0.08,
-      "foil": 0.25
+      "foil": 0.23
     },
     "UNL-030": {
       "normal": null,
-      "foil": 0.37
+      "foil": 0.36
     },
     "UNL-030a": {
       "normal": null,
-      "foil": 5.09
+      "foil": 5.12
     },
     "UNL-037": {
       "normal": 0.05,
@@ -3055,27 +3055,27 @@
     },
     "UNL-058a": {
       "normal": null,
-      "foil": 7.51
+      "foil": 7.71
     },
     "UNL-058": {
       "normal": null,
       "foil": 0.59
     },
     "UNL-065": {
-      "normal": 0.05,
+      "normal": 0.06,
       "foil": 0.14
     },
     "UNL-072": {
-      "normal": 0.11,
+      "normal": 0.13,
       "foil": 0.24
     },
     "UNL-087": {
       "normal": null,
-      "foil": 3.26
+      "foil": 3.18
     },
     "UNL-087a": {
       "normal": null,
-      "foil": 5.02
+      "foil": 5.04
     },
     "UNL-051a": {
       "normal": null,
@@ -3083,11 +3083,11 @@
     },
     "UNL-088": {
       "normal": null,
-      "foil": 3.68
+      "foil": 3.77
     },
     "UNL-090a": {
       "normal": null,
-      "foil": 8.34
+      "foil": 8.41
     },
     "UNL-092": {
       "normal": 0.04,
@@ -3103,19 +3103,19 @@
     },
     "UNL-113a": {
       "normal": null,
-      "foil": 2.88
+      "foil": 2.89
     },
     "UNL-119": {
       "normal": null,
-      "foil": 0.52
+      "foil": 0.55
     },
     "UNL-119a": {
       "normal": null,
-      "foil": 2.12
+      "foil": 2.07
     },
     "UNL-128": {
-      "normal": 0.22,
-      "foil": 0.87
+      "normal": 0.23,
+      "foil": 0.81
     },
     "UNL-130": {
       "normal": 0.03,
@@ -3126,16 +3126,16 @@
       "foil": 0.34
     },
     "UNL-138": {
-      "normal": 0.18,
-      "foil": 0.75
+      "normal": 0.2,
+      "foil": 0.76
     },
     "UNL-145a": {
       "normal": null,
-      "foil": 9.49
+      "foil": 9.81
     },
     "UNL-148": {
       "normal": null,
-      "foil": 0.57
+      "foil": 0.55
     },
     "UNL-154": {
       "normal": 0.05,
@@ -3154,7 +3154,7 @@
       "foil": 0.29
     },
     "UNL-166": {
-      "normal": 0.07,
+      "normal": 0.06,
       "foil": 0.17
     },
     "UNL-183": {
@@ -3163,7 +3163,7 @@
     },
     "UNL-185": {
       "normal": null,
-      "foil": 0.2
+      "foil": 0.19
     },
     "UNL-191": {
       "normal": null,
@@ -3171,7 +3171,7 @@
     },
     "UNL-204": {
       "normal": null,
-      "foil": 0.58
+      "foil": 0.55
     },
     "UNL-220": {
       "normal": null,
@@ -3179,11 +3179,11 @@
     },
     "UNL-221": {
       "normal": null,
-      "foil": 359.99
+      "foil": 361.73
     },
     "UNL-222": {
       "normal": null,
-      "foil": 199.84
+      "foil": 199.32
     },
     "UNL-223": {
       "normal": null,
@@ -3191,7 +3191,7 @@
     },
     "UNL-224": {
       "normal": null,
-      "foil": 188.09
+      "foil": 188.61
     },
     "UNL-225": {
       "normal": null,
@@ -3206,12 +3206,12 @@
       "foil": 0.34
     },
     "UNL-042": {
-      "normal": 0.24,
-      "foil": 1.62
+      "normal": 0.29,
+      "foil": 1.5
     },
     "UNL-046": {
-      "normal": 0.18,
-      "foil": 0.35
+      "normal": 0.17,
+      "foil": 0.33
     },
     "UNL-008": {
       "normal": 0.03,
@@ -3223,35 +3223,35 @@
     },
     "UNL-073": {
       "normal": 0.29,
-      "foil": 5.27
+      "foil": 5.37
     },
     "UNL-118a": {
       "normal": null,
-      "foil": 32.08
+      "foil": 32.01
     },
     "UNL-188": {
       "normal": null,
-      "foil": 0.54
+      "foil": 0.56
     },
     "UNL-019": {
       "normal": null,
-      "foil": 0.35
+      "foil": 0.33
     },
     "UNL-213": {
       "normal": 0.07,
       "foil": 0.23
     },
     "UNL-219": {
-      "normal": 0.05,
-      "foil": 0.22
+      "normal": 0.06,
+      "foil": 0.25
     },
     "UNL-214": {
-      "normal": 0.06,
+      "normal": 0.07,
       "foil": 0.26
     },
     "UNL-212": {
-      "normal": 0.09,
-      "foil": 0.28
+      "normal": 0.08,
+      "foil": 0.27
     },
     "UNL-006": {
       "normal": 0.06,
@@ -3259,11 +3259,11 @@
     },
     "UNL-028": {
       "normal": null,
-      "foil": 14.59
+      "foil": 14.57
     },
     "UNL-028a": {
       "normal": null,
-      "foil": 18.63
+      "foil": 18.4
     },
     "UNL-031": {
       "normal": 0.05,
@@ -3275,23 +3275,23 @@
     },
     "UNL-118": {
       "normal": null,
-      "foil": 25.85
+      "foil": 25.86
     },
     "UNL-134": {
-      "normal": 0.2,
+      "normal": 0.18,
       "foil": 1.43
     },
     "UNL-209": {
-      "normal": 0.11,
-      "foil": 0.31
+      "normal": 0.08,
+      "foil": 0.33
     },
     "UNL-210": {
-      "normal": 0.15,
-      "foil": 0.38
+      "normal": 0.12,
+      "foil": 0.41
     },
     "UNL-211": {
       "normal": 0.08,
-      "foil": 0.18
+      "foil": 0.16
     },
     "UNL-216": {
       "normal": 0.06,
@@ -3299,19 +3299,19 @@
     },
     "UNL-171": {
       "normal": null,
-      "foil": 0.26
+      "foil": 0.25
     },
     "UNL-143": {
       "normal": null,
-      "foil": 0.31
+      "foil": 0.27
     },
     "UNL-179a": {
       "normal": null,
-      "foil": 15.88
+      "foil": 16.21
     },
     "UNL-086": {
       "normal": null,
-      "foil": 0.2
+      "foil": 0.19
     },
     "UNL-217": {
       "normal": 0.06,
@@ -3322,15 +3322,15 @@
       "foil": 0.25
     },
     "UNL-039": {
-      "normal": 0.08,
+      "normal": 0.07,
       "foil": 0.26
     },
     "UNL-034": {
-      "normal": 0.05,
-      "foil": 0.17
+      "normal": 0.06,
+      "foil": 0.18
     },
     "UNL-091": {
-      "normal": 0.06,
+      "normal": 0.07,
       "foil": 0.21
     },
     "UNL-109": {
@@ -3343,11 +3343,11 @@
     },
     "UNL-184": {
       "normal": null,
-      "foil": 9.66
+      "foil": 10.45
     },
     "UNL-165": {
-      "normal": 0.4,
-      "foil": 1.74
+      "normal": 0.39,
+      "foil": 1.77
     },
     "UNL-024": {
       "normal": null,
@@ -3362,16 +3362,16 @@
       "foil": 0.21
     },
     "UNL-070": {
-      "normal": 0.15,
-      "foil": 0.89
+      "normal": 0.13,
+      "foil": 0.84
     },
     "UNL-143a": {
       "normal": null,
-      "foil": 7.56
+      "foil": 7.63
     },
     "UNL-180": {
       "normal": null,
-      "foil": 8.13
+      "foil": 8.26
     },
     "UNL-208": {
       "normal": 0.1,
@@ -3379,19 +3379,19 @@
     },
     "UNL-029": {
       "normal": null,
-      "foil": 0.96
+      "foil": 1.03
     },
     "UNL-053": {
       "normal": null,
-      "foil": 4.49
+      "foil": 4.71
     },
     "UNL-116": {
       "normal": null,
-      "foil": 0.26
+      "foil": 0.23
     },
     "UNL-229": {
       "normal": null,
-      "foil": 91.82
+      "foil": 92.39
     },
     "UNL-229s": {
       "normal": null,
@@ -3399,7 +3399,7 @@
     },
     "UNL-079a": {
       "normal": null,
-      "foil": 5.9
+      "foil": 5.84
     },
     "UNL-226s": {
       "normal": null,
@@ -3418,7 +3418,7 @@
       "foil": 49.77
     },
     "UNL-005": {
-      "normal": 0.03,
+      "normal": 0.04,
       "foil": 0.15
     },
     "UNL-167": {
@@ -3459,15 +3459,15 @@
     },
     "UNL-172a": {
       "normal": null,
-      "foil": 4.65
+      "foil": 4.45
     },
     "UNL-054": {
       "normal": null,
-      "foil": 0.28
+      "foil": 0.27
     },
     "UNL-025": {
       "normal": null,
-      "foil": 0.18
+      "foil": 0.19
     },
     "UNL-085": {
       "normal": null,
@@ -3475,7 +3475,7 @@
     },
     "UNL-103": {
       "normal": 0.15,
-      "foil": 0.41
+      "foil": 0.4
     },
     "UNL-133": {
       "normal": 0.08,
@@ -3494,7 +3494,7 @@
       "foil": 0.14
     },
     "UNL-013": {
-      "normal": 0.15,
+      "normal": 0.13,
       "foil": 0.38
     },
     "UNL-026": {
@@ -3503,22 +3503,22 @@
     },
     "UNL-029a": {
       "normal": null,
-      "foil": 2.4
+      "foil": 2.39
     },
     "UNL-078": {
-      "normal": 2.98,
-      "foil": 7.5
+      "normal": 3.42,
+      "foil": 7.74
     },
     "UNL-100": {
-      "normal": 0.06,
+      "normal": 0.07,
       "foil": 0.15
     },
     "UNL-116a": {
       "normal": null,
-      "foil": 1.48
+      "foil": 1.53
     },
     "UNL-121": {
-      "normal": 0.11,
+      "normal": 0.13,
       "foil": 0.28
     },
     "UNL-123": {
@@ -3531,11 +3531,11 @@
     },
     "UNL-176": {
       "normal": null,
-      "foil": 5.71
+      "foil": 5.7
     },
     "UNL-176a": {
       "normal": null,
-      "foil": 14.28
+      "foil": 14.23
     },
     "UNL-178": {
       "normal": null,
@@ -3543,31 +3543,31 @@
     },
     "UNL-178a": {
       "normal": null,
-      "foil": 2.26
+      "foil": 2.25
     },
     "UNL-196": {
       "normal": null,
-      "foil": 1.36
+      "foil": 1.37
     },
     "UNL-202": {
       "normal": null,
-      "foil": 6.82
+      "foil": 7.08
     },
     "UNL-215": {
-      "normal": 0.17,
+      "normal": 0.14,
       "foil": 0.36
     },
     "UNL-226": {
       "normal": null,
-      "foil": 69.92
+      "foil": 69.93
     },
     "UNL-227": {
       "normal": null,
-      "foil": 111.21
+      "foil": 108.67
     },
     "UNL-228": {
       "normal": null,
-      "foil": 94.27
+      "foil": 94.2
     },
     "UNL-231s": {
       "normal": null,
@@ -3575,7 +3575,7 @@
     },
     "UNL-232": {
       "normal": null,
-      "foil": 115.89
+      "foil": 120.49
     },
     "UNL-232s": {
       "normal": null,
@@ -3583,7 +3583,7 @@
     },
     "UNL-235": {
       "normal": null,
-      "foil": 246.16
+      "foil": 248.45
     },
     "UNL-235s": {
       "normal": null,
@@ -3591,7 +3591,7 @@
     },
     "UNL-104": {
       "normal": 0.09,
-      "foil": 0.38
+      "foil": 0.37
     },
     "UNL-064": {
       "normal": 0.04,
@@ -3602,7 +3602,7 @@
       "foil": 0.27
     },
     "UNL-107": {
-      "normal": 0.11,
+      "normal": 0.12,
       "foil": 0.31
     },
     "UNL-010": {
@@ -3615,30 +3615,30 @@
     },
     "UNL-141": {
       "normal": null,
-      "foil": 1.61
+      "foil": 1.69
     },
     "UNL-084": {
       "normal": null,
-      "foil": 0.21
+      "foil": 0.23
     },
     "UNL-175": {
       "normal": null,
-      "foil": 0.32
+      "foil": 0.29
     },
     "UNL-194": {
       "normal": null,
-      "foil": 0.42
+      "foil": 0.44
     },
     "UNL-186": {
       "normal": null,
-      "foil": 0.8
+      "foil": 0.78
     },
     "UNL-012": {
       "normal": 0.07,
       "foil": 0.25
     },
     "UNL-033": {
-      "normal": 0.05,
+      "normal": 0.06,
       "foil": 0.22
     },
     "UNL-062": {
@@ -3646,12 +3646,12 @@
       "foil": 0.17
     },
     "UNL-063": {
-      "normal": 0.15,
-      "foil": 0.29
+      "normal": 0.14,
+      "foil": 0.31
     },
     "UNL-076": {
       "normal": 0.11,
-      "foil": 0.26
+      "foil": 0.25
     },
     "UNL-093": {
       "normal": 0.06,
@@ -3662,8 +3662,8 @@
       "foil": 0.26
     },
     "UNL-205": {
-      "normal": 0.13,
-      "foil": 0.43
+      "normal": 0.11,
+      "foil": 0.41
     },
     "UNL-095": {
       "normal": 0.09,
@@ -3674,8 +3674,8 @@
       "foil": 1828.46
     },
     "UNL-069": {
-      "normal": 0.15,
-      "foil": 0.3
+      "normal": 0.12,
+      "foil": 0.28
     },
     "UNL-164": {
       "normal": 0.18,
@@ -3683,10 +3683,10 @@
     },
     "UNL-161": {
       "normal": 0.12,
-      "foil": 0.37
+      "foil": 0.38
     },
     "UNL-097": {
-      "normal": 0.11,
+      "normal": 0.1,
       "foil": 0.27
     },
     "UNL-067": {
@@ -3698,7 +3698,7 @@
       "foil": 0.23
     },
     "UNL-001": {
-      "normal": 0.08,
+      "normal": 0.07,
       "foil": 0.14
     },
     "UNL-016": {
@@ -3706,20 +3706,20 @@
       "foil": 0.17
     },
     "UNL-014": {
-      "normal": 0.09,
+      "normal": 0.08,
       "foil": 0.28
     },
     "UNL-057": {
       "normal": null,
-      "foil": 0.78
+      "foil": 0.76
     },
     "UNL-083": {
       "normal": null,
-      "foil": 0.68
+      "foil": 0.61
     },
     "UNL-052": {
       "normal": null,
-      "foil": 0.3
+      "foil": 0.31
     },
     "UNL-144": {
       "normal": null,
@@ -3727,15 +3727,15 @@
     },
     "UNL-150": {
       "normal": null,
-      "foil": 15.21
+      "foil": 14.61
     },
     "UNL-150a": {
       "normal": null,
-      "foil": 25.17
+      "foil": 25.13
     },
     "UNL-206": {
       "normal": 0.08,
-      "foil": 0.22
+      "foil": 0.21
     },
     "UNL-207": {
       "normal": 0.07,
@@ -3743,7 +3743,7 @@
     },
     "UNL-017": {
       "normal": 0.08,
-      "foil": 0.45
+      "foil": 0.42
     },
     "UNL-032": {
       "normal": 0.07,
@@ -3751,7 +3751,7 @@
     },
     "UNL-044": {
       "normal": 0.18,
-      "foil": 0.46
+      "foil": 0.45
     },
     "UNL-048": {
       "normal": 0.1,
@@ -3775,63 +3775,63 @@
     },
     "UNL-021": {
       "normal": null,
-      "foil": 0.3
+      "foil": 0.25
     },
     "UNL-023": {
       "normal": null,
-      "foil": 0.25
+      "foil": 0.23
     },
     "UNL-040": {
       "normal": 0.08,
       "foil": 0.16
     },
     "UNL-041": {
-      "normal": 0.12,
+      "normal": 0.13,
       "foil": 0.43
     },
     "UNL-055": {
       "normal": null,
-      "foil": 0.19
+      "foil": 0.18
     },
     "UNL-055a": {
       "normal": null,
-      "foil": 2.35
+      "foil": 2.33
     },
     "UNL-081": {
       "normal": null,
-      "foil": 0.17
+      "foil": 0.16
     },
     "UNL-082": {
       "normal": null,
-      "foil": 0.47
+      "foil": 0.43
     },
     "UNL-082a": {
       "normal": null,
-      "foil": 9.11
+      "foil": 9.27
     },
     "UNL-099": {
       "normal": 0.04,
-      "foil": 0.15
+      "foil": 0.16
     },
     "UNL-106": {
-      "normal": 0.51,
+      "normal": 0.45,
       "foil": 2.0
     },
     "UNL-110": {
       "normal": null,
-      "foil": 0.24
+      "foil": 0.23
     },
     "UNL-112": {
       "normal": null,
-      "foil": 6.84
+      "foil": 6.74
     },
     "UNL-117": {
       "normal": null,
-      "foil": 1.94
+      "foil": 1.92
     },
     "UNL-125": {
-      "normal": 0.09,
-      "foil": 0.2
+      "normal": 0.08,
+      "foil": 0.23
     },
     "UNL-129": {
       "normal": 0.03,
@@ -3839,15 +3839,15 @@
     },
     "UNL-132": {
       "normal": 0.16,
-      "foil": 0.52
+      "foil": 0.49
     },
     "UNL-136": {
-      "normal": 0.11,
-      "foil": 0.28
+      "normal": 0.12,
+      "foil": 0.27
     },
     "UNL-140": {
       "normal": null,
-      "foil": 0.18
+      "foil": 0.17
     },
     "UNL-146": {
       "normal": null,
@@ -3858,15 +3858,15 @@
       "foil": 0.11
     },
     "UNL-153": {
-      "normal": 0.13,
+      "normal": 0.1,
       "foil": 0.24
     },
     "UNL-158": {
-      "normal": 0.11,
-      "foil": 0.28
+      "normal": 0.1,
+      "foil": 0.29
     },
     "UNL-159": {
-      "normal": 0.08,
+      "normal": 0.07,
       "foil": 0.15
     },
     "UNL-174": {
@@ -3874,44 +3874,44 @@
       "foil": 0.18
     },
     "UNL-218": {
-      "normal": 0.08,
+      "normal": 0.09,
       "foil": 0.23
     },
     "UNL-R01a": {
       "normal": null,
-      "foil": 4.43
+      "foil": 4.36
     },
     "UNL-R02a": {
       "normal": null,
-      "foil": 9.72
+      "foil": 9.81
     },
     "UNL-R03a": {
       "normal": null,
-      "foil": 6.26
+      "foil": 5.83
     },
     "UNL-R04a": {
       "normal": null,
-      "foil": 6.45
+      "foil": 6.55
     },
     "UNL-R05a": {
       "normal": null,
-      "foil": 10.51
+      "foil": 10.45
     },
     "UNL-R06a": {
       "normal": null,
-      "foil": 4.41
+      "foil": 4.53
     },
     "UNL-R04b": {
       "normal": null,
-      "foil": 2.64
+      "foil": 2.63
     },
     "UNL-R02b": {
       "normal": null,
-      "foil": 8.12
+      "foil": 7.95
     },
     "UNL-R05b": {
       "normal": null,
-      "foil": 9.24
+      "foil": 9.36
     },
     "UNL-R01b": {
       "normal": null,
@@ -3919,11 +3919,11 @@
     },
     "UNL-R03b": {
       "normal": null,
-      "foil": 6.83
+      "foil": 6.8
     },
     "UNL-R06b": {
       "normal": null,
-      "foil": 3.47
+      "foil": 3.32
     },
     "UNL-T06": {
       "normal": 0.1,
@@ -3975,31 +3975,31 @@
     },
     "VEN-SP3": {
       "normal": null,
-      "foil": 83.8
+      "foil": 80.06
     },
     "VEN-021a": {
       "normal": null,
-      "foil": 12.34
+      "foil": 12.04
     },
     "VEN-021": {
       "normal": null,
-      "foil": 0.97
+      "foil": 0.91
     },
     "VEN-038a": {
       "normal": null,
-      "foil": 10.67
+      "foil": 10.81
     },
     "VEN-038": {
       "normal": null,
-      "foil": 0.33
+      "foil": 0.23
     },
     "VEN-136": {
       "normal": null,
-      "foil": 0.47
+      "foil": 0.44
     },
     "VEN-136a": {
       "normal": null,
-      "foil": 2.48
+      "foil": 2.34
     },
     "VEN-047": {
       "normal": 0.03,
@@ -4014,20 +4014,20 @@
       "foil": 0.15
     },
     "VEN-R04": {
-      "normal": 0.1,
+      "normal": 0.11,
       "foil": null
     },
     "VEN-067": {
       "normal": null,
-      "foil": 1.15
+      "foil": 0.95
     },
     "VEN-141": {
       "normal": null,
-      "foil": 0.17
+      "foil": 0.15
     },
     "VEN-190": {
       "normal": null,
-      "foil": 57.78
+      "foil": 57.3
     },
     "VEN-R02": {
       "normal": 0.15,
@@ -4043,15 +4043,15 @@
     },
     "VEN-091": {
       "normal": null,
-      "foil": 0.72
+      "foil": 0.64
     },
     "VEN-192": {
       "normal": null,
-      "foil": 160.87
+      "foil": 159.85
     },
     "VEN-145": {
       "normal": null,
-      "foil": 0.16
+      "foil": 0.13
     },
     "VEN-079": {
       "normal": 0.06,
@@ -4059,27 +4059,27 @@
     },
     "VEN-144": {
       "normal": null,
-      "foil": 0.94
+      "foil": 0.76
     },
     "VEN-107": {
       "normal": null,
-      "foil": 0.26
+      "foil": 0.22
     },
     "VEN-061": {
       "normal": null,
-      "foil": 0.4
+      "foil": 0.35
     },
     "VEN-149": {
       "normal": null,
-      "foil": 0.15
+      "foil": 0.13
     },
     "VEN-142": {
       "normal": null,
-      "foil": 0.52
+      "foil": 0.51
     },
     "VEN-016": {
       "normal": null,
-      "foil": 0.18
+      "foil": 0.16
     },
     "VEN-025": {
       "normal": 0.03,
@@ -4087,7 +4087,7 @@
     },
     "VEN-193": {
       "normal": null,
-      "foil": 76.71
+      "foil": 76.29
     },
     "VEN-147": {
       "normal": null,
@@ -4095,7 +4095,7 @@
     },
     "VEN-SP5": {
       "normal": null,
-      "foil": 15.41
+      "foil": 15.69
     },
     "VEN-026": {
       "normal": 0.05,
@@ -4111,35 +4111,35 @@
     },
     "VEN-086": {
       "normal": null,
-      "foil": 0.26
+      "foil": 0.19
     },
     "VEN-133": {
       "normal": null,
-      "foil": 0.14
+      "foil": 0.13
     },
     "VEN-101": {
-      "normal": 0.11,
+      "normal": 0.1,
       "foil": 0.33
     },
     "VEN-197": {
       "normal": null,
-      "foil": 216.06
+      "foil": 214.46
     },
     "VEN-155": {
       "normal": null,
-      "foil": 0.15
+      "foil": 0.13
     },
     "VEN-158": {
       "normal": 0.1,
-      "foil": 1.03
+      "foil": 0.98
     },
     "VEN-087": {
       "normal": null,
-      "foil": 0.17
+      "foil": 0.15
     },
     "VEN-062": {
       "normal": null,
-      "foil": 0.18
+      "foil": 0.21
     },
     "VEN-118": {
       "normal": 0.03,
@@ -4151,23 +4151,23 @@
     },
     "VEN-109": {
       "normal": null,
-      "foil": 0.49
+      "foil": 0.24
     },
     "VEN-073": {
-      "normal": 0.06,
+      "normal": 0.08,
       "foil": 0.18
     },
     "VEN-068": {
       "normal": null,
-      "foil": 0.49
+      "foil": 0.45
     },
     "VEN-068a": {
       "normal": null,
-      "foil": 1.77
+      "foil": 1.82
     },
     "VEN-088": {
       "normal": null,
-      "foil": 0.16
+      "foil": 0.17
     },
     "VEN-088a": {
       "normal": null,
@@ -4179,7 +4179,7 @@
     },
     "VEN-168": {
       "normal": null,
-      "foil": 110.62
+      "foil": 110.14
     },
     "VEN-119": {
       "normal": 0.05,
@@ -4187,43 +4187,43 @@
     },
     "VEN-135a": {
       "normal": null,
-      "foil": 4.85
+      "foil": 4.89
     },
     "VEN-135": {
       "normal": null,
-      "foil": 0.27
+      "foil": 0.26
     },
     "VEN-113": {
       "normal": null,
-      "foil": 1.61
+      "foil": 1.45
     },
     "VEN-180": {
       "normal": null,
-      "foil": 70.72
+      "foil": 70.06
     },
     "VEN-126": {
-      "normal": 0.17,
-      "foil": 0.38
+      "normal": 0.12,
+      "foil": 0.37
     },
     "VEN-093": {
       "normal": 0.05,
       "foil": 0.14
     },
     "VEN-127": {
-      "normal": 0.1,
-      "foil": 0.36
+      "normal": 0.09,
+      "foil": 0.34
     },
     "VEN-156": {
       "normal": null,
-      "foil": 6.12
+      "foil": 6.05
     },
     "VEN-SP6": {
       "normal": null,
-      "foil": 30.29
+      "foil": 30.75
     },
     "VEN-143": {
       "normal": null,
-      "foil": 0.13
+      "foil": 0.12
     },
     "VEN-191": {
       "normal": null,
@@ -4235,30 +4235,30 @@
     },
     "VEN-196": {
       "normal": null,
-      "foil": 120.71
+      "foil": 119.73
     },
     "VEN-110a": {
       "normal": null,
-      "foil": 1.3
+      "foil": 1.21
     },
     "VEN-110": {
       "normal": null,
-      "foil": 0.16
+      "foil": 0.15
     },
     "VEN-069": {
       "normal": null,
-      "foil": 0.89
+      "foil": 0.86
     },
     "VEN-069a": {
       "normal": null,
-      "foil": 2.94
+      "foil": 3.01
     },
     "VEN-052": {
       "normal": 0.07,
       "foil": 0.29
     },
     "VEN-R03": {
-      "normal": 0.1,
+      "normal": 0.11,
       "foil": null
     },
     "VEN-017": {
@@ -4266,28 +4266,28 @@
       "foil": 0.14
     },
     "VEN-028": {
-      "normal": 0.09,
+      "normal": 0.1,
       "foil": 0.34
     },
     "VEN-046": {
       "normal": null,
-      "foil": 0.56
+      "foil": 0.47
     },
     "VEN-046a": {
       "normal": null,
-      "foil": 2.19
+      "foil": 2.09
     },
     "VEN-063": {
       "normal": null,
-      "foil": 0.13
+      "foil": 0.11
     },
     "VEN-063a": {
       "normal": null,
-      "foil": 1.11
+      "foil": 1.09
     },
     "VEN-080": {
       "normal": 0.06,
-      "foil": 0.2
+      "foil": 0.22
     },
     "VEN-006": {
       "normal": 0.07,
@@ -4295,26 +4295,26 @@
     },
     "VEN-115": {
       "normal": null,
-      "foil": 1.03
+      "foil": 0.98
     },
     "VEN-029": {
       "normal": 0.07,
       "foil": 0.3
     },
     "VEN-R06": {
-      "normal": 0.1,
+      "normal": 0.09,
       "foil": 10.0
     },
     "VEN-058": {
-      "normal": 0.2,
-      "foil": 0.57
+      "normal": 0.18,
+      "foil": 0.56
     },
     "VEN-012": {
-      "normal": 0.12,
+      "normal": 0.13,
       "foil": 0.43
     },
     "VEN-161": {
-      "normal": 0.06,
+      "normal": 0.07,
       "foil": 0.21
     },
     "VEN-007": {
@@ -4322,27 +4322,27 @@
       "foil": 0.2
     },
     "VEN-054": {
-      "normal": 0.05,
-      "foil": 0.31
+      "normal": 0.06,
+      "foil": 0.32
     },
     "VEN-018": {
       "normal": null,
       "foil": 0.18
     },
     "VEN-083": {
-      "normal": 0.24,
-      "foil": 1.0
+      "normal": 0.21,
+      "foil": 0.99
     },
     "VEN-102": {
-      "normal": 0.19,
-      "foil": 1.28
+      "normal": 0.14,
+      "foil": 1.25
     },
     "VEN-152": {
       "normal": null,
-      "foil": 1.78
+      "foil": 2.11
     },
     "VEN-121": {
-      "normal": 0.06,
+      "normal": 0.05,
       "foil": 0.13
     },
     "VEN-019": {
@@ -4351,39 +4351,39 @@
     },
     "VEN-019a": {
       "normal": null,
-      "foil": 1.0
+      "foil": 0.99
     },
     "VEN-179": {
       "normal": null,
-      "foil": 166.38
+      "foil": 166.04
     },
     "VEN-163": {
-      "normal": 0.09,
+      "normal": 0.1,
       "foil": 0.33
     },
     "VEN-041": {
       "normal": null,
-      "foil": 0.21
+      "foil": 0.18
     },
     "VEN-139": {
       "normal": null,
-      "foil": 0.19
+      "foil": 0.14
     },
     "VEN-189": {
       "normal": null,
-      "foil": 592.63
+      "foil": 593.02
     },
     "VEN-129": {
       "normal": 0.08,
       "foil": 0.34
     },
     "VEN-164": {
-      "normal": 0.1,
-      "foil": 0.34
+      "normal": 0.12,
+      "foil": 0.33
     },
     "VEN-SP4": {
       "normal": null,
-      "foil": 13.05
+      "foil": 13.1
     },
     "VEN-013": {
       "normal": 0.07,
@@ -4391,7 +4391,7 @@
     },
     "VEN-095": {
       "normal": 0.09,
-      "foil": 0.36
+      "foil": 0.34
     },
     "VEN-103": {
       "normal": 0.11,
@@ -4403,27 +4403,27 @@
     },
     "VEN-138a": {
       "normal": null,
-      "foil": 1.72
+      "foil": 1.87
     },
     "VEN-138": {
       "normal": null,
-      "foil": 0.28
+      "foil": 0.26
     },
     "VEN-042a": {
       "normal": null,
-      "foil": 0.86
+      "foil": 0.88
     },
     "VEN-042": {
       "normal": null,
-      "foil": 0.13
+      "foil": 0.1
     },
     "VEN-140": {
       "normal": null,
-      "foil": 8.9
+      "foil": 8.61
     },
     "VEN-146": {
       "normal": null,
-      "foil": 0.88
+      "foil": 0.81
     },
     "VEN-060": {
       "normal": 0.06,
@@ -4431,11 +4431,11 @@
     },
     "VEN-SP2": {
       "normal": null,
-      "foil": 26.24
+      "foil": 28.27
     },
     "VEN-195": {
       "normal": null,
-      "foil": 173.02
+      "foil": 171.66
     },
     "VEN-151": {
       "normal": null,
@@ -4443,43 +4443,43 @@
     },
     "VEN-043": {
       "normal": null,
-      "foil": 0.33
+      "foil": 0.27
     },
     "VEN-066": {
       "normal": null,
-      "foil": 0.62
+      "foil": 0.5
     },
     "VEN-037": {
-      "normal": 0.13,
-      "foil": 0.39
+      "normal": 0.11,
+      "foil": 0.38
     },
     "VEN-077": {
       "normal": 0.05,
       "foil": 0.28
     },
     "VEN-031": {
-      "normal": 0.1,
+      "normal": 0.08,
       "foil": 0.3
     },
     "VEN-167": {
       "normal": null,
-      "foil": 102.31
+      "foil": 102.3
     },
     "VEN-176": {
       "normal": null,
-      "foil": 79.38
+      "foil": 78.98
     },
     "VEN-089": {
       "normal": null,
-      "foil": 0.13
+      "foil": 0.14
     },
     "VEN-106": {
-      "normal": 0.15,
-      "foil": 0.57
+      "normal": 0.14,
+      "foil": 0.53
     },
     "VEN-023": {
       "normal": null,
-      "foil": 0.47
+      "foil": 0.37
     },
     "VEN-169": {
       "normal": null,
@@ -4487,43 +4487,43 @@
     },
     "VEN-023a": {
       "normal": null,
-      "foil": 2.52
+      "foil": 2.36
     },
     "VEN-112": {
       "normal": null,
-      "foil": 0.2
+      "foil": 0.19
     },
     "VEN-112a": {
       "normal": null,
-      "foil": 3.5
+      "foil": 3.48
     },
     "VEN-150": {
       "normal": null,
-      "foil": 0.88
+      "foil": 0.72
     },
     "VEN-024": {
-      "normal": 0.1,
+      "normal": 0.09,
       "foil": 0.2
     },
     "VEN-187": {
       "normal": null,
-      "foil": 48.2
+      "foil": 47.96
     },
     "VEN-084": {
       "normal": null,
-      "foil": 0.19
+      "foil": 0.17
     },
     "VEN-084a": {
       "normal": null,
-      "foil": 1.67
+      "foil": 1.71
     },
     "VEN-055": {
-      "normal": 0.14,
-      "foil": 0.73
+      "normal": 0.11,
+      "foil": 0.7
     },
     "VEN-044": {
       "normal": null,
-      "foil": 36.12
+      "foil": 39.53
     },
     "VEN-130": {
       "normal": null,
@@ -4539,7 +4539,7 @@
     },
     "VEN-003": {
       "normal": 0.09,
-      "foil": 0.34
+      "foil": 0.35
     },
     "VEN-070": {
       "normal": 0.04,
@@ -4547,11 +4547,11 @@
     },
     "VEN-090": {
       "normal": null,
-      "foil": 0.41
+      "foil": 0.42
     },
     "VEN-056": {
       "normal": 0.13,
-      "foil": 0.25
+      "foil": 0.26
     },
     "VEN-010": {
       "normal": 0.1,
@@ -4559,42 +4559,42 @@
     },
     "VEN-057": {
       "normal": 0.07,
-      "foil": 0.25
+      "foil": 0.26
     },
     "VEN-039": {
       "normal": null,
-      "foil": 0.25
+      "foil": 0.22
     },
     "VEN-040": {
       "normal": null,
-      "foil": 0.44
+      "foil": 0.39
     },
     "VEN-015": {
       "normal": null,
-      "foil": 0.35
+      "foil": 0.28
     },
     "VEN-085": {
       "normal": null,
-      "foil": 0.33
+      "foil": 0.25
     },
     "VEN-131": {
       "normal": null,
-      "foil": 0.42
+      "foil": 0.38
     },
     "VEN-194": {
       "normal": null,
-      "foil": 211.4
+      "foil": 209.91
     },
     "VEN-183": {
       "normal": null,
-      "foil": 124.45
+      "foil": 123.15
     },
     "VEN-117": {
       "normal": 0.06,
       "foil": 0.21
     },
     "VEN-116": {
-      "normal": 0.1,
+      "normal": 0.09,
       "foil": 0.28
     },
     "VEN-157": {
@@ -4606,8 +4606,8 @@
       "foil": 79.52
     },
     "VEN-049": {
-      "normal": 0.1,
-      "foil": 0.42
+      "normal": 0.08,
+      "foil": 0.41
     },
     "VEN-004": {
       "normal": 0.08,
@@ -4615,19 +4615,19 @@
     },
     "VEN-022": {
       "normal": null,
-      "foil": 0.82
+      "foil": 0.75
     },
     "VEN-124": {
-      "normal": 0.15,
-      "foil": 0.38
+      "normal": 0.14,
+      "foil": 0.37
     },
     "VEN-132": {
       "normal": null,
-      "foil": 0.24
+      "foil": 0.21
     },
     "VEN-108": {
       "normal": null,
-      "foil": 0.15
+      "foil": 0.13
     },
     "VEN-005": {
       "normal": 0.08,
@@ -4650,12 +4650,12 @@
       "foil": 0.24
     },
     "VEN-027": {
-      "normal": 0.09,
+      "normal": 0.08,
       "foil": 0.29
     },
     "VEN-045": {
       "normal": null,
-      "foil": 2.65
+      "foil": 2.82
     },
     "VEN-125": {
       "normal": 0.05,
@@ -4666,20 +4666,20 @@
       "foil": 220.2
     },
     "VEN-051": {
-      "normal": 0.07,
-      "foil": 0.26
+      "normal": 0.05,
+      "foil": 0.25
     },
     "VEN-SP1": {
       "normal": null,
-      "foil": 80.83
+      "foil": 83.09
     },
     "VEN-134": {
       "normal": null,
-      "foil": 0.32
+      "foil": 0.31
     },
     "VEN-185": {
       "normal": null,
-      "foil": 167.4
+      "foil": 166.73
     },
     "VEN-113a": {
       "normal": null,
@@ -4687,7 +4687,7 @@
     },
     "VEN-114": {
       "normal": null,
-      "foil": 4.49
+      "foil": 4.86
     },
     "VEN-159": {
       "normal": 0.07,
@@ -4695,23 +4695,23 @@
     },
     "VEN-074": {
       "normal": 0.07,
-      "foil": 0.22
+      "foil": 0.21
     },
     "VEN-184": {
       "normal": null,
       "foil": 84.47
     },
     "VEN-120": {
-      "normal": 0.07,
-      "foil": 0.17
+      "normal": 0.08,
+      "foil": 0.16
     },
     "VEN-094": {
-      "normal": 0.08,
+      "normal": 0.07,
       "foil": 0.21
     },
     "VEN-188": {
       "normal": null,
-      "foil": 78.63
+      "foil": 78.39
     },
     "VEN-111": {
       "normal": null,
@@ -4719,7 +4719,7 @@
     },
     "VEN-186": {
       "normal": null,
-      "foil": 114.34
+      "foil": 115.25
     },
     "VEN-160": {
       "normal": 0.08,
@@ -4727,22 +4727,22 @@
     },
     "VEN-178": {
       "normal": null,
-      "foil": 63.71
+      "foil": 63.51
     },
     "VEN-128": {
       "normal": 0.12,
       "foil": 0.39
     },
     "VEN-081": {
-      "normal": 0.14,
-      "foil": 0.31
+      "normal": 0.16,
+      "foil": 0.32
     },
     "VEN-053": {
       "normal": 0.1,
       "foil": 0.16
     },
     "VEN-033": {
-      "normal": 0.06,
+      "normal": 0.07,
       "foil": 0.26
     },
     "VEN-011": {
@@ -4750,36 +4750,36 @@
       "foil": 0.33
     },
     "VEN-075": {
-      "normal": 0.09,
+      "normal": 0.06,
       "foil": 0.23
     },
     "VEN-064": {
       "normal": null,
-      "foil": 0.2
+      "foil": 0.26
     },
     "VEN-082": {
       "normal": 0.12,
       "foil": 0.29
     },
     "VEN-162": {
-      "normal": 0.06,
+      "normal": 0.07,
       "foil": 0.28
     },
     "VEN-154": {
       "normal": null,
-      "foil": 1.04
+      "foil": 1.02
     },
     "VEN-092a": {
       "normal": null,
-      "foil": 1.76
+      "foil": 1.71
     },
     "VEN-092": {
       "normal": null,
-      "foil": 0.31
+      "foil": 0.28
     },
     "VEN-177": {
       "normal": null,
-      "foil": 63.57
+      "foil": 63.35
     },
     "VEN-076": {
       "normal": 0.1,
@@ -4791,7 +4791,7 @@
     },
     "VEN-171": {
       "normal": null,
-      "foil": 68.68
+      "foil": 71.19
     },
     "VEN-008": {
       "normal": 0.08,
@@ -4799,27 +4799,27 @@
     },
     "VEN-035": {
       "normal": 0.09,
-      "foil": 0.26
+      "foil": 0.25
     },
     "VEN-036": {
       "normal": 0.05,
       "foil": 0.18
     },
     "VEN-030": {
-      "normal": 0.04,
+      "normal": 0.05,
       "foil": 0.16
     },
     "VEN-148": {
       "normal": null,
-      "foil": 0.33
+      "foil": 0.28
     },
     "VEN-014": {
       "normal": 0.06,
-      "foil": 0.25
+      "foil": 0.26
     },
     "VEN-165": {
-      "normal": 0.07,
-      "foil": 0.32
+      "normal": 0.08,
+      "foil": 0.33
     },
     "VEN-096": {
       "normal": 0.05,
@@ -4827,11 +4827,11 @@
     },
     "VEN-170": {
       "normal": null,
-      "foil": 50.84
+      "foil": 50.6
     },
     "VEN-059": {
       "normal": 0.11,
-      "foil": 0.43
+      "foil": 0.42
     },
     "VEN-122": {
       "normal": 0.11,
@@ -4847,39 +4847,39 @@
     },
     "VEN-098": {
       "normal": 0.05,
-      "foil": 0.15
+      "foil": 0.14
     },
     "VEN-173": {
       "normal": null,
-      "foil": 78.6
+      "foil": 78.06
     },
     "VEN-065": {
       "normal": null,
-      "foil": 0.23
+      "foil": 0.22
     },
     "VEN-104": {
-      "normal": 0.16,
-      "foil": 0.55
+      "normal": 0.13,
+      "foil": 0.49
     },
     "VEN-166": {
       "normal": 0.07,
       "foil": 0.29
     },
     "VEN-099": {
-      "normal": 0.16,
-      "foil": 0.25
+      "normal": 0.09,
+      "foil": 0.26
     },
     "VEN-020": {
       "normal": null,
       "foil": 0.19
     },
     "VEN-105": {
-      "normal": 0.07,
+      "normal": 0.08,
       "foil": 0.31
     },
     "VEN-100": {
       "normal": 0.1,
-      "foil": 0.6
+      "foil": 0.62
     },
     "VEN-190s": {
       "normal": null,
@@ -4903,27 +4903,27 @@
     },
     "VEN-R04a": {
       "normal": null,
-      "foil": 3.73
+      "foil": 4.36
     },
     "VEN-R02a": {
       "normal": null,
-      "foil": 5.71
+      "foil": 6.41
     },
     "VEN-R05a": {
       "normal": null,
-      "foil": 7.09
+      "foil": 7.12
     },
     "VEN-R01a": {
       "normal": null,
-      "foil": 6.22
+      "foil": 6.81
     },
     "VEN-R03a": {
       "normal": null,
-      "foil": 4.82
+      "foil": 5.36
     },
     "VEN-R06a": {
       "normal": null,
-      "foil": 5.78
+      "foil": 5.91
     },
     "VEN-191s": {
       "normal": null,
@@ -4943,10 +4943,10 @@
     },
     "VEN-T05": {
       "normal": null,
-      "foil": 1.03
+      "foil": 1.02
     },
     "VEN-T03": {
-      "normal": 0.11,
+      "normal": 0.1,
       "foil": null
     },
     "VEN-T01": {
