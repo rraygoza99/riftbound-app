@@ -105,9 +105,10 @@ SOURCES = [
     ("scripts/errata_old_raw.txt", "Origins"),
     ("scripts/errata_updated_raw.txt", "Origins"),
     ("docs/UNL Errata.txt", "Unleashed"),
+    ("docs/RAD Errata.txt", "Radiance"),
 ]
 
-SET_ORDER = ["Origins", "Spiritforged", "Unleashed"]
+SET_ORDER = ["Origins", "Spiritforged", "Unleashed", "Vendetta", "Radiance"]
 
 
 def build_errata():

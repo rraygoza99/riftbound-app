@@ -50,6 +50,8 @@ import EditNoteIcon from "@mui/icons-material/EditNote";
 import BlockIcon from "@mui/icons-material/Block";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
+import GroupsIcon from "@mui/icons-material/Groups";
+import PersonIcon from "@mui/icons-material/Person";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
@@ -58,9 +60,14 @@ import { App as CapApp } from "@capacitor/app";
 import { Capacitor } from "@capacitor/core";
 import { Share } from "@capacitor/share";
 import { Filesystem, Directory } from "@capacitor/filesystem";
-import { ScreenBrightness } from "@capacitor-community/screen-brightness";
 import "./riftbound-score.css";
 import logoUrl from "../../assets/version_2.png";
+
+// UI accent: a single solid gold, used for primary actions and selected states.
+const ACCENT = "#d9a441";
+const ACCENT_HOVER = "#c8932f";
+const ACCENT_RGB = "217,164,65";
+const ON_ACCENT = "#1d1608";
 
 const STORAGE_KEY = "riftbound-setup";
 const CONFIG_KEY = "riftbound-config";
@@ -114,6 +121,8 @@ const TRANSLATIONS: Record<string, Record<Lang, string>> = {
   launch_game: { en: "Launch Game", es: "Iniciar partida", it: "Avvia partita", de: "Spiel starten", cs: "Spustit hru" },
   reset_players: { en: "Reset Players", es: "Reiniciar jugadores", it: "Reimposta giocatori", de: "Spieler zurücksetzen", cs: "Obnovit hráče" },
   choose_legend: { en: "Choose Legend", es: "Elegir leyenda", it: "Scegli leggenda", de: "Legende wählen", cs: "Vyberte legendu" },
+  hold_for_overnumbered: { en: "Hold card for OverNumbered art", es: "Mantén presionado para arte OverNumbered", it: "Tieni premuto per arte OverNumbered", de: "Gedrückt halten für OverNumbered-Artwork", cs: "Podržením zvolíte OverNumbered verzi" },
+  overnumbered_badge: { en: "ON", es: "ON", it: "ON", de: "ON", cs: "ON" },
   no_legend: { en: "No legend", es: "Sin leyenda", it: "Nessuna leggenda", de: "Keine Legende", cs: "Bez legendy" },
   search_legends: { en: "Search legends…", es: "Buscar leyendas…", it: "Cerca leggende…", de: "Legenden suchen…", cs: "Hledat legendy…" },
   none: { en: "None", es: "Ninguna", it: "Nessuna", de: "Keine", cs: "Žádná" },
@@ -163,9 +172,10 @@ const TRANSLATIONS: Record<string, Record<Lang, string>> = {
   subtotal: { en: "Subtotal", es: "Subtotal", it: "Subtotale", de: "Zwischensumme", cs: "Mezisoučet" },
   cash: { en: "Cash", es: "Efectivo", it: "Contanti", de: "Bargeld", cs: "Hotovost" },
   trade_even: { en: "Trade is balanced", es: "El intercambio está equilibrado", it: "Lo scambio è in pari", de: "Der Tausch ist ausgeglichen", cs: "Výměna je vyrovnaná" },
-  trade_up: { en: "You are up +{amount}", es: "Ganas +{amount}", it: "Sei in vantaggio di +{amount}", de: "Du liegst +{amount} vorne", cs: "Jsi v plusu +{amount}" },
-  trade_owe: { en: "You owe {amount} to balance", es: "Debes {amount} para equilibrar", it: "Devi {amount} per pareggiare", de: "Du schuldest {amount} zum Ausgleich", cs: "Dlužíš {amount} k vyrovnání" },
+  trade_receive_more: { en: "You receive {amount} more than you give", es: "Recibes {amount} más de lo que das", it: "Ricevi {amount} in più di quanto dai", de: "Du erhältst {amount} mehr, als du gibst", cs: "Dostáváš o {amount} víc, než dáváš" },
+  trade_give_more: { en: "You give {amount} more than you receive", es: "Das {amount} más de lo que recibes", it: "Dai {amount} in più di quanto ricevi", de: "Du gibst {amount} mehr, als du erhältst", cs: "Dáváš o {amount} víc, než dostáváš" },
   copy_summary: { en: "Copy Summary", es: "Copiar resumen", it: "Copia riepilogo", de: "Zusammenfassung kopieren", cs: "Kopírovat souhrn" },
+  promo: { en: "Promo", es: "Promo", it: "Promo", de: "Promo", cs: "Promo" },
   share_trade: { en: "Share", es: "Compartir", it: "Condividi", de: "Teilen", cs: "Sdílet" },
   share_as_text: { en: "Share as text", es: "Compartir como texto", it: "Condividi come testo", de: "Als Text teilen", cs: "Sdílet jako text" },
   share_as_image: { en: "Share as image", es: "Compartir como imagen", it: "Condividi come immagine", de: "Als Bild teilen", cs: "Sdílet jako obrázek" },
@@ -281,59 +291,191 @@ function persistConfig(next: Partial<{ utilitiesMode: UtilitiesMode; lang: Lang 
 }
 
 const LEGENDS = [
-  { id: "OGN-247", name: "Kai'Sa" },
-  { id: "OGN-249", name: "Volibear" },
-  { id: "OGN-251", name: "Jinx" },
-  { id: "OGN-253", name: "Darius" },
-  { id: "OGN-255", name: "Ahri" },
-  { id: "OGN-257", name: "Lee Sin" },
-  { id: "OGN-259", name: "Yasuo" },
-  { id: "OGN-261", name: "Leona" },
-  { id: "OGN-263", name: "Teemo" },
-  { id: "OGN-265", name: "Viktor" },
-  { id: "OGN-267", name: "Miss Fortune" },
-  { id: "OGN-269", name: "Sett" },
-  { id: "OGS-017", name: "Annie" },
-  { id: "OGS-019", name: "Master Yi" },
-  { id: "OGS-021", name: "Lux" },
-  { id: "OGS-023", name: "Garen" },
-  { id: "SFD-181", name: "Rumble" },
-  { id: "SFD-183", name: "Lucian" },
-  { id: "SFD-185", name: "Draven" },
-  { id: "SFD-187", name: "Rek'Sai" },
-  { id: "SFD-189", name: "Ornn" },
-  { id: "SFD-193", name: "Jax" },
-  { id: "SFD-195", name: "Irelia" },
-  { id: "SFD-197", name: "Azir" },
-  { id: "SFD-199", name: "Ezreal" },
-  { id: "SFD-201", name: "Renata Glasc" },
-  { id: "SFD-203", name: "Sivir" },
-  { id: "SFD-205", name: "Fiora" },
-  { id: "UNL-181", name: "Jhin" },
-  { id: "UNL-183", name: "Rengar" },
-  { id: "UNL-185", name: "Pyke" },
-  { id: "UNL-187", name: "Vi" },
-  { id: "UNL-189", name: "Lillia" },
-  { id: "UNL-191", name: "Master Yi" },
-  { id: "UNL-193", name: "Vex" },
-  { id: "UNL-195", name: "Ivern" },
-  { id: "UNL-197", name: "Diana" },
-  { id: "UNL-199", name: "LeBlanc" },
-  { id: "UNL-201", name: "Kha'Zix" },
-  { id: "UNL-203", name: "Poppy" },
-  { id: "VEN-139", name: "Akali" },
-  { id: "VEN-141", name: "Renekton" },
-  { id: "VEN-143", name: "Zed" },
-  { id: "VEN-145", name: "Nasus" },
-  { id: "VEN-147", name: "Shen" },
-  { id: "VEN-149", name: "Jayce" },
-  { id: "VEN-151", name: "Mel" },
-  { id: "VEN-153", name: "Ambessa" },
-  { id: "VEN-155", name: "Kennen" },
+  { id: "OGN-247", overId: "OGN-299", name: "Kai'Sa" },
+  { id: "OGN-249", overId: "OGN-300", name: "Volibear" },
+  { id: "OGN-251", overId: "OGN-301", name: "Jinx" },
+  { id: "OGN-253", overId: "OGN-302", name: "Darius" },
+  { id: "OGN-255", overId: "OGN-303", name: "Ahri" },
+  { id: "OGN-257", overId: "OGN-304", name: "Lee Sin" },
+  { id: "OGN-259", overId: "OGN-305", name: "Yasuo" },
+  { id: "OGN-261", overId: "OGN-306", name: "Leona" },
+  { id: "OGN-263", overId: "OGN-307", name: "Teemo" },
+  { id: "OGN-265", overId: "OGN-308", name: "Viktor" },
+  { id: "OGN-267", overId: "OGN-309", name: "Miss Fortune" },
+  { id: "OGN-269", overId: "OGN-310", name: "Sett" },
+  { id: "OGS-017", overId: null, name: "Annie" },
+  { id: "OGS-019", overId: null, name: "Master Yi" },
+  { id: "OGS-021", overId: null, name: "Lux" },
+  { id: "OGS-023", overId: null, name: "Garen" },
+  { id: "SFD-181", overId: "SFD-240", name: "Rumble" },
+  { id: "SFD-183", overId: "SFD-241", name: "Lucian" },
+  { id: "SFD-185", overId: "SFD-242", name: "Draven" },
+  { id: "SFD-187", overId: "SFD-243", name: "Rek'Sai" },
+  { id: "SFD-189", overId: "SFD-244", name: "Ornn" },
+  { id: "SFD-193", overId: "SFD-245", name: "Jax" },
+  { id: "SFD-195", overId: "SFD-246", name: "Irelia" },
+  { id: "SFD-197", overId: "SFD-247", name: "Azir" },
+  { id: "SFD-199", overId: "SFD-248", name: "Ezreal" },
+  { id: "SFD-201", overId: "SFD-249", name: "Renata Glasc" },
+  { id: "SFD-203", overId: "SFD-250", name: "Sivir" },
+  { id: "SFD-205", overId: "SFD-251", name: "Fiora" },
+  { id: "UNL-181", overId: "UNL-226", name: "Jhin" },
+  { id: "UNL-183", overId: "UNL-227", name: "Rengar" },
+  { id: "UNL-185", overId: "UNL-228", name: "Pyke" },
+  { id: "UNL-187", overId: "UNL-229", name: "Vi" },
+  { id: "UNL-189", overId: "UNL-230", name: "Lillia" },
+  { id: "UNL-191", overId: "UNL-231", name: "Master Yi" },
+  { id: "UNL-193", overId: "UNL-232", name: "Vex" },
+  { id: "UNL-195", overId: "UNL-233", name: "Ivern" },
+  { id: "UNL-197", overId: "UNL-234", name: "Diana" },
+  { id: "UNL-199", overId: "UNL-235", name: "LeBlanc" },
+  { id: "UNL-201", overId: "UNL-236", name: "Kha'Zix" },
+  { id: "UNL-203", overId: "UNL-237", name: "Poppy" },
+  { id: "VEN-139", overId: "VEN-189", name: "Akali" },
+  { id: "VEN-141", overId: "VEN-190", name: "Renekton" },
+  { id: "VEN-143", overId: "VEN-191", name: "Zed" },
+  { id: "VEN-145", overId: "VEN-192", name: "Nasus" },
+  { id: "VEN-147", overId: "VEN-193", name: "Shen" },
+  { id: "VEN-149", overId: "VEN-194", name: "Jayce" },
+  { id: "VEN-151", overId: "VEN-195", name: "Mel" },
+  { id: "VEN-153", overId: "VEN-196", name: "Ambessa" },
+  { id: "VEN-155", overId: "VEN-197", name: "Kennen" },
+  { id: "RAD-139", overId: "RAD-168", name: "Ekko" },
+  { id: "RAD-141", overId: "RAD-169", name: "Ziggs" },
+  { id: "RAD-143", overId: "RAD-170", name: "Mordekaiser" },
+  { id: "RAD-145", overId: "RAD-171", name: "Orianna" },
+  { id: "RAD-147", overId: "RAD-172", name: "K'Sante" },
+  { id: "RAD-149", overId: "RAD-173", name: "Riven" },
+  { id: "RAD-151", overId: "RAD-174", name: "Seraphine" },
+  { id: "RAD-153", overId: "RAD-175", name: "Evelynn" },
+  { id: "RAD-155", overId: "RAD-176", name: "Jarvan IV" },
 ];
 
 function getLegendUrl(id: string): string {
+  if (id.startsWith("cdn:")) {
+    return `https://cdn.piltoverarchive.com/cards/${id.slice(4)}.webp`;
+  }
   return `/legends/${id}.webp`;
+}
+
+interface LegendCardProps {
+  id: string;
+  overId: string | null;
+  name: string;
+  isSelected?: boolean;
+  isTaken?: boolean;
+  takenByName?: string;
+  onSelect: (selectedId: string) => void;
+}
+
+function LegendCardItem({ id, overId, name, isSelected = false, isTaken = false, takenByName, onSelect }: LegendCardProps) {
+  const isDark = useTheme().palette.mode === "dark";
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isLongPressRef = useRef(false);
+
+  const clearTimer = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+
+  const handlePointerDown = () => {
+    isLongPressRef.current = false;
+    clearTimer();
+    timerRef.current = setTimeout(() => {
+      isLongPressRef.current = true;
+      tryVibrate(50);
+      onSelect(overId ? `cdn:${overId}` : id);
+    }, 450);
+  };
+
+  const handlePointerUp = () => {
+    const wasLong = isLongPressRef.current;
+    clearTimer();
+    if (!wasLong) {
+      onSelect(id);
+    }
+  };
+
+  const handlePointerCancel = () => {
+    clearTimer();
+    isLongPressRef.current = false;
+  };
+
+  return (
+    <Box
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
+      onPointerCancel={handlePointerCancel}
+      onPointerLeave={handlePointerCancel}
+      onContextMenu={(e) => {
+        e.preventDefault();
+        if (overId) {
+          tryVibrate(50);
+          onSelect(`cdn:${overId}`);
+        }
+      }}
+      sx={{
+        position: "relative",
+        cursor: "pointer",
+        borderRadius: 2,
+        overflow: "hidden",
+        border: `2px solid ${isSelected ? ACCENT : (isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)")}`,
+        "&:hover": { borderColor: isDark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.4)" },
+        "&:active": { transform: "scale(0.97)" },
+        transition: "border-color 0.15s, transform 0.1s",
+        display: "flex",
+        flexDirection: "column",
+        userSelect: "none",
+        WebkitUserSelect: "none",
+        WebkitTouchCallout: "none",
+      }}
+    >
+      <img
+        src={getLegendUrl(id)}
+        alt={name}
+        loading="lazy"
+        draggable={false}
+        style={{ width: "100%", aspectRatio: "3/4", objectFit: "cover", objectPosition: "top", display: "block", opacity: isTaken ? 0.55 : 1 }}
+      />
+      {overId && (
+        <Box
+          sx={{
+            position: "absolute",
+            top: 4,
+            left: 4,
+            background: ACCENT,
+            color: "#000",
+            fontSize: "0.55rem",
+            fontWeight: 900,
+            borderRadius: "4px",
+            px: 0.5,
+            py: 0.1,
+            lineHeight: 1.2,
+            boxShadow: "0 2px 4px rgba(0,0,0,0.5)",
+            letterSpacing: 0.5,
+          }}
+        >
+          ON
+        </Box>
+      )}
+      {isTaken && (
+        <CheckCircleIcon
+          titleAccess={takenByName}
+          sx={{
+            position: "absolute",
+            bottom: 4,
+            right: 4,
+            fontSize: 22,
+            color: "#4caf50",
+            background: "rgba(0,0,0,0.55)",
+            borderRadius: "50%",
+          }}
+        />
+      )}
+    </Box>
+  );
 }
 
 // ---- Card catalog & trading ----
@@ -344,6 +486,9 @@ interface CatalogCard {
   set: string;
   number: number;
   variant: string | null;
+  // Promo printings come from the price file and reuse their base card's art.
+  code?: string;
+  promo?: boolean;
 }
 
 interface CardCatalog {
@@ -353,8 +498,15 @@ interface CardCatalog {
 }
 
 // Card art is served from the same CDN the app already uses for legends.
-function getCardThumbUrl(id: string): string {
-  return `https://cdn.piltoverarchive.com/cards/${id}.webp?width=220`;
+// Promos show their base printing's art (TCGplayer images can't be hotlinked);
+// promo runes/tokens with no base card get a plain card-shaped placeholder.
+const CARD_PLACEHOLDER = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63 88"><rect width="63" height="88" rx="3" fill="#2c2b28"/></svg>')}`;
+// Not every printing has art on the CDN yet (e.g. new Signatures).
+const hideMissingArt = (e: React.SyntheticEvent<HTMLImageElement>) => { e.currentTarget.src = CARD_PLACEHOLDER; };
+function getCardThumbUrl(card: CatalogCard): string {
+  const artId = card.promo ? card.code : card.id;
+  if (!artId || !artId.includes("-")) return CARD_PLACEHOLDER;
+  return `https://cdn.piltoverarchive.com/cards/${artId}.webp?width=220`;
 }
 
 function useCardCatalog() {
@@ -376,13 +528,17 @@ type CardCondition = "NM" | "LP" | "MP" | "HP" | "DMG";
 const CONDITIONS: CardCondition[] = ["NM", "LP", "MP", "HP", "DMG"];
 
 interface PriceEntry { normal: number | null; foil: number | null; }
+interface PromoCard { id: string; name: string; set: string; code: string; number: number; }
 interface PriceBook {
   generatedAt: string;
   source: string;
   sourceUpdated: string;
   currency: string;
   prices: Record<string, PriceEntry>;
+  promos?: PromoCard[];
 }
+
+const PROMO_SET = "PROMO";
 
 // Prices are refreshed daily from a hosted file (regenerated by CI from TCGCSV)
 // so they update without shipping a new app version. The bundled copy is the
@@ -431,13 +587,11 @@ function usePriceBook() {
 }
 
 // Market price is condition-agnostic (~NM); users can still override per item.
+// Variants (e.g. "-197b") are never priced from their base printing: alt-art
+// and promo versions can be worth orders of magnitude more, so an unpriced
+// variant falls back to manual entry instead.
 function lookupPrice(book: PriceBook | null, cardId: string, foil: boolean): number | null {
-  let e = book?.prices[cardId];
-  // Fall back to the base printing when a specific variant (e.g. "-007b") isn't priced.
-  if (!e) {
-    const base = cardId.replace(/[a-z]$/i, "");
-    if (base !== cardId) e = book?.prices[base];
-  }
+  const e = book?.prices[cardId];
   if (!e) return null;
   return foil ? e.foil : e.normal;
 }
@@ -489,6 +643,13 @@ const PRESET_COLORS = [
 ];
 
 const DEFAULT_COLORS = ["#e63946", "#2979ff", "#4caf50", "#ffd600"];
+
+const MAX_PLAYER_NAME_LEN = 16;
+const MAX_CARD_PRICE = 99999;
+
+function sanitizePlayerName(val: string): string {
+  return val.replace(/[^\p{L}\s]/gu, "").slice(0, MAX_PLAYER_NAME_LEN);
+}
 
 const DEFAULT_NAMES: Record<GameMode, string[]> = {
   "2p": ["Player 1", "Player 2"],
@@ -560,14 +721,6 @@ function useIdleDim(active: boolean, timeoutMs: number) {
     markActive();
     return () => { if (timerRef.current) clearTimeout(timerRef.current); };
   }, [active, markActive]);
-  // Lower the actual hardware backlight while dimmed (-1 restores the user's setting).
-  useEffect(() => {
-    if (!Capacitor.isNativePlatform()) return;
-    ScreenBrightness.setBrightness({ brightness: active && dimmed ? 0.15 : -1 }).catch(() => { /* ignore */ });
-  }, [dimmed, active]);
-  useEffect(() => () => {
-    if (Capacitor.isNativePlatform()) ScreenBrightness.setBrightness({ brightness: -1 }).catch(() => { /* ignore */ });
-  }, []);
   return { dimmed, markActive };
 }
 
@@ -628,7 +781,7 @@ const PlayerPanel = React.memo(function PlayerPanel({ player, flipped, highlight
   return (
     <Box
       className={`rb-player-panel${flipped ? " rb-player-panel--flipped" : ""}${highlighted ? " rb-player-panel--highlighted" : ""}`}
-      style={{ background: `linear-gradient(160deg, ${isDark ? "#09091a" : "#f4f4f8"} 0%, ${player.color}1a 100%)`, '--rb-hl-color': player.color } as React.CSSProperties}
+      style={{ background: `linear-gradient(${player.color}24, ${player.color}24), ${isDark ? "#121211" : "#f4f3ef"}`, '--rb-hl-color': player.color } as React.CSSProperties}
     >
       {player.legendId && (
         <Box sx={{
@@ -733,7 +886,7 @@ const PlayerPanel = React.memo(function PlayerPanel({ player, flipped, highlight
                 <Box
                   key={i}
                   className={`rb-point-seg${filled ? " rb-point-seg--filled" : ""}${isLast ? " rb-point-seg--last" : ""}`}
-                  style={filled ? { background: POINT_COLORS[type!], boxShadow: `0 0 10px ${POINT_COLORS[type!]}66` } : undefined}
+                  style={filled ? { background: POINT_COLORS[type!] } : undefined}
                   onClick={isLast ? () => { tryVibrate(); onLogAction(player.id, "-1"); } : undefined}
                 >
                   {filled && React.createElement(POINT_ICONS[type!], { className: "rb-point-seg-icon" })}
@@ -914,7 +1067,7 @@ function MightCalculator() {
   const textMuted = isDark ? "rgba(255,255,255,0.45)" : "rgba(0,0,0,0.45)";
 
   const tagChipStyle = (active: boolean) => ({
-    borderRadius: "50px",
+    borderRadius: "6px",
     textTransform: "none" as const,
     fontWeight: 600,
     fontSize: "0.7rem",
@@ -941,17 +1094,17 @@ function MightCalculator() {
           flexShrink: 0, cursor: "pointer",
           display: "flex", alignItems: "center", justifyContent: "space-between",
           transform: flipped ? "rotate(180deg)" : "none",
-          background: sel ? "rgba(41,121,255,0.16)" : (isDark ? "rgba(255,255,255,0.04)" : "rgba(0,0,0,0.04)"),
-          border: `1.5px solid ${sel ? "rgba(41,121,255,0.55)" : (isDark ? "rgba(255,255,255,0.10)" : "rgba(0,0,0,0.10)")}`,
+          background: sel ? `rgba(${ACCENT_RGB},0.16)` : (isDark ? "rgba(255,255,255,0.04)" : "rgba(0,0,0,0.04)"),
+          border: `1.5px solid ${sel ? `rgba(${ACCENT_RGB},0.55)` : (isDark ? "rgba(255,255,255,0.10)" : "rgba(0,0,0,0.10)")}`,
           borderRadius: 2, px: 2, py: 0.9,
           transition: "background 0.15s, border-color 0.15s",
         }}
       >
         <Box>
           <Typography sx={{ fontWeight: 800, color: textPrimary, fontSize: "0.92rem", lineHeight: 1.2 }}>{label}</Typography>
-          <Typography sx={{ fontSize: "0.64rem", color: sel ? "#2979ff" : textMuted }}>{sel ? t("editing_units") : t("tap_to_edit")}</Typography>
+          <Typography sx={{ fontSize: "0.64rem", color: sel ? ACCENT : textMuted }}>{sel ? t("editing_units") : t("tap_to_edit")}</Typography>
         </Box>
-        <Typography sx={{ fontWeight: 900, fontSize: "1.5rem", color: "#2979ff", lineHeight: 1 }}>{value}</Typography>
+        <Typography sx={{ fontWeight: 900, fontSize: "1.5rem", color: ACCENT, lineHeight: 1 }}>{value}</Typography>
       </Box>
     );
   };
@@ -998,7 +1151,7 @@ function MightCalculator() {
             },
           }}
         />
-        <IconButton onClick={addCard} sx={{ background: "#2979ff", color: "#fff", borderRadius: 2, "&:hover": { background: "#1565c0" } }} size="small">
+        <IconButton onClick={addCard} sx={{ background: ACCENT, color: ON_ACCENT, borderRadius: 2, "&:hover": { background: ACCENT_HOVER } }} size="small">
           <AddIcon />
         </IconButton>
       </Box>
@@ -1025,7 +1178,7 @@ function MightCalculator() {
             size="small"
             onClick={() => quickAdd(qc.name, qc.might, qc.tags)}
             sx={{
-              borderRadius: "50px", textTransform: "none", fontWeight: 600, fontSize: "0.75rem",
+              borderRadius: "6px", textTransform: "none", fontWeight: 600, fontSize: "0.75rem",
               px: 1.5, py: 0.4, background: surface, border: `1px solid ${border}`,
               color: textPrimary, minWidth: 0, lineHeight: 1.4,
               "&:hover": { background: isDark ? "rgba(255,255,255,0.10)" : "rgba(0,0,0,0.10)" },
@@ -1248,12 +1401,12 @@ function OrnnCalculator() {
     <Box sx={{ display: "flex", flexDirection: "column", gap: 1.2, height: "100%", overflow: "hidden" }}>
       {/* Special counters: Svellsongur + Gold tokens */}
       <Box sx={{ flexShrink: 0, display: "flex", flexDirection: "column", gap: "8px" }}>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 1, background: isDark ? "rgba(41,121,255,0.10)" : "rgba(41,121,255,0.08)", border: `1px solid rgba(41,121,255,0.30)`, borderRadius: 2, px: 1.5, py: 0.8 }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1, background: isDark ? `rgba(${ACCENT_RGB},0.10)` : `rgba(${ACCENT_RGB},0.08)`, border: `1px solid rgba(${ACCENT_RGB},0.30)`, borderRadius: 2, px: 1.5, py: 0.8 }}>
           <Box sx={{ flex: 1, minWidth: 0 }}>
             <Typography sx={{ fontWeight: 700, fontSize: "0.9rem", color: textPrimary }}>{t("svellsongur_attached")}</Typography>
             <Typography sx={{ fontSize: "0.68rem", color: textMuted }}>{t("svellsongur_desc")}</Typography>
           </Box>
-          {stepper(svellsongur, () => setSvellsongur((v) => Math.max(0, v - 1)), () => setSvellsongur((v) => Math.min(3, v + 1)), "#2979ff", svellsongur <= 0, svellsongur >= 3)}
+          {stepper(svellsongur, () => setSvellsongur((v) => Math.max(0, v - 1)), () => setSvellsongur((v) => Math.min(3, v + 1)), ACCENT, svellsongur <= 0, svellsongur >= 3)}
         </Box>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1, background: isDark ? "rgba(255,214,0,0.08)" : "rgba(255,193,7,0.10)", border: `1px solid rgba(255,193,7,0.35)`, borderRadius: 2, px: 1.5, py: 0.8 }}>
           <Box sx={{ flex: 1, minWidth: 0 }}>
@@ -1301,7 +1454,7 @@ function OrnnCalculator() {
       </Box>
 
       {/* Result */}
-      <Box sx={{ flexShrink: 0, display: "flex", flexDirection: "column", gap: 0.5, background: isDark ? "rgba(41,121,255,0.15)" : "rgba(41,121,255,0.10)", border: `1px solid rgba(41,121,255,0.35)`, borderRadius: 2, px: 2, py: 1 }}>
+      <Box sx={{ flexShrink: 0, display: "flex", flexDirection: "column", gap: 0.5, background: isDark ? `rgba(${ACCENT_RGB},0.15)` : `rgba(${ACCENT_RGB},0.10)`, border: `1px solid rgba(${ACCENT_RGB},0.35)`, borderRadius: 2, px: 2, py: 1 }}>
         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <Box>
             <Typography sx={{ fontWeight: 700, color: textPrimary, fontSize: "0.95rem" }}>{t("ornn_bonus")}</Typography>
@@ -1309,7 +1462,7 @@ function OrnnCalculator() {
               {totalGears} {totalGears === 1 ? t("gear_one") : t("gear_many")} × (1 + {svellsongur} Svellsongur)
             </Typography>
           </Box>
-          <Typography sx={{ fontWeight: 900, fontSize: "1.8rem", color: "#2979ff", lineHeight: 1 }}>+{mightBonus}</Typography>
+          <Typography sx={{ fontWeight: 900, fontSize: "1.8rem", color: ACCENT, lineHeight: 1 }}>+{mightBonus}</Typography>
         </Box>
         {(selectedGears > 0 || svellsongur > 0 || goldTokens > 0) && (
           <Button size="small" onClick={resetAll} sx={{ alignSelf: "flex-start", textTransform: "none", fontSize: "0.72rem", color: textMuted, p: 0, minWidth: 0, "&:hover": { background: "transparent", color: textPrimary } }}>
@@ -1393,8 +1546,8 @@ function RunesCalculator() {
       {/* Turn counter with steppers */}
       <Box sx={{
         flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", gap: 2.5,
-        background: isDark ? "rgba(41,121,255,0.10)" : "rgba(41,121,255,0.08)",
-        border: `1px solid rgba(41,121,255,0.30)`, borderRadius: 3, py: 2, px: 2,
+        background: isDark ? `rgba(${ACCENT_RGB},0.10)` : `rgba(${ACCENT_RGB},0.08)`,
+        border: `1px solid rgba(${ACCENT_RGB},0.30)`, borderRadius: 3, py: 2, px: 2,
       }}>
         <IconButton onClick={() => setTurn((t) => Math.max(1, t - 1))} disabled={turn <= 1} sx={{ background: surface, border: `1px solid ${border}`, color: textPrimary, borderRadius: 2, p: 1, "&.Mui-disabled": { opacity: 0.3, color: textMuted } }}>
           <RemoveIcon />
@@ -1491,7 +1644,7 @@ function HowToGuide({ onDismiss }: { onDismiss: () => void }) {
           sx={{
             background: "rgba(255,255,255,0.06)",
             border: "1px solid rgba(255,255,255,0.12)",
-            borderRadius: "16px", px: 2.5, py: 2,
+            borderRadius: "10px", px: 2.5, py: 2,
             width: "100%", maxWidth: 360,
             display: "flex", alignItems: "center", gap: 2,
           }}
@@ -1513,12 +1666,11 @@ function HowToGuide({ onDismiss }: { onDismiss: () => void }) {
       <Button
         onClick={(e) => { e.stopPropagation(); onDismiss(); }}
         sx={{
-          mt: 1, borderRadius: "50px", px: 5, py: 1.3,
-          background: "#2979ff", color: "#fff",
+          mt: 1, borderRadius: "10px", px: 5, py: 1.3,
+          background: ACCENT, color: ON_ACCENT,
           fontWeight: 700, fontSize: "0.95rem",
           textTransform: "none",
-          boxShadow: "0 4px 20px rgba(41,121,255,0.4)",
-          "&:hover": { background: "#1565c0" },
+          "&:hover": { background: ACCENT_HOVER },
         }}
       >
         {t("guide_got_it")}
@@ -1592,7 +1744,7 @@ function UtilitiesPanel({ open, onClose }: UtilitiesPanelProps) {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       sx={{
-        background: isDark ? "#0a0a1a" : "#f4f4f8",
+        background: isDark ? "#141412" : "#f4f3ef",
         color: isDark ? "#fff" : "#111",
       }}
     >
@@ -1636,7 +1788,7 @@ function UtilitiesPanel({ open, onClose }: UtilitiesPanelProps) {
                     borderRadius: 4,
                     cursor: "pointer",
                     transition: "all 0.2s",
-                    background: active ? "linear-gradient(135deg, #2979ff 0%, #5c35d4 100%)" : (isDark ? "rgba(255,255,255,0.22)" : "rgba(0,0,0,0.22)"),
+                    background: active ? ACCENT : (isDark ? "rgba(255,255,255,0.22)" : "rgba(0,0,0,0.22)"),
                   }}
                 />
               );
@@ -1819,21 +1971,21 @@ function GameView({ players, mode, maxPoints, useXp, timer, timerRunning, tossOp
 
   return (
     <Box className="rb-game-screen" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} sx={{
-      '--rb-bg': isDark ? '#08080f' : '#f4f4f8',
+      '--rb-bg': isDark ? '#121211' : '#f4f3ef',
       '--rb-text': isDark ? '#ffffff' : '#111111',
       '--rb-text-muted': isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.45)',
       '--rb-icon-color': isDark ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,0.5)',
-      '--rb-badge-bg': isDark ? 'rgba(10,10,30,0.85)' : 'rgba(255,255,255,0.92)',
+      '--rb-badge-bg': isDark ? 'rgba(24,23,21,0.94)' : 'rgba(255,255,255,0.92)',
       '--rb-badge-border': isDark ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.15)',
-      '--rb-score-btn-bg': isDark ? 'rgba(18,18,45,0.92)' : 'rgba(240,240,250,0.95)',
+      '--rb-score-btn-bg': isDark ? 'rgba(36,35,32,0.95)' : 'rgba(240,238,232,0.95)',
       '--rb-score-btn-border': isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.15)',
       '--rb-score-btn-color': isDark ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.8)',
-      '--rb-bar-bg': isDark ? '#0c0c1e' : '#ebebf5',
+      '--rb-bar-bg': isDark ? '#191917' : '#eae8e2',
       '--rb-bar-border': isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.1)',
       '--rb-pill-bg': isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.07)',
       '--rb-pill-color': isDark ? 'rgba(255,255,255,0.85)' : 'rgba(0,0,0,0.75)',
       '--rb-panel-divider': isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.08)',
-      '--rb-xp-bg': isDark ? 'rgba(4,4,18,0.94)' : 'rgba(255,255,255,0.96)',
+      '--rb-xp-bg': isDark ? 'rgba(22,21,19,0.96)' : 'rgba(255,255,255,0.96)',
       '--rb-xp-border': isDark ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.18)',
     } as React.CSSProperties}>
       {mode === "2p" && <>{panel(players[1], true)}{middleBar}{panel(players[0], false)}</>}
@@ -1867,7 +2019,7 @@ function GameView({ players, mode, maxPoints, useXp, timer, timerRunning, tossOp
         maxWidth="xs"
         slotProps={{ paper: {
           sx: {
-            background: isDark ? "#0f0f22" : "#f4f4f8",
+            background: isDark ? "#1c1b19" : "#f4f3ef",
             borderRadius: 3,
             m: 2,
           },
@@ -1904,7 +2056,7 @@ function GameView({ players, mode, maxPoints, useXp, timer, timerRunning, tossOp
         maxWidth="xs"
         slotProps={{ paper: {
           sx: {
-            background: isDark ? "#0f0f22" : "#f4f4f8",
+            background: isDark ? "#1c1b19" : "#f4f3ef",
             borderRadius: 3,
             m: 2,
             maxHeight: "75vh",
@@ -1971,7 +2123,7 @@ function GameView({ players, mode, maxPoints, useXp, timer, timerRunning, tossOp
         sx={{
           position: "fixed", inset: 0, zIndex: 1600,
           background: "#000",
-          opacity: dimmed ? (Capacitor.isNativePlatform() ? 0.25 : 0.6) : 0,
+          opacity: dimmed ? 0.65 : 0,
           transition: "opacity 0.9s ease",
           pointerEvents: dimmed ? "auto" : "none",
         }}
@@ -1995,13 +2147,13 @@ function ConfigScreen({ utilitiesMode, onChangeUtilitiesMode, lang, onChangeLang
   const isDark = theme.palette.mode === "dark";
   const t = useT();
 
-  const surface = isDark ? "#0f0f22" : "#ffffff";
+  const surface = isDark ? "#1c1b19" : "#ffffff";
   const border = isDark ? "rgba(255,255,255,0.07)" : "rgba(0,0,0,0.1)";
 
   return (
     <Box sx={{
       position: "fixed", inset: 0, display: "flex", flexDirection: "column",
-      background: isDark ? "#08080f" : "#f4f4f8",
+      background: isDark ? "#121211" : "#f4f3ef",
       color: isDark ? "#fff" : "#111",
       pt: "env(safe-area-inset-top)",
       pb: "env(safe-area-inset-bottom)",
@@ -2014,7 +2166,7 @@ function ConfigScreen({ utilitiesMode, onChangeUtilitiesMode, lang, onChangeLang
         <Typography sx={{ fontWeight: 700, fontSize: "1.2rem", letterSpacing: -0.2 }}>{t("configuration")}</Typography>
       </Box>
 
-      <Box sx={{ px: 2, pt: 2.5, display: "flex", flexDirection: "column", gap: 2 }}>
+      <Box sx={{ flex: 1, overflowY: "auto", px: 2, pt: 2.5, pb: 4, display: "flex", flexDirection: "column", gap: 2 }}>
         {/* Section label */}
         <Typography sx={{ fontSize: "0.75rem", fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", color: isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.45)" }}>
           {t("config_game_screen")}
@@ -2037,14 +2189,14 @@ function ConfigScreen({ utilitiesMode, onChangeUtilitiesMode, lang, onChangeLang
               px: 2, py: 1.5,
               borderTop: `1px solid ${border}`,
               cursor: "pointer",
-              background: utilitiesMode === "gesture" ? (isDark ? "rgba(41,121,255,0.10)" : "rgba(41,121,255,0.06)") : "transparent",
+              background: utilitiesMode === "gesture" ? (isDark ? `rgba(${ACCENT_RGB},0.10)` : `rgba(${ACCENT_RGB},0.06)`) : "transparent",
               transition: "background 0.15s",
             }}
           >
             <Box sx={{
               width: 20, height: 20, borderRadius: "50%", flexShrink: 0,
-              border: `2px solid ${utilitiesMode === "gesture" ? "#2979ff" : (isDark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.3)")}`,
-              background: utilitiesMode === "gesture" ? "#2979ff" : "transparent",
+              border: `2px solid ${utilitiesMode === "gesture" ? ACCENT : (isDark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.3)")}`,
+              background: utilitiesMode === "gesture" ? ACCENT : "transparent",
               display: "flex", alignItems: "center", justifyContent: "center",
             }}>
               {utilitiesMode === "gesture" && <Box sx={{ width: 8, height: 8, borderRadius: "50%", background: "#fff" }} />}
@@ -2065,14 +2217,14 @@ function ConfigScreen({ utilitiesMode, onChangeUtilitiesMode, lang, onChangeLang
               px: 2, py: 1.5,
               borderTop: `1px solid ${border}`,
               cursor: "pointer",
-              background: utilitiesMode === "button" ? (isDark ? "rgba(41,121,255,0.10)" : "rgba(41,121,255,0.06)") : "transparent",
+              background: utilitiesMode === "button" ? (isDark ? `rgba(${ACCENT_RGB},0.10)` : `rgba(${ACCENT_RGB},0.06)`) : "transparent",
               transition: "background 0.15s",
             }}
           >
             <Box sx={{
               width: 20, height: 20, borderRadius: "50%", flexShrink: 0,
-              border: `2px solid ${utilitiesMode === "button" ? "#2979ff" : (isDark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.3)")}`,
-              background: utilitiesMode === "button" ? "#2979ff" : "transparent",
+              border: `2px solid ${utilitiesMode === "button" ? ACCENT : (isDark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.3)")}`,
+              background: utilitiesMode === "button" ? ACCENT : "transparent",
               display: "flex", alignItems: "center", justifyContent: "center",
             }}>
               {utilitiesMode === "button" && <Box sx={{ width: 8, height: 8, borderRadius: "50%", background: "#fff" }} />}
@@ -2108,7 +2260,7 @@ function ConfigScreen({ utilitiesMode, onChangeUtilitiesMode, lang, onChangeLang
                 fontWeight: 700,
                 "& .MuiOutlinedInput-notchedOutline": { borderColor: border },
                 "&:hover .MuiOutlinedInput-notchedOutline": { borderColor: isDark ? "rgba(255,255,255,0.25)" : "rgba(0,0,0,0.25)" },
-                "&.Mui-focused .MuiOutlinedInput-notchedOutline": { borderColor: "#2979ff" },
+                "&.Mui-focused .MuiOutlinedInput-notchedOutline": { borderColor: ACCENT },
                 "& .MuiSvgIcon-root": { color: isDark ? "rgba(255,255,255,0.55)" : "rgba(0,0,0,0.45)" },
               }}
             >
@@ -2129,169 +2281,105 @@ function HomeScreen({ onMultiplayer, onSolo, onConfig, onRules, onTrading }: { o
   const theme = useTheme();
   const isDark = theme.palette.mode === "dark";
   const t = useT();
+  const textPrimary = isDark ? "#f2f0ea" : "#1a1917";
+  const textMuted = isDark ? "rgba(242,240,234,0.55)" : "rgba(26,25,23,0.55)";
+  const border = isDark ? "rgba(255,255,255,0.09)" : "rgba(0,0,0,0.1)";
+  const surface = isDark ? "#1c1b19" : "#ffffff";
+
+  const menuRow = (label: string, sub: string, icon: React.ReactNode, onClick: () => void, primary = false) => (
+    <Button
+      fullWidth
+      onClick={onClick}
+      sx={{
+        justifyContent: "flex-start", textAlign: "left", gap: 1.75,
+        px: 2, py: 1.5, borderRadius: "10px",
+        background: primary ? ACCENT : surface,
+        border: `1px solid ${primary ? ACCENT : border}`,
+        color: primary ? ON_ACCENT : textPrimary,
+        textTransform: "none",
+        transition: "background 0.15s",
+        "&:hover": { background: primary ? ACCENT_HOVER : (isDark ? "#242320" : "#f4f3ef") },
+        "& .MuiTouchRipple-root": { color: primary ? ON_ACCENT : textPrimary },
+      }}
+    >
+      <Box sx={{ display: "flex", color: primary ? ON_ACCENT : textMuted, "& svg": { fontSize: 22 } }}>{icon}</Box>
+      <Box sx={{ flex: 1, minWidth: 0 }}>
+        <Typography sx={{ fontSize: "1rem", fontWeight: 700, lineHeight: 1.25 }}>{label}</Typography>
+        <Typography sx={{ fontSize: "0.75rem", fontWeight: 500, lineHeight: 1.3, color: primary ? "rgba(29,22,8,0.7)" : textMuted }}>{sub}</Typography>
+      </Box>
+      <ChevronRightIcon sx={{ fontSize: 20, opacity: primary ? 0.7 : 0.4 }} />
+    </Button>
+  );
+
   return (
     <Box sx={{
-      position: "fixed", inset: 0, display: "flex", flexDirection: "column",
-      alignItems: "center", justifyContent: "center",
-      background: isDark ? "#08080f" : "#f4f4f8",
-      gap: 3, px: 3,
-      pt: "env(safe-area-inset-top)",
-      pb: "env(safe-area-inset-bottom)",
+      position: "fixed", inset: 0,
+      overflowY: "auto", overflowX: "hidden",
+      WebkitOverflowScrolling: "touch",
+      background: isDark ? "#121211" : "#f4f3ef",
+      display: "flex", flexDirection: "column",
     }}>
-      {/* Support us — external link */}
-      <Button
-        onClick={() => window.open("https://buymeacoffee.com/sonsofthemoon", "_blank")}
-        startIcon={<LocalCafeIcon sx={{ fontSize: 16 }} />}
-        sx={{
-          position: "absolute", top: "calc(env(safe-area-inset-top) + 12px)", right: 12,
-          borderRadius: "50px", px: 1.5, py: 0.6, minWidth: 0,
-          background: isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.05)",
-          border: `1px solid ${isDark ? "rgba(255,255,255,0.14)" : "rgba(0,0,0,0.12)"}`,
-          color: "#ffb300", fontSize: "0.72rem", fontWeight: 700, textTransform: "none", letterSpacing: 0.2,
-          "&:hover": { background: isDark ? "rgba(255,255,255,0.10)" : "rgba(0,0,0,0.09)" },
-        }}
-      >
-        {t("support_us")}
-      </Button>
+      <Box sx={{
+        minHeight: "100%",
+        width: "100%",
+        maxWidth: 420,
+        mx: "auto",
+        display: "flex",
+        flexDirection: "column",
+        boxSizing: "border-box",
+        px: 2,
+        pt: "calc(env(safe-area-inset-top) + 16px)",
+        pb: "calc(env(safe-area-inset-bottom) + 16px)",
+      }}>
+        {/* Header: logo + name, support link */}
+        <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 4 }}>
+          <Box
+            component="img"
+            src={logoUrl}
+            alt=""
+            sx={{ width: 44, height: 44, borderRadius: "10px", display: "block", flexShrink: 0 }}
+          />
+          <Box sx={{ flex: 1, minWidth: 0 }}>
+            <Typography sx={{ fontSize: "1.35rem", fontWeight: 800, color: textPrimary, lineHeight: 1.1, letterSpacing: -0.3 }}>
+              RiftMate
+            </Typography>
+            <Typography sx={{ fontSize: "0.78rem", fontWeight: 500, color: textMuted, lineHeight: 1.3 }}>
+              {t("home_subtitle")}
+            </Typography>
+          </Box>
+          <Button
+            onClick={() => window.open("https://buymeacoffee.com/sonsofthemoon", "_blank")}
+            startIcon={<LocalCafeIcon sx={{ fontSize: 15 }} />}
+            sx={{
+              borderRadius: "8px", px: 1.25, py: 0.5, minWidth: 0,
+              color: textMuted, fontSize: "0.75rem", fontWeight: 600, textTransform: "none",
+              "&:hover": { color: textPrimary, background: "transparent" },
+            }}
+          >
+            {t("support_us")}
+          </Button>
+        </Box>
 
-      {/* Logo / title */}
-      <Box sx={{ textAlign: "center", mb: 3, position: "relative" }}>
-        {/* Glow blob behind title */}
-        <Box sx={{
-          position: "absolute", top: "50%", left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: 200, height: 200, borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(41,121,255,0.18) 0%, transparent 70%)",
-          pointerEvents: "none",
-        }} />
-        <Box
-          component="img"
-          src={logoUrl}
-          alt="RiftMate"
-          sx={{
-            width: "clamp(84px, 26vw, 112px)", height: "auto", display: "block", mx: "auto", mb: 1.5,
-            borderRadius: "22px",
-            boxShadow: isDark ? "0 8px 30px rgba(41,121,255,0.45)" : "0 8px 24px rgba(0,0,0,0.2)",
-          }}
-        />
-        <Typography sx={{
-          fontSize: "clamp(2.2rem, 9vw, 3.2rem)", fontWeight: 900,
-          color: isDark ? "#fff" : "#111", letterSpacing: -1.5, lineHeight: 1,
-          textShadow: isDark ? "0 2px 30px rgba(41,121,255,0.3)" : "none",
-        }}>
-          RiftMate
-        </Typography>
-        <Typography sx={{
-          fontSize: "clamp(0.7rem, 2.8vw, 0.85rem)", fontWeight: 700,
-          color: isDark ? "rgba(255,255,255,0.35)" : "rgba(0,0,0,0.4)",
-          letterSpacing: 4, textTransform: "uppercase", mt: 0.75,
-        }}>
-          {t("home_subtitle")}
-        </Typography>
+        <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+          {menuRow(t("home_multiplayer"), t("home_multiplayer_sub"), <GroupsIcon />, onMultiplayer, true)}
+          {menuRow(t("home_solo"), t("home_solo_sub"), <PersonIcon />, onSolo)}
+          {menuRow(t("home_rules"), t("home_rules_sub"), <MenuBookIcon />, onRules)}
+          {menuRow(t("home_trading"), t("home_trading_sub"), <SwapVertIcon />, onTrading)}
+        </Box>
+
+        <Box sx={{ mt: "auto", pt: 3, display: "flex", justifyContent: "center" }}>
+          <Button
+            onClick={onConfig}
+            startIcon={<SettingsIcon sx={{ fontSize: 16 }} />}
+            sx={{
+              color: textMuted, fontSize: "0.82rem", fontWeight: 600, textTransform: "none",
+              "&:hover": { color: textPrimary, background: "transparent" },
+            }}
+          >
+            {t("configuration")}
+          </Button>
+        </Box>
       </Box>
-
-      {/* Multiplayer */}
-      <Button
-        fullWidth
-        onClick={onMultiplayer}
-        sx={{
-          maxWidth: 360, borderRadius: "20px", py: 2.5,
-          background: "linear-gradient(135deg, #2979ff 0%, #5c35d4 100%)",
-          color: "#fff", fontSize: "1.1rem", fontWeight: 800,
-          textTransform: "none", letterSpacing: 0.2,
-          boxShadow: "0 8px 32px rgba(41,121,255,0.5)",
-          transition: "box-shadow 0.2s, transform 0.1s",
-          "&:hover": { boxShadow: "0 10px 36px rgba(41,121,255,0.6)", transform: "translateY(-1px)" },
-          "&:active": { transform: "scale(0.97)" },
-          display: "flex", flexDirection: "column", gap: 0.3,
-        }}
-      >
-        <span>{t("home_multiplayer")}</span>
-        <Typography component="span" sx={{ fontSize: "0.7rem", fontWeight: 500, opacity: 0.75, lineHeight: 1 }}>
-          {t("home_multiplayer_sub")}
-        </Typography>
-      </Button>
-
-      {/* Solo */}
-      <Button
-        fullWidth
-        onClick={onSolo}
-        sx={{
-          maxWidth: 360, borderRadius: "20px", py: 2.5,
-          background: isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.05)",
-          border: `1.5px solid ${isDark ? "rgba(255,255,255,0.14)" : "rgba(0,0,0,0.12)"}`,
-          color: isDark ? "#fff" : "#111", fontSize: "1.1rem", fontWeight: 800,
-          textTransform: "none", letterSpacing: 0.2,
-          transition: "background 0.15s, transform 0.1s",
-          "&:hover": { background: isDark ? "rgba(255,255,255,0.10)" : "rgba(0,0,0,0.09)" },
-          "&:active": { transform: "scale(0.97)" },
-          display: "flex", flexDirection: "column", gap: 0.3,
-        }}
-      >
-        <span>{t("home_solo")}</span>
-        <Typography component="span" sx={{ fontSize: "0.7rem", fontWeight: 500, opacity: 0.5, lineHeight: 1 }}>
-          {t("home_solo_sub")}
-        </Typography>
-      </Button>
-
-      {/* Rules */}
-      <Button
-        fullWidth
-        onClick={onRules}
-        startIcon={<MenuBookIcon sx={{ fontSize: 22 }} />}
-        sx={{
-          maxWidth: 360, borderRadius: "20px", py: 2.5,
-          background: isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.05)",
-          border: `1.5px solid ${isDark ? "rgba(255,255,255,0.14)" : "rgba(0,0,0,0.12)"}`,
-          color: isDark ? "#fff" : "#111", fontSize: "1.1rem", fontWeight: 800,
-          textTransform: "none", letterSpacing: 0.2,
-          transition: "background 0.15s, transform 0.1s",
-          "&:hover": { background: isDark ? "rgba(255,255,255,0.10)" : "rgba(0,0,0,0.09)" },
-          "&:active": { transform: "scale(0.97)" },
-          display: "flex", flexDirection: "column", gap: 0.3,
-        }}
-      >
-        <span>{t("home_rules")}</span>
-        <Typography component="span" sx={{ fontSize: "0.7rem", fontWeight: 500, opacity: 0.5, lineHeight: 1 }}>
-          {t("home_rules_sub")}
-        </Typography>
-      </Button>
-
-      {/* Trading */}
-      <Button
-        fullWidth
-        onClick={onTrading}
-        startIcon={<SwapVertIcon sx={{ fontSize: 22 }} />}
-        sx={{
-          maxWidth: 360, borderRadius: "20px", py: 2.5,
-          background: isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.05)",
-          border: `1.5px solid ${isDark ? "rgba(255,255,255,0.14)" : "rgba(0,0,0,0.12)"}`,
-          color: isDark ? "#fff" : "#111", fontSize: "1.1rem", fontWeight: 800,
-          textTransform: "none", letterSpacing: 0.2,
-          transition: "background 0.15s, transform 0.1s",
-          "&:hover": { background: isDark ? "rgba(255,255,255,0.10)" : "rgba(0,0,0,0.09)" },
-          "&:active": { transform: "scale(0.97)" },
-          display: "flex", flexDirection: "column", gap: 0.3,
-        }}
-      >
-        <span>{t("home_trading")}</span>
-        <Typography component="span" sx={{ fontSize: "0.7rem", fontWeight: 500, opacity: 0.5, lineHeight: 1 }}>
-          {t("home_trading_sub")}
-        </Typography>
-      </Button>
-
-      {/* Config */}
-      <Button
-        onClick={onConfig}
-        startIcon={<SettingsIcon sx={{ fontSize: 17 }} />}
-        sx={{
-          mt: 1.5, color: isDark ? "rgba(255,255,255,0.35)" : "rgba(0,0,0,0.38)",
-          fontSize: "0.82rem", fontWeight: 600, textTransform: "none", letterSpacing: 0.2,
-          "&:hover": { color: isDark ? "rgba(255,255,255,0.65)" : "rgba(0,0,0,0.65)" },
-        }}
-      >
-        {t("configuration")}
-      </Button>
     </Box>
   );
 }
@@ -2372,7 +2460,7 @@ function useRulesData() {
 function RuleRow({ entry, isDark, highlight = "" }: { entry: RuleEntry; isDark: boolean; highlight?: string }) {
   return (
     <Box sx={{ display: "flex", gap: 1, py: 0.7, pl: `${entry.depth * 14}px` }}>
-      <Typography sx={{ fontSize: "0.72rem", fontWeight: 700, color: "#2979ff", minWidth: 52, flexShrink: 0, fontVariantNumeric: "tabular-nums" }}>
+      <Typography sx={{ fontSize: "0.72rem", fontWeight: 700, color: ACCENT, minWidth: 52, flexShrink: 0, fontVariantNumeric: "tabular-nums" }}>
         {entry.num}
       </Typography>
       <Typography sx={{ fontSize: "0.85rem", lineHeight: 1.45, color: isDark ? "rgba(255,255,255,0.82)" : "rgba(0,0,0,0.78)" }}>
@@ -2446,7 +2534,7 @@ function RulesView({ onBack }: { onBack: () => void }) {
 
   const containerSx = {
     position: "fixed" as const, inset: 0,
-    background: isDark ? "#08080f" : "#f4f4f8",
+    background: isDark ? "#121211" : "#f4f3ef",
     color: isDark ? "#fff" : "#111",
     display: "flex", flexDirection: "column" as const,
     pb: "env(safe-area-inset-bottom)",
@@ -2602,9 +2690,9 @@ function RulesView({ onBack }: { onBack: () => void }) {
               onClick={() => { setTab(key); setExpanded(null); }}
               sx={{
                 flex: 1, borderRadius: "9px", py: 1, textTransform: "none", fontWeight: 800, fontSize: "0.9rem",
-                background: tab === key ? "#2979ff" : "transparent",
-                color: tab === key ? "#fff" : textMuted,
-                "&:hover": { background: tab === key ? "#2979ff" : "transparent" },
+                background: tab === key ? ACCENT : "transparent",
+                color: tab === key ? ON_ACCENT : textMuted,
+                "&:hover": { background: tab === key ? ACCENT : "transparent" },
               }}
             >
               {key === "core" ? t("core_rules") : t("tournament_rules")}
@@ -2860,14 +2948,14 @@ function SoloView({ onBack }: { onBack: () => void }) {
   }
 
   const cssVars = {
-    '--rb-bg': isDark ? '#08080f' : '#f4f4f8',
+    '--rb-bg': isDark ? '#121211' : '#f4f3ef',
     '--rb-text': isDark ? '#ffffff' : '#111111',
-    '--rb-badge-bg': isDark ? 'rgba(10,10,30,0.85)' : 'rgba(255,255,255,0.92)',
+    '--rb-badge-bg': isDark ? 'rgba(24,23,21,0.94)' : 'rgba(255,255,255,0.92)',
     '--rb-badge-border': isDark ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.15)',
-    '--rb-score-btn-bg': isDark ? 'rgba(18,18,45,0.92)' : 'rgba(240,240,250,0.95)',
+    '--rb-score-btn-bg': isDark ? 'rgba(36,35,32,0.95)' : 'rgba(240,238,232,0.95)',
     '--rb-score-btn-border': isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.15)',
     '--rb-score-btn-color': isDark ? 'rgba(255,255,255,0.9)' : 'rgba(0,0,0,0.8)',
-    '--rb-bar-bg': isDark ? '#0c0c1e' : '#ebebf5',
+    '--rb-bar-bg': isDark ? '#191917' : '#eae8e2',
     '--rb-bar-border': isDark ? 'rgba(255,255,255,0.07)' : 'rgba(0,0,0,0.1)',
     '--rb-pill-bg': isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.07)',
     '--rb-pill-color': isDark ? 'rgba(255,255,255,0.85)' : 'rgba(0,0,0,0.75)',
@@ -2899,7 +2987,7 @@ function SoloView({ onBack }: { onBack: () => void }) {
 
         <Typography sx={{
           fontSize: "clamp(5rem, 22vw, 10rem)", fontWeight: 900, lineHeight: 1,
-          color: isDark ? "#fff" : "#111", textShadow: "0 2px 30px rgba(0,0,0,0.5)",
+          color: isDark ? "#fff" : "#111",
           userSelect: "none",
         }}>
           {score}
@@ -2951,27 +3039,34 @@ function SoloView({ onBack }: { onBack: () => void }) {
         open={legendPickerOpen}
         onClose={() => setLegendPickerOpen(false)}
         fullWidth maxWidth="xs"
-        slotProps={{ paper: { sx: { background: isDark ? "#0f0f22" : "#f4f4f8", borderRadius: 3, m: 2, maxHeight: "70vh" } } }}
+        slotProps={{ paper: { sx: { background: isDark ? "#1c1b19" : "#f4f3ef", borderRadius: 3, m: 2, maxHeight: "75vh" } } }}
       >
-        <DialogTitle sx={{ color: isDark ? "#fff" : "#111", fontWeight: 700, pb: 1 }}>{t("choose_legend")}</DialogTitle>
-        <DialogContent sx={{ pt: 0 }}>
-          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
-            {legendId && (
-              <Button size="small" onClick={() => { setLegendId(null); setLegendPickerOpen(false); }}
-                sx={{ borderRadius: 2, textTransform: "none", color: isDark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)", fontSize: "0.78rem" }}>
-                {t("none")}
-              </Button>
-            )}
+        <DialogTitle sx={{ color: isDark ? "#fff" : "#111", fontWeight: 700, pb: 0.5, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <Box>
+            <Typography sx={{ fontWeight: 800, fontSize: "1.05rem", color: isDark ? "#fff" : "#111" }}>{t("choose_legend")}</Typography>
+            <Typography sx={{ fontSize: "0.68rem", color: isDark ? "rgba(255,255,255,0.4)" : "rgba(0,0,0,0.45)", fontWeight: 500 }}>
+              {t("hold_for_overnumbered")}
+            </Typography>
+          </Box>
+          {legendId && (
+            <Button size="small" onClick={() => { setLegendId(null); setLegendPickerOpen(false); }}
+              sx={{ borderRadius: 2, textTransform: "none", color: isDark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)", fontSize: "0.78rem" }}>
+              {t("none")}
+            </Button>
+          )}
+        </DialogTitle>
+        <DialogContent sx={{ pt: 1 }}>
+          <Box sx={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1 }}>
             {LEGENDS.map((l) => (
-              <Box
+              <LegendCardItem
                 key={l.id}
-                onClick={() => { setLegendId(l.id); setLegendPickerOpen(false); }}
-                sx={{
-                  width: 56, height: 72, borderRadius: 2, overflow: "hidden", cursor: "pointer",
-                  border: legendId === l.id ? "2px solid #2979ff" : "2px solid transparent",
-                  backgroundImage: `url(${getLegendUrl(l.id)})`,
-                  backgroundSize: "cover", backgroundPosition: "center top",
-                  "&:hover": { opacity: 0.85 },
+                id={l.id}
+                overId={l.overId}
+                name={l.name}
+                isSelected={legendId === l.id || legendId === `cdn:${l.overId}`}
+                onSelect={(selectedId) => {
+                  setLegendId(selectedId);
+                  setLegendPickerOpen(false);
                 }}
               />
             ))}
@@ -2986,7 +3081,7 @@ function SoloView({ onBack }: { onBack: () => void }) {
         sx={{
           position: "fixed", inset: 0, zIndex: 1600,
           background: "#000",
-          opacity: dimmed ? (Capacitor.isNativePlatform() ? 0.25 : 0.6) : 0,
+          opacity: dimmed ? 0.65 : 0,
           transition: "opacity 0.9s ease",
           pointerEvents: dimmed ? "auto" : "none",
         }}
@@ -3072,8 +3167,15 @@ function TradingView({ onBack }: { onBack: () => void }) {
   const theme = useTheme();
   const isDark = theme.palette.mode === "dark";
   const t = useT();
-  const { cards, loading, error } = useCardCatalog();
+  const { cards: catalogCards, loading, error } = useCardCatalog();
   const priceBook = usePriceBook();
+  const cards = useMemo<CatalogCard[]>(() => [
+    ...catalogCards,
+    ...(priceBook?.promos ?? []).map((p) => ({
+      id: p.id, name: p.name, set: PROMO_SET, number: p.number, variant: null,
+      code: p.code, promo: true,
+    })),
+  ], [catalogCards, priceBook]);
   const priceBookRef = useRef<PriceBook | null>(null);
   priceBookRef.current = priceBook;
   const rates = useRates();
@@ -3117,7 +3219,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
     const q = search.trim().toLowerCase();
     return cards
       .filter((c) => setFilter === "ALL" || c.set === setFilter)
-      .filter((c) => !q || c.name.toLowerCase().includes(q) || c.id.toLowerCase().includes(q) || String(c.number).includes(q))
+      .filter((c) => !q || c.name.toLowerCase().includes(q) || c.id.toLowerCase().includes(q) || (c.code ?? "").toLowerCase().includes(q) || String(c.number).includes(q))
       .slice(0, 120);
   }, [cards, search, setFilter]);
 
@@ -3166,6 +3268,13 @@ function TradingView({ onBack }: { onBack: () => void }) {
   }
   function deleteTrade(id: string) { setTrades((prev) => prev.filter((x) => x.id !== id)); }
 
+  const cardLabel = (card: CatalogCard) => (card.promo ? `${t("promo")} · ${card.code}` : card.id);
+  const promoBadge = (
+    <Box sx={{ position: "absolute", top: 5, right: 5, background: ACCENT, color: ON_ACCENT, fontSize: "0.55rem", fontWeight: 800, borderRadius: "4px", px: 0.5, lineHeight: 1.5, textTransform: "uppercase", zIndex: 2, pointerEvents: "none" }}>
+      {t("promo")}
+    </Box>
+  );
+
   function addCard(card: CatalogCard) {
     if (!searchSide) return;
     // Prefer the selected printing's price; fall back to the other (e.g. foil-only champions).
@@ -3206,8 +3315,9 @@ function TradingView({ onBack }: { onBack: () => void }) {
   }
 
   function commitNumDialog() {
-    const disp = Math.max(0, parseFloat(numInput.replace(",", ".")) || 0);
-    const usd = Math.round((disp / rates[currency]) * 100) / 100;
+    const rawDisp = Math.max(0, parseFloat(numInput.replace(",", ".")) || 0);
+    const disp = Math.min(MAX_CARD_PRICE, rawDisp);
+    const usd = Math.min(MAX_CARD_PRICE, Math.round((disp / rates[currency]) * 100) / 100);
     if (priceEdit) {
       updateItem(priceEdit.side, priceEdit.key, { price: numInput.trim() === "" ? null : usd });
       setPriceEdit(null);
@@ -3226,8 +3336,8 @@ function TradingView({ onBack }: { onBack: () => void }) {
 
   function netMessage(): string {
     if (Math.abs(net) < 0.005) return t("trade_even");
-    if (net > 0) return t("trade_up").replace("{amount}", formatMoney(net));
-    return t("trade_owe").replace("{amount}", formatMoney(-net));
+    if (net > 0) return t("trade_receive_more").replace("{amount}", formatMoney(net));
+    return t("trade_give_more").replace("{amount}", formatMoney(-net));
   }
 
   function buildSummary(): string {
@@ -3236,7 +3346,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
       lines.push(`${t(labelKey)} — ${formatMoney(total)}`);
       if (items.length === 0 && cash === 0) lines.push("  —");
       items.forEach((it) => {
-        const tags = `${it.card.id}${it.foil ? " Foil" : ""} · ${it.condition}`;
+        const tags = `${cardLabel(it.card)}${it.foil ? " Foil" : ""} · ${it.condition}`;
         lines.push(`  ${it.qty}× ${it.card.name} [${tags}] ${it.price != null ? formatMoney(it.price) : "—"}`);
       });
       if (cash > 0) lines.push(`  + ${t("cash")}: ${formatMoney(cash)}`);
@@ -3281,7 +3391,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
     ctx.scale(scale, scale);
 
     const pad = 28;
-    ctx.fillStyle = "#0f0f22";
+    ctx.fillStyle = "#1c1b19";
     ctx.fillRect(0, 0, W, H);
 
     let y = 44;
@@ -3317,7 +3427,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
         ctx.fillText(name, pad + 14, y + rowH / 2);
         ctx.fillStyle = "rgba(255,255,255,0.45)";
         ctx.font = "600 12px system-ui, sans-serif";
-        ctx.fillText(`${it.card.id}${it.foil ? " · Foil" : ""} · ${it.condition}`, pad + 14 + ctx.measureText(name).width + 12, y + rowH / 2 + 1);
+        ctx.fillText(`${cardLabel(it.card)}${it.foil ? " · Foil" : ""} · ${it.condition}`, pad + 14 + ctx.measureText(name).width + 12, y + rowH / 2 + 1);
         ctx.textAlign = "right";
         ctx.fillStyle = it.price != null ? "#ffffff" : "rgba(255,255,255,0.4)";
         ctx.font = "700 15px system-ui, sans-serif";
@@ -3395,14 +3505,14 @@ function TradingView({ onBack }: { onBack: () => void }) {
     return (
       <Box key={it.key} sx={{ display: "flex", alignItems: "center", gap: 1, background: `${accent}14`, border: `1px solid ${accent}40`, borderLeft: `3px solid ${accent}`, borderRadius: 2, px: 1, py: 0.8 }}>
         <Box sx={{ width: 40, height: 56, borderRadius: 1, overflow: "hidden", flexShrink: 0, border: `1px solid ${accent}66`, background: isDark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.06)" }}>
-          <img src={getCardThumbUrl(it.card.id)} alt={it.card.name} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
+          <img src={getCardThumbUrl(it.card)} alt={it.card.name} loading="lazy" onError={hideMissingArt} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
         </Box>
         <Box sx={{ flex: 1, minWidth: 0 }}>
           <Typography sx={{ fontSize: "0.82rem", fontWeight: 700, color: textPrimary, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
             {it.card.name}
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, mt: 0.3, flexWrap: "wrap" }}>
-            <Typography sx={{ fontSize: "0.62rem", fontWeight: 700, color: textMuted }}>{it.card.id}</Typography>
+            <Typography sx={{ fontSize: "0.62rem", fontWeight: 700, color: textMuted }}>{cardLabel(it.card)}</Typography>
             <Box onClick={() => cycleCondition(side, it)} sx={{ cursor: "pointer", px: 0.6, py: 0.05, borderRadius: "4px", background: `${CONDITION_COLORS[it.condition]}22`, border: `1px solid ${CONDITION_COLORS[it.condition]}66` }}>
               <Typography sx={{ fontSize: "0.6rem", fontWeight: 800, color: CONDITION_COLORS[it.condition] }}>{it.condition}</Typography>
             </Box>
@@ -3477,7 +3587,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
   }
 
   return (
-    <Box sx={{ position: "fixed", inset: 0, display: "flex", flexDirection: "column", background: isDark ? "#08080f" : "#f4f4f8", color: textPrimary, pt: "env(safe-area-inset-top)", pb: "env(safe-area-inset-bottom)" }}>
+    <Box sx={{ position: "fixed", inset: 0, display: "flex", flexDirection: "column", background: isDark ? "#121211" : "#f4f3ef", color: textPrimary, pt: "env(safe-area-inset-top)", pb: "env(safe-area-inset-bottom)" }}>
       {/* Header */}
       <Box sx={{ display: "flex", alignItems: "center", gap: 1, px: 1.5, py: 1.25, borderBottom: `1px solid ${border}` }}>
         <IconButton size="small" onClick={onBack} sx={{ color: textMuted }}>
@@ -3489,7 +3599,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
           size="small"
           onChange={(e) => setCurrency(e.target.value as Currency)}
           title={t("currency")}
-          MenuProps={{ slotProps: { paper: { sx: { background: isDark ? "#14142a" : "#fff", color: textPrimary } } } }}
+          MenuProps={{ slotProps: { paper: { sx: { background: isDark ? "#242320" : "#fff", color: textPrimary } } } }}
           sx={{ fontSize: "0.72rem", fontWeight: 800, color: textPrimary, mr: 0.5, "& .MuiOutlinedInput-notchedOutline": { borderColor: border }, "& .MuiSvgIcon-root": { color: textMuted }, "& .MuiSelect-select": { py: 0.5, pl: 1 } }}
         >
           {CURRENCIES.map((c) => (<MenuItem key={c} value={c} sx={{ fontSize: "0.78rem" }}>{c}</MenuItem>))}
@@ -3512,7 +3622,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
             {t("prices_updated").replace("{date}", (priceBook.sourceUpdated || priceBook.generatedAt).slice(0, 10))}
           </Typography>
         ) : <Box sx={{ flex: 1 }} />}
-        <Button size="small" startIcon={<SaveIcon sx={{ fontSize: 15 }} />} onClick={saveTrade} sx={{ color: "#2979ff", textTransform: "none", fontWeight: 700, fontSize: "0.72rem", minWidth: 0, px: 0.75 }}>
+        <Button size="small" startIcon={<SaveIcon sx={{ fontSize: 15 }} />} onClick={saveTrade} sx={{ color: ACCENT, textTransform: "none", fontWeight: 700, fontSize: "0.72rem", minWidth: 0, px: 0.75 }}>
           {t("save_trade")}
         </Button>
         <IconButton size="small" onClick={() => setTradesOpen(true)} title={t("past_trades")} sx={{ color: textPrimary }}>
@@ -3552,7 +3662,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
           <Button fullWidth size="small" startIcon={<ContentCopyIcon sx={{ fontSize: 16 }} />} onClick={doCopy} sx={{ borderRadius: 2, textTransform: "none", fontWeight: 700, fontSize: "0.8rem", color: textPrimary, border: `1px solid ${border}`, background: surface, "&:hover": { background: isDark ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.06)" } }}>
             {t("copy_summary")}
           </Button>
-          <Button fullWidth size="small" startIcon={<IosShareIcon sx={{ fontSize: 16 }} />} onClick={(e) => setShareAnchor(e.currentTarget)} sx={{ borderRadius: 2, textTransform: "none", fontWeight: 700, fontSize: "0.8rem", color: "#fff", background: "linear-gradient(135deg, #2979ff 0%, #5c35d4 100%)", "&:hover": { filter: "brightness(1.08)" } }}>
+          <Button fullWidth size="small" startIcon={<IosShareIcon sx={{ fontSize: 16 }} />} onClick={(e) => setShareAnchor(e.currentTarget)} sx={{ borderRadius: 2, textTransform: "none", fontWeight: 700, fontSize: "0.8rem", color: ON_ACCENT, background: ACCENT, "&:hover": { background: ACCENT_HOVER } }}>
             {t("share_trade")}
           </Button>
         </Box>
@@ -3564,7 +3674,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
         onClose={() => setShareAnchor(null)}
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
         transformOrigin={{ vertical: "bottom", horizontal: "center" }}
-        slotProps={{ paper: { sx: { background: isDark ? "#14142a" : "#fff", color: textPrimary, borderRadius: 2, border: `1px solid ${border}` } } }}
+        slotProps={{ paper: { sx: { background: isDark ? "#242320" : "#fff", color: textPrimary, borderRadius: 2, border: `1px solid ${border}` } } }}
       >
         <MenuItem onClick={shareText} sx={{ fontSize: "0.85rem", fontWeight: 600, gap: 1 }}>
           <ContentCopyIcon sx={{ fontSize: 18, color: textMuted }} />
@@ -3582,7 +3692,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
         onClose={() => setSearchSide(null)}
         fullWidth
         maxWidth="sm"
-        slotProps={{ paper: { sx: { background: isDark ? "#0f0f22" : "#f4f4f8", borderRadius: 3, m: 2, maxHeight: "85vh" } } }}
+        slotProps={{ paper: { sx: { background: isDark ? "#1c1b19" : "#f4f3ef", borderRadius: 3, m: 2, maxHeight: "85vh" } } }}
       >
         <DialogTitle sx={{ color: textPrimary, fontWeight: 700, pb: 1, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           {t("add_card")}
@@ -3615,8 +3725,8 @@ function TradingView({ onBack }: { onBack: () => void }) {
           {/* Set filter */}
           <Box sx={{ display: "flex", gap: 0.5, mb: 1.25, overflowX: "auto", pb: 0.5 }}>
             {["ALL", ...sets].map((s) => (
-              <Box key={s} onClick={() => setSetFilter(s)} sx={{ cursor: "pointer", flexShrink: 0, px: 1, py: 0.4, borderRadius: "50px", background: setFilter === s ? "#2979ff" : surface, border: `1px solid ${setFilter === s ? "#2979ff" : border}` }}>
-                <Typography sx={{ fontSize: "0.7rem", fontWeight: 700, color: setFilter === s ? "#fff" : textMuted }}>{s === "ALL" ? t("filter_all_sets") : s}</Typography>
+              <Box key={s} onClick={() => setSetFilter(s)} sx={{ cursor: "pointer", flexShrink: 0, px: 1, py: 0.4, borderRadius: "6px", background: setFilter === s ? ACCENT : surface, border: `1px solid ${setFilter === s ? ACCENT : border}` }}>
+                <Typography sx={{ fontSize: "0.7rem", fontWeight: 700, color: setFilter === s ? ON_ACCENT : textMuted }}>{s === "ALL" ? t("filter_all_sets") : s === PROMO_SET ? t("promo") : s}</Typography>
               </Box>
             ))}
           </Box>
@@ -3630,15 +3740,48 @@ function TradingView({ onBack }: { onBack: () => void }) {
               const primary = lookupPrice(priceBook, c.id, addFoil);
               const shown = primary ?? lookupPrice(priceBook, c.id, !addFoil);
               const shownIsFoil = primary != null ? addFoil : true;
+              const sideItems = searchSide === "give" ? give : receive;
+              const addedCount = sideItems
+                .filter((it) => it.card.id === c.id)
+                .reduce((sum, it) => sum + it.qty, 0);
+
               return (
-              <Box key={c.id} onClick={() => addCard(c)} sx={{ cursor: "pointer", borderRadius: 2, overflow: "hidden", border: `1px solid ${border}`, "&:hover": { borderColor: "#2979ff" }, transition: "border-color 0.15s" }}>
-                <img src={getCardThumbUrl(c.id)} alt={c.name} loading="lazy" style={{ width: "100%", aspectRatio: "63/88", objectFit: "cover", objectPosition: "top", display: "block" }} />
+              <Box key={c.id} onClick={() => addCard(c)} sx={{ position: "relative", cursor: "pointer", borderRadius: 2, overflow: "hidden", border: `1px solid ${addedCount > 0 ? (searchSide === "give" ? "#2979ff" : "#4caf50") : border}`, "&:hover": { borderColor: "#2979ff" }, transition: "border-color 0.15s" }}>
+                <Box sx={{ position: "relative" }}>
+                  <img src={getCardThumbUrl(c)} alt={c.name} loading="lazy" onError={hideMissingArt} style={{ width: "100%", aspectRatio: "63/88", objectFit: "cover", objectPosition: "top", display: "block" }} />
+                  {c.promo && promoBadge}
+                  {addedCount > 0 && (
+                    <Box
+                      sx={{
+                        position: "absolute",
+                        top: 5,
+                        left: 5,
+                        background: searchSide === "give" ? "#2979ff" : "#4caf50",
+                        color: "#fff",
+                        fontSize: "0.7rem",
+                        fontWeight: 900,
+                        minWidth: 20,
+                        height: 20,
+                        borderRadius: "10px",
+                        px: 0.6,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        boxShadow: "0 2px 6px rgba(0,0,0,0.6)",
+                        zIndex: 2,
+                        pointerEvents: "none",
+                      }}
+                    >
+                      {addedCount}
+                    </Box>
+                  )}
+                </Box>
                 <Box sx={{ px: 0.5, py: 0.4 }}>
                   <Typography sx={{ fontSize: "0.62rem", fontWeight: 700, color: textPrimary, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.name}</Typography>
-                  <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 0.5 }}>
-                    <Typography sx={{ fontSize: "0.56rem", color: textMuted }}>{c.id}</Typography>
+                  <Box sx={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", columnGap: 0.5 }}>
+                    <Typography sx={{ fontSize: "0.56rem", color: textMuted, whiteSpace: "nowrap" }}>{c.promo ? c.code : c.id}</Typography>
                     {shown != null && (
-                      <Typography sx={{ fontSize: "0.58rem", fontWeight: 800, color: shownIsFoil ? "#ce93d8" : "#4caf50" }}>{formatMoney(shown)}{shownIsFoil ? " ◆" : ""}</Typography>
+                      <Typography sx={{ fontSize: "0.58rem", fontWeight: 800, whiteSpace: "nowrap", color: shownIsFoil ? "#ce93d8" : "#4caf50" }}>{formatMoney(shown)}{shownIsFoil ? " ◆" : ""}</Typography>
                     )}
                   </Box>
                 </Box>
@@ -3655,7 +3798,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
         onClose={() => { setPriceEdit(null); setCashEdit(null); setNumInput(""); }}
         fullWidth
         maxWidth="xs"
-        slotProps={{ paper: { sx: { background: isDark ? "#0f0f22" : "#f4f4f8", borderRadius: 3, m: 2 } } }}
+        slotProps={{ paper: { sx: { background: isDark ? "#1c1b19" : "#f4f3ef", borderRadius: 3, m: 2 } } }}
       >
         <DialogTitle sx={{ color: textPrimary, fontWeight: 700, pb: 1 }}>{cashEdit ? t("add_cash") : t("set_price")}</DialogTitle>
         <DialogContent sx={{ pt: 0 }}>
@@ -3664,16 +3807,40 @@ function TradingView({ onBack }: { onBack: () => void }) {
             fullWidth
             type="number"
             value={numInput}
-            onChange={(e) => setNumInput(e.target.value)}
+            onChange={(e) => {
+              const val = e.target.value;
+              if (val === "" || val === "-" || val === ".") {
+                setNumInput(val);
+                return;
+              }
+              const parsed = parseFloat(val);
+              if (!isNaN(parsed) && parsed > MAX_CARD_PRICE) {
+                setNumInput(String(MAX_CARD_PRICE));
+              } else {
+                setNumInput(val);
+              }
+            }}
             onKeyDown={(e) => { if (e.key === "Enter") commitNumDialog(); }}
             placeholder="0.00"
-            slotProps={{ input: { startAdornment: (<InputAdornment position="start"><Typography sx={{ fontSize: "0.9rem", fontWeight: 700, color: textMuted }}>{CURRENCY_SYMBOL[currency]}</Typography></InputAdornment>), inputProps: { min: 0, step: 0.25 } } }}
+            slotProps={{
+              input: {
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <Typography sx={{ fontSize: "0.9rem", fontWeight: 700, color: textMuted }}>
+                      {CURRENCY_SYMBOL[currency]}
+                    </Typography>
+                  </InputAdornment>
+                ),
+                inputProps: { min: 0, max: MAX_CARD_PRICE, step: 0.25 },
+              },
+              htmlInput: { min: 0, max: MAX_CARD_PRICE, step: 0.25 },
+            }}
             sx={{ mt: 0.5, "& .MuiOutlinedInput-root": { borderRadius: "10px", background: surface, "& fieldset": { borderColor: border } }, "& .MuiOutlinedInput-input": { color: textPrimary, fontSize: "1.1rem", fontWeight: 700 } }}
           />
         </DialogContent>
         <DialogActions sx={{ px: 3, pb: 2 }}>
           <Button onClick={() => { setPriceEdit(null); setCashEdit(null); setNumInput(""); }} sx={{ color: textMuted, textTransform: "none", fontWeight: 700 }}>{t("cancel")}</Button>
-          <Button onClick={commitNumDialog} sx={{ color: "#2979ff", textTransform: "none", fontWeight: 800 }}>{t("set_price")}</Button>
+          <Button onClick={commitNumDialog} sx={{ color: ACCENT, textTransform: "none", fontWeight: 800 }}>{t("set_price")}</Button>
         </DialogActions>
       </Dialog>
 
@@ -3683,7 +3850,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
         onClose={() => setResetOpen(false)}
         fullWidth
         maxWidth="xs"
-        slotProps={{ paper: { sx: { background: isDark ? "#0f0f22" : "#f4f4f8", borderRadius: 3, m: 2 } } }}
+        slotProps={{ paper: { sx: { background: isDark ? "#1c1b19" : "#f4f3ef", borderRadius: 3, m: 2 } } }}
       >
         <DialogTitle sx={{ color: textPrimary, fontWeight: 700, pb: 1 }}>{t("trade_reset_title")}</DialogTitle>
         <DialogContent sx={{ pt: 0 }}>
@@ -3701,7 +3868,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
         onClose={() => setTradesOpen(false)}
         fullWidth
         maxWidth="xs"
-        slotProps={{ paper: { sx: { background: isDark ? "#0f0f22" : "#f4f4f8", borderRadius: 3, m: 2, maxHeight: "80vh" } } }}
+        slotProps={{ paper: { sx: { background: isDark ? "#1c1b19" : "#f4f3ef", borderRadius: 3, m: 2, maxHeight: "80vh" } } }}
       >
         <DialogTitle sx={{ color: textPrimary, fontWeight: 700, pb: 1, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           {t("past_trades")}
@@ -3730,7 +3897,7 @@ function TradingView({ onBack }: { onBack: () => void }) {
                     {new Date(tr.savedAt).toLocaleDateString()} {new Date(tr.savedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })} · {t("n_cards").replace("{n}", String(nCards))}
                   </Typography>
                 </Box>
-                <Button size="small" onClick={() => loadTrade(tr)} sx={{ color: "#2979ff", textTransform: "none", fontWeight: 700, fontSize: "0.72rem", minWidth: 0 }}>{t("load_trade")}</Button>
+                <Button size="small" onClick={() => loadTrade(tr)} sx={{ color: ACCENT, textTransform: "none", fontWeight: 700, fontSize: "0.72rem", minWidth: 0 }}>{t("load_trade")}</Button>
                 <IconButton size="small" onClick={() => deleteTrade(tr.id)} sx={{ color: textMuted }}>
                   <DeleteOutlineIcon sx={{ fontSize: 18 }} />
                 </IconButton>
@@ -3940,8 +4107,9 @@ export default function RiftboundScore() {
   }
 
   function commitEdit(id: string) {
-    if (editName.trim()) {
-      setPlayers((prev) => prev.map((p) => (p.id === id ? { ...p, name: editName.trim() } : p)));
+    const cleaned = sanitizePlayerName(editName).trim().replace(/\s+/g, " ");
+    if (cleaned) {
+      setPlayers((prev) => prev.map((p) => (p.id === id ? { ...p, name: cleaned } : p)));
     }
     setEditingId(null);
   }
@@ -4047,10 +4215,10 @@ export default function RiftboundScore() {
   return (
     <LangContext.Provider value={lang}>
     <Box className="rb-setup" sx={{
-      '--rb-bg': isDark ? '#070710' : '#f0f0f6',
-      '--rb-surface': isDark ? '#0e0e20' : '#ffffff',
-      '--rb-surface2': isDark ? '#141428' : '#e4e4ef',
-      '--rb-surface3': isDark ? '#1a1a32' : '#d4d4e4',
+      '--rb-bg': isDark ? '#121211' : '#f4f3ef',
+      '--rb-surface': isDark ? '#1c1b19' : '#ffffff',
+      '--rb-surface2': isDark ? '#242320' : '#e8e6e0',
+      '--rb-surface3': isDark ? '#2c2b28' : '#d9d6ce',
       '--rb-text': isDark ? '#ffffff' : '#111111',
       '--rb-text-muted': isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.45)',
       '--rb-border': isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.1)',
@@ -4058,7 +4226,7 @@ export default function RiftboundScore() {
       '--rb-icon-color': isDark ? 'rgba(255,255,255,0.6)' : 'rgba(0,0,0,0.5)',
       '--rb-swatch-border': isDark ? 'rgba(255,255,255,0.14)' : 'rgba(0,0,0,0.15)',
       '--rb-swatch-hover': isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.4)',
-      '--rb-mode-active-bg': isDark ? '#2a2a4a' : '#d0d0e0',
+      '--rb-mode-active-bg': isDark ? '#33312d' : '#d9d6ce',
       '--rb-reset-color': isDark ? 'rgba(255,255,255,0.28)' : 'rgba(0,0,0,0.32)',
     } as React.CSSProperties}>
       <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, px: 2, py: 1.5, borderBottom: `1px solid ${isDark ? "rgba(255,255,255,0.07)" : "rgba(0,0,0,0.07)"}` }}>
@@ -4105,12 +4273,13 @@ export default function RiftboundScore() {
               {editingId === player.id ? (
                 <TextField
                   value={editName}
-                  onChange={(e) => setEditName(e.target.value)}
+                  onChange={(e) => setEditName(sanitizePlayerName(e.target.value))}
                   onBlur={() => commitEdit(player.id)}
                   onKeyDown={(e) => { if (e.key === "Enter") commitEdit(player.id); }}
                   size="small"
                   variant="standard"
                   autoFocus
+                  slotProps={{ htmlInput: { maxLength: MAX_PLAYER_NAME_LEN } }}
                   sx={{
                     "& .MuiInput-input": { color: isDark ? "#fff" : "#111", fontSize: "1.05rem", fontWeight: 700 },
                     "& .MuiInput-underline:before": { borderBottomColor: isDark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.25)", borderBottomStyle: "dashed" },
@@ -4166,7 +4335,7 @@ export default function RiftboundScore() {
         onClose={() => setColorAnchorEl(null)}
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
         transformOrigin={{ vertical: "top", horizontal: "center" }}
-        slotProps={{ paper: { sx: { background: isDark ? "#14142a" : "#ffffff", border: `1px solid ${isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.12)"}`, borderRadius: 2 } } }}
+        slotProps={{ paper: { sx: { background: isDark ? "#242320" : "#ffffff", border: `1px solid ${isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.12)"}`, borderRadius: 2 } } }}
       >
         <Box sx={{ p: 1.5, display: "grid", gridTemplateColumns: "repeat(4, 32px)", gap: "8px" }}>
           {PRESET_COLORS.map((c) => (
@@ -4191,20 +4360,25 @@ export default function RiftboundScore() {
         maxWidth="sm"
         slotProps={{ paper: {
           sx: {
-            background: isDark ? "#0f0f22" : "#f4f4f8",
+            background: isDark ? "#1c1b19" : "#f4f3ef",
             borderRadius: 3,
             m: 2,
             maxHeight: "80vh",
           },
         } }}
       >
-        <DialogTitle sx={{ color: isDark ? "#fff" : "#111", fontWeight: 700, pb: 1, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-          {t("choose_legend")}
+        <DialogTitle sx={{ color: isDark ? "#fff" : "#111", fontWeight: 700, pb: 0.5, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <Box>
+            <Typography sx={{ fontWeight: 800, fontSize: "1.1rem", color: isDark ? "#fff" : "#111" }}>{t("choose_legend")}</Typography>
+            <Typography sx={{ fontSize: "0.72rem", color: isDark ? "rgba(255,255,255,0.45)" : "rgba(0,0,0,0.5)", fontWeight: 500 }}>
+              {t("hold_for_overnumbered")}
+            </Typography>
+          </Box>
           <Button size="small" onClick={() => { pickLegend(null); setLegendSearch(""); }} sx={{ color: isDark ? "rgba(255,255,255,0.45)" : "rgba(0,0,0,0.45)", fontSize: "0.75rem", textTransform: "none", minWidth: 0 }}>
             {t("no_legend")}
           </Button>
         </DialogTitle>
-        <DialogContent sx={{ pt: 0 }}>
+        <DialogContent sx={{ pt: 1 }}>
           <TextField
             placeholder={t("search_legends")}
             value={legendSearch}
@@ -4225,44 +4399,20 @@ export default function RiftboundScore() {
           />
           <Box sx={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", pb: 1 }}>
             {LEGENDS.filter((l) => l.name.toLowerCase().includes(legendSearch.toLowerCase())).map((legend) => {
-              const takenBy = players.find((p) => p.id !== legendPickerPlayerId && p.legendId === legend.id);
+              const activePlayer = players.find((p) => p.id === legendPickerPlayerId);
+              const isSelected = activePlayer?.legendId === legend.id || activePlayer?.legendId === `cdn:${legend.overId}`;
+              const takenBy = players.find((p) => p.id !== legendPickerPlayerId && (p.legendId === legend.id || (legend.overId && p.legendId === `cdn:${legend.overId}`)));
               return (
-              <Box
-                key={legend.id}
-                onClick={() => pickLegend(legend.id)}
-                sx={{
-                  position: "relative",
-                  cursor: "pointer",
-                  borderRadius: 2,
-                  overflow: "hidden",
-                  border: `2px solid ${isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"}`,
-                  "&:hover": { borderColor: isDark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.4)" },
-                  transition: "border-color 0.15s",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <img
-                  src={getLegendUrl(legend.id)}
-                  alt={legend.name}
-                  loading="lazy"
-                  style={{ width: "100%", aspectRatio: "3/4", objectFit: "cover", objectPosition: "top", display: "block", opacity: takenBy ? 0.55 : 1 }}
+                <LegendCardItem
+                  key={legend.id}
+                  id={legend.id}
+                  overId={legend.overId}
+                  name={legend.name}
+                  isSelected={isSelected}
+                  isTaken={Boolean(takenBy)}
+                  takenByName={takenBy?.name}
+                  onSelect={(selectedId) => pickLegend(selectedId)}
                 />
-                {takenBy && (
-                  <CheckCircleIcon
-                    titleAccess={takenBy.name}
-                    sx={{
-                      position: "absolute",
-                      bottom: 4,
-                      right: 4,
-                      fontSize: 22,
-                      color: "#4caf50",
-                      background: "rgba(0,0,0,0.55)",
-                      borderRadius: "50%",
-                    }}
-                  />
-                )}
-              </Box>
               );
             })}
           </Box>

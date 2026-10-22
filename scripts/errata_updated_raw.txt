@@ -1,3 +1,5 @@
+
+===== PAGE 1 =====
 Origins  Cards  
 Falling  Star  
 [NEW  TEXT]   Deal  3  to  a  unit.  Deal  3  to  a  unit.  
@@ -7,7 +9,9 @@ Falling  Star
 Icathian  Rain  
 [NEW  TEXT]   Deal  2  to  a  unit.  Deal  2  to  a  unit.  Deal  2  to  a  unit.  Deal  2  to  a  unit.  Deal  2  to  a  unit.  Deal  2  to  a  unit.  
 ▲  
-[OLD  TEXT]  Do  this  6  times:  Deal  2  to  a  unit.  (You  can  choose  different  units.)   Reinforce  
+[OLD  TEXT]  Do  this  6  times:  Deal  2  to  a  unit.  (You  can  choose  different  units.)   
+===== PAGE 2 =====
+Reinforce  
 [NEW  TEXT]   Look  at  the  top  5  cards  of  your  Main  Deck.  You  may  banish  a  unit  from  among  
 them,
  
@@ -85,7 +89,9 @@ of
 them.
   
  
- Blood  Rush  
+ 
+===== PAGE 3 =====
+Blood  Rush  
 [NEW  TEXT]  [Action]  (Play  on  your  turn  or  in  showdowns.)  [Repeat]  [1]  (You  may  pay  the  additional  cost  to  repeat  this  spell's  effect.)  Give  a  unit  [Assault  2]  this  turn.  (+2  [M]  while  it's  an  attacker.)  
 ▲  
 [OLD  TEXT]  [Action]  (Play  on  your  turn  or  in  showdowns.)  [Repeat]  [1]  (You  may  pay  the  additional  cost  to  repeat  this  spell's  effect.)  Give  a  unit  [Assault  2].  (+2  [M]  while  it's  an  attacker.)   
@@ -100,7 +106,9 @@ Draw
  
 1.
   
- Edge  of  Night  
+ 
+===== PAGE 4 =====
+Edge  of  Night  
 [NEW  TEXT]  [Hidden]  (Hide  now  for  [A]  to  react  with  later  for  [0].)  When  you  play  this  from  face  down,  attach  it  to  a  unit  you  control  (here) .  [Equip]  [C]  ([C]:  Attach  this  to  a  unit  you  control.)  
 ▲  
 [OLD  TEXT]   [Hidden]  (Hide  now  for  [A]  to  react  with  later  for  [0].)  When  you  play  this  from  face  down,  attach  it  to  a  unit  you  control  here.  [Equip]  [C]  ([C]:  Attach  this  to  a  unit  you  control.)   
@@ -130,7 +138,9 @@ control.)
  When  you  play  me,  heal  your  units  here,  then  move  an  enemy  unit  from  here  to  its  
 base.
   
- Jax,  Unmatched  
+ 
+===== PAGE 5 =====
+Jax,  Unmatched  
 [NEW  TEXT]   [Deﬂect]  (Opponents  must  pay  [A]  to  choose  me  with  a  spell  or  ability.)  Your  Equipment  everywhere  have  [Quick-Draw].  (Each  gains  [Reaction].  When  you  
 play
  
@@ -188,7 +198,9 @@ this
  
 turn.
   
- Rek’Sai,  Swarm  Queen  
+ 
+===== PAGE 6 =====
+Rek’Sai,  Swarm  Queen  
 [NEW  TEXT]   When  I  attack,  you  may  reveal  the  top  2  cards  of  your  Main  Deck.  You  may  banish  
 one,
  
@@ -304,7 +316,9 @@ to
  
 me.
   
- Tianna  Crownguard  
+ 
+===== PAGE 7 =====
+Tianna  Crownguard  
 [NEW  TEXT]   [Deﬂect]  (Opponents  must  pay  [A]  to  choose  me  with  a  spell  or  ability.)  While  I'm  at  a  battleﬁeld,  opponents  can't  gain  points.  
 ▲  
 [OLD  TEXT]  [Deﬂect]  (Opponents  must  pay  [A]  to  choose  me  with  a  spell  or  ability.)  While  I'm  at  a  battleﬁeld,  opponents  can't  score  points.   
@@ -352,7 +366,9 @@ the
  
 rest.
   
- Void  Rush  
+ 
+===== PAGE 8 =====
+Void  Rush  
 [NEW  TEXT]   Reveal  the  top  2  cards  of  your  Main  Deck.  You  may  banish  one,  then  play  it,  
 reducing
  

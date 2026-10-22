@@ -1,6 +1,6 @@
 ﻿{
-    "generatedAt":  "2026-08-19",
-    "count":  1153,
+    "generatedAt":  "2026-10-22",
+    "count":  1370,
     "cards":  [
                   {
                       "id":  "OGN-001",
@@ -2681,6 +2681,1525 @@
                       "name":  "Decisive Strike",
                       "set":  "OGS",
                       "number":  24,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-001",
+                      "name":  "Amateur Demolitionist",
+                      "set":  "RAD",
+                      "number":  1,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-002",
+                      "name":  "Banner of Conquest",
+                      "set":  "RAD",
+                      "number":  2,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-003",
+                      "name":  "Bilgewater Tracker",
+                      "set":  "RAD",
+                      "number":  3,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-004",
+                      "name":  "Brawl",
+                      "set":  "RAD",
+                      "number":  4,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-005",
+                      "name":  "Lingering Animus",
+                      "set":  "RAD",
+                      "number":  5,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-006",
+                      "name":  "Scorched Earth",
+                      "set":  "RAD",
+                      "number":  6,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-007",
+                      "name":  "Rally for War",
+                      "set":  "RAD",
+                      "number":  7,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-008",
+                      "name":  "War Scout",
+                      "set":  "RAD",
+                      "number":  8,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-009",
+                      "name":  "Antagonistic Apparatus",
+                      "set":  "RAD",
+                      "number":  9,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-010",
+                      "name":  "Forbidden Technique",
+                      "set":  "RAD",
+                      "number":  10,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-011",
+                      "name":  "Incorrigible Construct",
+                      "set":  "RAD",
+                      "number":  11,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-012",
+                      "name":  "Runeblade Anvil",
+                      "set":  "RAD",
+                      "number":  12,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-013",
+                      "name":  "Lost to the Sands",
+                      "set":  "RAD",
+                      "number":  13,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-014",
+                      "name":  "Shimmering Swimmer",
+                      "set":  "RAD",
+                      "number":  14,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-015",
+                      "name":  "Akali, Brash",
+                      "set":  "RAD",
+                      "number":  15,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-016",
+                      "name":  "Coalesced Energy",
+                      "set":  "RAD",
+                      "number":  16,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-017",
+                      "name":  "Detonation Amplifier",
+                      "set":  "RAD",
+                      "number":  17,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-018",
+                      "name":  "Drakehound Packmaster",
+                      "set":  "RAD",
+                      "number":  18,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-019",
+                      "name":  "Firebrand Raider",
+                      "set":  "RAD",
+                      "number":  19,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-020",
+                      "name":  "Mordekaiser, Twice Slain",
+                      "set":  "RAD",
+                      "number":  20,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-020a",
+                      "name":  "Mordekaiser, Twice Slain",
+                      "set":  "RAD",
+                      "number":  20,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-021",
+                      "name":  "Ekko, Revolutionary",
+                      "set":  "RAD",
+                      "number":  21,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-021a",
+                      "name":  "Ekko, Revolutionary",
+                      "set":  "RAD",
+                      "number":  21,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-022",
+                      "name":  "Whirling Twirligig",
+                      "set":  "RAD",
+                      "number":  22,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-023",
+                      "name":  "Ziggs, Short-Fused",
+                      "set":  "RAD",
+                      "number":  23,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-023a",
+                      "name":  "Ziggs, Short-Fused",
+                      "set":  "RAD",
+                      "number":  23,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-024",
+                      "name":  "Blossoming Dreamroot",
+                      "set":  "RAD",
+                      "number":  24,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-025",
+                      "name":  "Consult the Heavens",
+                      "set":  "RAD",
+                      "number":  25,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-026",
+                      "name":  "Entrenched Boar",
+                      "set":  "RAD",
+                      "number":  26,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-027",
+                      "name":  "Iridescent Avian",
+                      "set":  "RAD",
+                      "number":  27,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-028",
+                      "name":  "Ki Burst",
+                      "set":  "RAD",
+                      "number":  28,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-029",
+                      "name":  "Life from Stone",
+                      "set":  "RAD",
+                      "number":  29,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-030",
+                      "name":  "Sanctum Conservator",
+                      "set":  "RAD",
+                      "number":  30,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-031",
+                      "name":  "Stoic Ferryman",
+                      "set":  "RAD",
+                      "number":  31,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-032",
+                      "name":  "Battle Preparations",
+                      "set":  "RAD",
+                      "number":  32,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-033",
+                      "name":  "Command: Attack",
+                      "set":  "RAD",
+                      "number":  33,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-034",
+                      "name":  "Hunker Down",
+                      "set":  "RAD",
+                      "number":  34,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-035",
+                      "name":  "Invigorating Bloom",
+                      "set":  "RAD",
+                      "number":  35,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-036",
+                      "name":  "Storm Raptor",
+                      "set":  "RAD",
+                      "number":  36,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-037",
+                      "name":  "Watchful Curator",
+                      "set":  "RAD",
+                      "number":  37,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-038",
+                      "name":  "Ahri, Confident",
+                      "set":  "RAD",
+                      "number":  38,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-039",
+                      "name":  "Ephemeral Ward",
+                      "set":  "RAD",
+                      "number":  39,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-040",
+                      "name":  "Heartening Soul",
+                      "set":  "RAD",
+                      "number":  40,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-041",
+                      "name":  "Hush",
+                      "set":  "RAD",
+                      "number":  41,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-042",
+                      "name":  "Orianna, Exquisite",
+                      "set":  "RAD",
+                      "number":  42,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-042a",
+                      "name":  "Orianna, Exquisite",
+                      "set":  "RAD",
+                      "number":  42,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-043",
+                      "name":  "Riven, Broken Blade",
+                      "set":  "RAD",
+                      "number":  43,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-043a",
+                      "name":  "Riven, Broken Blade",
+                      "set":  "RAD",
+                      "number":  43,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-044",
+                      "name":  "Hunting Blind",
+                      "set":  "RAD",
+                      "number":  44,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-045",
+                      "name":  "K\u0027Sante, Dauntless",
+                      "set":  "RAD",
+                      "number":  45,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-045a",
+                      "name":  "K\u0027Sante, Dauntless",
+                      "set":  "RAD",
+                      "number":  45,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-046",
+                      "name":  "Resplendent Rostrum",
+                      "set":  "RAD",
+                      "number":  46,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-047",
+                      "name":  "Fanfare",
+                      "set":  "RAD",
+                      "number":  47,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-048",
+                      "name":  "High Note",
+                      "set":  "RAD",
+                      "number":  48,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-049",
+                      "name":  "Industrious Mechsmith",
+                      "set":  "RAD",
+                      "number":  49,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-050",
+                      "name":  "Mysterious Chronomancer",
+                      "set":  "RAD",
+                      "number":  50,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-051",
+                      "name":  "Parallel Convergence",
+                      "set":  "RAD",
+                      "number":  51,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-052",
+                      "name":  "Resource Extractor",
+                      "set":  "RAD",
+                      "number":  52,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-053",
+                      "name":  "Strigian Oracle",
+                      "set":  "RAD",
+                      "number":  53,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-054",
+                      "name":  "Trinket Peddler",
+                      "set":  "RAD",
+                      "number":  54,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-055",
+                      "name":  "Clanging Sentry",
+                      "set":  "RAD",
+                      "number":  55,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-056",
+                      "name":  "Improvised Projectile",
+                      "set":  "RAD",
+                      "number":  56,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-057",
+                      "name":  "Piltovan Guidebot",
+                      "set":  "RAD",
+                      "number":  57,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-058",
+                      "name":  "Riptide Mage",
+                      "set":  "RAD",
+                      "number":  58,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-059",
+                      "name":  "Supernova",
+                      "set":  "RAD",
+                      "number":  59,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-060",
+                      "name":  "The Empyrean",
+                      "set":  "RAD",
+                      "number":  60,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-061",
+                      "name":  "Ekko, Ingenious",
+                      "set":  "RAD",
+                      "number":  61,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-061a",
+                      "name":  "Ekko, Ingenious",
+                      "set":  "RAD",
+                      "number":  61,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-062",
+                      "name":  "Gravity Field",
+                      "set":  "RAD",
+                      "number":  62,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-063",
+                      "name":  "Kai\u0027Sa, Rebel",
+                      "set":  "RAD",
+                      "number":  63,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-064",
+                      "name":  "Scrutinizing Scope",
+                      "set":  "RAD",
+                      "number":  64,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-065",
+                      "name":  "Seraphine, Inspiring",
+                      "set":  "RAD",
+                      "number":  65,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-065a",
+                      "name":  "Seraphine, Inspiring",
+                      "set":  "RAD",
+                      "number":  65,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-066",
+                      "name":  "Spirit of the Forge",
+                      "set":  "RAD",
+                      "number":  66,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-067",
+                      "name":  "Clocktower Guardian",
+                      "set":  "RAD",
+                      "number":  67,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-068",
+                      "name":  "Orianna, Mechanical Marvel",
+                      "set":  "RAD",
+                      "number":  68,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-068a",
+                      "name":  "Orianna, Mechanical Marvel",
+                      "set":  "RAD",
+                      "number":  68,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-069",
+                      "name":  "Zero Point Inflection",
+                      "set":  "RAD",
+                      "number":  69,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-070",
+                      "name":  "Hold \u0027Em",
+                      "set":  "RAD",
+                      "number":  70,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-071",
+                      "name":  "Nazuman Ntofo",
+                      "set":  "RAD",
+                      "number":  71,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-072",
+                      "name":  "Overloaded Traveler",
+                      "set":  "RAD",
+                      "number":  72,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-073",
+                      "name":  "Pillaged Armory",
+                      "set":  "RAD",
+                      "number":  73,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-074",
+                      "name":  "Raving Witness",
+                      "set":  "RAD",
+                      "number":  74,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-075",
+                      "name":  "Skystrike Squadron",
+                      "set":  "RAD",
+                      "number":  75,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-076",
+                      "name":  "Sneaky Zeebles",
+                      "set":  "RAD",
+                      "number":  76,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-077",
+                      "name":  "Wrath of the Freljord",
+                      "set":  "RAD",
+                      "number":  77,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-078",
+                      "name":  "Armored Tusker",
+                      "set":  "RAD",
+                      "number":  78,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-079",
+                      "name":  "Avalanche",
+                      "set":  "RAD",
+                      "number":  79,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-080",
+                      "name":  "Bloodscent Swarm",
+                      "set":  "RAD",
+                      "number":  80,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-081",
+                      "name":  "Elnuk Herd",
+                      "set":  "RAD",
+                      "number":  81,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-082",
+                      "name":  "Primordial Roar",
+                      "set":  "RAD",
+                      "number":  82,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-083",
+                      "name":  "Stalwart Goatherd",
+                      "set":  "RAD",
+                      "number":  83,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-084",
+                      "name":  "Cataclysm",
+                      "set":  "RAD",
+                      "number":  84,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-085",
+                      "name":  "Graves, Blasting Through",
+                      "set":  "RAD",
+                      "number":  85,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-086",
+                      "name":  "K\u0027Sante, Courageous",
+                      "set":  "RAD",
+                      "number":  86,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-086a",
+                      "name":  "K\u0027Sante, Courageous",
+                      "set":  "RAD",
+                      "number":  86,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-087",
+                      "name":  "Portable Portal",
+                      "set":  "RAD",
+                      "number":  87,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-088",
+                      "name":  "Staunch Survivor",
+                      "set":  "RAD",
+                      "number":  88,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-089",
+                      "name":  "Titanic Shrine",
+                      "set":  "RAD",
+                      "number":  89,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-090",
+                      "name":  "Evelynn, Consuming",
+                      "set":  "RAD",
+                      "number":  90,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-090a",
+                      "name":  "Evelynn, Consuming",
+                      "set":  "RAD",
+                      "number":  90,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-091",
+                      "name":  "Jarvan IV, Martial Paragon",
+                      "set":  "RAD",
+                      "number":  91,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-091a",
+                      "name":  "Jarvan IV, Martial Paragon",
+                      "set":  "RAD",
+                      "number":  91,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-092",
+                      "name":  "Seraphic Wyvern",
+                      "set":  "RAD",
+                      "number":  92,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-093",
+                      "name":  "Disposal Expert",
+                      "set":  "RAD",
+                      "number":  93,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-094",
+                      "name":  "Explosimian",
+                      "set":  "RAD",
+                      "number":  94,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-095",
+                      "name":  "Momentary Companion",
+                      "set":  "RAD",
+                      "number":  95,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-096",
+                      "name":  "Satchel Charge",
+                      "set":  "RAD",
+                      "number":  96,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-097",
+                      "name":  "Siren of the Shallows",
+                      "set":  "RAD",
+                      "number":  97,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-098",
+                      "name":  "Siren\u0027s Song",
+                      "set":  "RAD",
+                      "number":  98,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-099",
+                      "name":  "Suave Negotiator",
+                      "set":  "RAD",
+                      "number":  99,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-100",
+                      "name":  "The Waters\u0027 Wage",
+                      "set":  "RAD",
+                      "number":  100,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-101",
+                      "name":  "An Offer You Can\u0027t Refuse",
+                      "set":  "RAD",
+                      "number":  101,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-102",
+                      "name":  "Demon Shade",
+                      "set":  "RAD",
+                      "number":  102,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-103",
+                      "name":  "Gutter Guardian",
+                      "set":  "RAD",
+                      "number":  103,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-104",
+                      "name":  "Pitiless Stalker",
+                      "set":  "RAD",
+                      "number":  104,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-105",
+                      "name":  "Reckless Innovator",
+                      "set":  "RAD",
+                      "number":  105,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-106",
+                      "name":  "The Good Stuff",
+                      "set":  "RAD",
+                      "number":  106,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-107",
+                      "name":  "Bedeviling Stranger",
+                      "set":  "RAD",
+                      "number":  107,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-108",
+                      "name":  "Bushwhack Trap",
+                      "set":  "RAD",
+                      "number":  108,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-109",
+                      "name":  "Evelynn, In Control",
+                      "set":  "RAD",
+                      "number":  109,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-109a",
+                      "name":  "Evelynn, In Control",
+                      "set":  "RAD",
+                      "number":  109,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-110",
+                      "name":  "Lulu, Whimsical",
+                      "set":  "RAD",
+                      "number":  110,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-111",
+                      "name":  "Mechanical Bandit",
+                      "set":  "RAD",
+                      "number":  111,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-112",
+                      "name":  "Ziggs, Explosive",
+                      "set":  "RAD",
+                      "number":  112,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-112a",
+                      "name":  "Ziggs, Explosive",
+                      "set":  "RAD",
+                      "number":  112,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-113",
+                      "name":  "Angler Wyrm",
+                      "set":  "RAD",
+                      "number":  113,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-114",
+                      "name":  "Riven, Deserter",
+                      "set":  "RAD",
+                      "number":  114,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-114a",
+                      "name":  "Riven, Deserter",
+                      "set":  "RAD",
+                      "number":  114,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-115",
+                      "name":  "Transpositionist",
+                      "set":  "RAD",
+                      "number":  115,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-116",
+                      "name":  "Concert Poster",
+                      "set":  "RAD",
+                      "number":  116,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-117",
+                      "name":  "For Demacia!",
+                      "set":  "RAD",
+                      "number":  117,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-118",
+                      "name":  "Herald of the Emperor",
+                      "set":  "RAD",
+                      "number":  118,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-119",
+                      "name":  "Hunting Dog",
+                      "set":  "RAD",
+                      "number":  119,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-120",
+                      "name":  "Meticulous Restorationist",
+                      "set":  "RAD",
+                      "number":  120,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-121",
+                      "name":  "One-Two Punch",
+                      "set":  "RAD",
+                      "number":  121,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-122",
+                      "name":  "Party Crasher",
+                      "set":  "RAD",
+                      "number":  122,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-123",
+                      "name":  "Protector\u0027s Shield",
+                      "set":  "RAD",
+                      "number":  123,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-124",
+                      "name":  "Burn Away",
+                      "set":  "RAD",
+                      "number":  124,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-125",
+                      "name":  "Dune Devourer",
+                      "set":  "RAD",
+                      "number":  125,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-126",
+                      "name":  "Mournful Spirit",
+                      "set":  "RAD",
+                      "number":  126,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-127",
+                      "name":  "Rousing Display",
+                      "set":  "RAD",
+                      "number":  127,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-128",
+                      "name":  "Steadfast Outrider",
+                      "set":  "RAD",
+                      "number":  128,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-129",
+                      "name":  "Trifarian Captain",
+                      "set":  "RAD",
+                      "number":  129,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-130",
+                      "name":  "Battlefield Armorer",
+                      "set":  "RAD",
+                      "number":  130,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-131",
+                      "name":  "Demacian Illuminators",
+                      "set":  "RAD",
+                      "number":  131,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-132",
+                      "name":  "Heimerdinger, Academy Instructor",
+                      "set":  "RAD",
+                      "number":  132,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-133",
+                      "name":  "Jarvan IV, Royal Heir",
+                      "set":  "RAD",
+                      "number":  133,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-133a",
+                      "name":  "Jarvan IV, Royal Heir",
+                      "set":  "RAD",
+                      "number":  133,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-134",
+                      "name":  "Raucous Anthem",
+                      "set":  "RAD",
+                      "number":  134,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-135",
+                      "name":  "Remember the Fallen",
+                      "set":  "RAD",
+                      "number":  135,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-136",
+                      "name":  "Dockside Lock-Up",
+                      "set":  "RAD",
+                      "number":  136,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-137",
+                      "name":  "Mordekaiser, Dominating",
+                      "set":  "RAD",
+                      "number":  137,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-137a",
+                      "name":  "Mordekaiser, Dominating",
+                      "set":  "RAD",
+                      "number":  137,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-138",
+                      "name":  "Seraphine, Not Alone",
+                      "set":  "RAD",
+                      "number":  138,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-138a",
+                      "name":  "Seraphine, Not Alone",
+                      "set":  "RAD",
+                      "number":  138,
+                      "variant":  "a"
+                  },
+                  {
+                      "id":  "RAD-139",
+                      "name":  "Ekko, Boy Who Shattered Time",
+                      "set":  "RAD",
+                      "number":  139,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-140",
+                      "name":  "Chronobreak",
+                      "set":  "RAD",
+                      "number":  140,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-141",
+                      "name":  "Ziggs, Hexplosives Expert",
+                      "set":  "RAD",
+                      "number":  141,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-142",
+                      "name":  "Hexplosive Minefield",
+                      "set":  "RAD",
+                      "number":  142,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-143",
+                      "name":  "Mordekaiser, Iron Revenant",
+                      "set":  "RAD",
+                      "number":  143,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-144",
+                      "name":  "Realm of Death",
+                      "set":  "RAD",
+                      "number":  144,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-145",
+                      "name":  "Orianna, Lady of Clockwork",
+                      "set":  "RAD",
+                      "number":  145,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-146",
+                      "name":  "The Ball",
+                      "set":  "RAD",
+                      "number":  146,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-147",
+                      "name":  "K\u0027Sante, Pride of Nazumah",
+                      "set":  "RAD",
+                      "number":  147,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-148",
+                      "name":  "Ntofo Strikes",
+                      "set":  "RAD",
+                      "number":  148,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-149",
+                      "name":  "Riven, The Exile",
+                      "set":  "RAD",
+                      "number":  149,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-150",
+                      "name":  "Blade of the Exile",
+                      "set":  "RAD",
+                      "number":  150,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-151",
+                      "name":  "Seraphine, Starry-Eyed Songstress",
+                      "set":  "RAD",
+                      "number":  151,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-152",
+                      "name":  "Encore",
+                      "set":  "RAD",
+                      "number":  152,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-153",
+                      "name":  "Evelynn, Agony\u0027s Embrace",
+                      "set":  "RAD",
+                      "number":  153,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-154",
+                      "name":  "Last Caress",
+                      "set":  "RAD",
+                      "number":  154,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-155",
+                      "name":  "Jarvan IV, Exemplar of Demacia",
+                      "set":  "RAD",
+                      "number":  155,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-156",
+                      "name":  "Demacian Standard",
+                      "set":  "RAD",
+                      "number":  156,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-157",
+                      "name":  "Bandle Scouts\u0027 Academy",
+                      "set":  "RAD",
+                      "number":  157,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-158",
+                      "name":  "Black Market",
+                      "set":  "RAD",
+                      "number":  158,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-159",
+                      "name":  "Black Rose Sanctum",
+                      "set":  "RAD",
+                      "number":  159,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-160",
+                      "name":  "Cosmic Vista",
+                      "set":  "RAD",
+                      "number":  160,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-161",
+                      "name":  "Durand Memorial",
+                      "set":  "RAD",
+                      "number":  161,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-162",
+                      "name":  "Firelights\u0027 Hideout",
+                      "set":  "RAD",
+                      "number":  162,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-163",
+                      "name":  "Hunters\u0027 Circle",
+                      "set":  "RAD",
+                      "number":  163,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-164",
+                      "name":  "Packed Amphitheater",
+                      "set":  "RAD",
+                      "number":  164,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-165",
+                      "name":  "Rakelstake",
+                      "set":  "RAD",
+                      "number":  165,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-166",
+                      "name":  "Ruined Monastery",
+                      "set":  "RAD",
+                      "number":  166,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-167",
+                      "name":  "Neeko, Bleeding In",
+                      "set":  "RAD",
+                      "number":  167,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-168",
+                      "name":  "Ekko, Boy Who Shattered Time",
+                      "set":  "RAD",
+                      "number":  168,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-168s",
+                      "name":  "Ekko, Boy Who Shattered Time",
+                      "set":  "RAD",
+                      "number":  168,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-169",
+                      "name":  "Ziggs, Hexplosives Expert",
+                      "set":  "RAD",
+                      "number":  169,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-169s",
+                      "name":  "Ziggs, Hexplosives Expert",
+                      "set":  "RAD",
+                      "number":  169,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-170",
+                      "name":  "Mordekaiser, Iron Revenant",
+                      "set":  "RAD",
+                      "number":  170,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-170s",
+                      "name":  "Mordekaiser, Iron Revenant",
+                      "set":  "RAD",
+                      "number":  170,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-171",
+                      "name":  "Orianna, Lady of Clockwork",
+                      "set":  "RAD",
+                      "number":  171,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-171s",
+                      "name":  "Orianna, Lady of Clockwork",
+                      "set":  "RAD",
+                      "number":  171,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-172",
+                      "name":  "K\u0027Sante, Pride of Nazumah",
+                      "set":  "RAD",
+                      "number":  172,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-172s",
+                      "name":  "K\u0027Sante, Pride of Nazumah",
+                      "set":  "RAD",
+                      "number":  172,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-173",
+                      "name":  "Riven, The Exile",
+                      "set":  "RAD",
+                      "number":  173,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-173s",
+                      "name":  "Riven, The Exile",
+                      "set":  "RAD",
+                      "number":  173,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-174",
+                      "name":  "Seraphine, Starry-Eyed Songstress",
+                      "set":  "RAD",
+                      "number":  174,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-174s",
+                      "name":  "Seraphine, Starry-Eyed Songstress",
+                      "set":  "RAD",
+                      "number":  174,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-175",
+                      "name":  "Evelynn, Agony\u0027s Embrace",
+                      "set":  "RAD",
+                      "number":  175,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-175s",
+                      "name":  "Evelynn, Agony\u0027s Embrace",
+                      "set":  "RAD",
+                      "number":  175,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-176",
+                      "name":  "Jarvan IV, Exemplar of Demacia",
+                      "set":  "RAD",
+                      "number":  176,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-176s",
+                      "name":  "Jarvan IV, Exemplar of Demacia",
+                      "set":  "RAD",
+                      "number":  176,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-177",
+                      "name":  "Ekko, Revolutionary",
+                      "set":  "RAD",
+                      "number":  177,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-178",
+                      "name":  "K\u0027Sante, Courageous",
+                      "set":  "RAD",
+                      "number":  178,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-178s",
+                      "name":  "K\u0027Sante, Courageous",
+                      "set":  "RAD",
+                      "number":  178,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-179",
+                      "name":  "Aphelios, Exalted",
+                      "set":  "RAD",
+                      "number":  179,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-179s",
+                      "name":  "Aphelios, Exalted",
+                      "set":  "RAD",
+                      "number":  179,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-180",
+                      "name":  "Ezreal, Dashing",
+                      "set":  "RAD",
+                      "number":  180,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-180s",
+                      "name":  "Ezreal, Dashing",
+                      "set":  "RAD",
+                      "number":  180,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-181",
+                      "name":  "Yone, Blademaster",
+                      "set":  "RAD",
+                      "number":  181,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-181s",
+                      "name":  "Yone, Blademaster",
+                      "set":  "RAD",
+                      "number":  181,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-182",
+                      "name":  "Kayn, Unleashed",
+                      "set":  "RAD",
+                      "number":  182,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-182s",
+                      "name":  "Kayn, Unleashed",
+                      "set":  "RAD",
+                      "number":  182,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-183",
+                      "name":  "Sett, Kingpin",
+                      "set":  "RAD",
+                      "number":  183,
+                      "variant":  null
+                  },
+                  {
+                      "id":  "RAD-183s",
+                      "name":  "Sett, Kingpin",
+                      "set":  "RAD",
+                      "number":  183,
+                      "variant":  "s"
+                  },
+                  {
+                      "id":  "RAD-184",
+                      "name":  "Packed Amphitheater",
+                      "set":  "RAD",
+                      "number":  184,
                       "variant":  null
                   },
                   {

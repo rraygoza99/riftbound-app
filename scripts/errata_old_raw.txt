@@ -1,3 +1,5 @@
+
+===== PAGE 1 =====
 Riftbound  Card  Errata  
 Last  Updated:  2025-10-21   
 Ava  Achiever  
@@ -134,7 +136,9 @@ the
  
 rest.
   
-   
+ 
+===== PAGE 2 =====
+  
  
  
 Blind  Fury  
@@ -179,7 +183,9 @@ Clockwork  Keeper
 [NEW  TEXT]  You  may  pay  [C]  as  an  additional  cost  to  play  me.  When  you  play  me,  if  you  paid  the  additional  cost,  draw  1.  
 ▲
  
-[OLD  TEXT]  As  you  play  me,  you  may  pay  [C]  as  an  additional  cost.  If  you  do,  draw  1.     
+[OLD  TEXT]  As  you  play  me,  you  may  pay  [C]  as  an  additional  cost.  If  you  do,  draw  1.   
+===== PAGE 3 =====
+  
 Convergent  Mutation  
 [NEW  TEXT]  [Reaction]  (Play  any  time,  even  before  spells  and  abilities  resolve.)  Choose  a  friendly  unit.  This  turn,  increase  its  Might  to  the  Might  of  another  friendly  
 unit.
@@ -247,7 +253,9 @@ recycle
 the
  
 rest.
-    
+ 
+===== PAGE 4 =====
+   
 Disintegrate  
 [NEW  TEXT]   Action  (Play  on  your  turn  or  in  showdowns.)  Deal  3  to  a  unit  at  a  battleﬁeld.  If  this  kills  it,  do  this:  draw  1.  
 ▲  
@@ -295,7 +303,9 @@ other.
 Dune  Drake  
 [NEW  TEXT]   When  I  attack,  give  me  +2  [M]  this  turn  if  there  is  a  ready  enemy  unit  here.  
 ▲  
-[OLD  TEXT]  When  I  attack,  give  me  +2  [M]  if  there  is  a  ready  enemy  unit  here.     
+[OLD  TEXT]  When  I  attack,  give  me  +2  [M]  if  there  is  a  ready  enemy  unit  here.  
+===== PAGE 5 =====
+   
 Highlander  
 [NEW  TEXT]   [Reaction]  (Play  any  time,  even  before  spells  and  abilities  resolve.)  Choose  a  friendly  unit.  The  next  time  it  would  die  this  turn,  heal  it,  exhaust  it,  and  
 recall
@@ -387,7 +397,9 @@ Runes
 aren't
  
 cards.)
-    
+  
+===== PAGE 6 =====
+  
 Kinkou  Monk  
 [NEW  TEXT]   When  you  play  me,  buff  up  to  two  other  friendly  units.  (Each  one  that  doesn't  have  
 a
@@ -449,7 +461,9 @@ for
 Pack  of  Wonders  
 [NEW  TEXT]   [E]:  Return  another  friendly  gear,  unit,  or  facedown  card  to  its  owner's  hand.  
 ▲  
-[OLD  TEXT]  [E]:  Return  another  friendly  gear,  unit,  or  [Hidden]  card  to  its  owner's  hand.     
+[OLD  TEXT]  [E]:  Return  another  friendly  gear,  unit,  or  [Hidden]  card  to  its  owner's  hand.  
+===== PAGE 7 =====
+   
 Portal  Rescue  
 [NEW  TEXT]   [Action]  (Play  on  your  turn  or  in  showdowns.)  Banish  a  friendly  unit,  then  its  owner  plays  it  to  their  base,  ignoring  its  cost.  
 ▲  
@@ -543,7 +557,9 @@ pay
 Power
  
 costs.)
-    
+  
+===== PAGE 8 =====
+  
  
 Ravenborn  Tome  
 [NEW  TEXT]   [E]:  The  next  spell  you  play  this  turn  deals  1  Bonus  Damage.  (Each  instance  of  
@@ -580,7 +596,9 @@ by
 Salvage  
 [NEW  TEXT]   [Action]  (Play  on  your  turn  or  in  showdowns.)  You  may  kill  up  to  one  gear.  Draw  1.  
 ▲  
-[OLD  TEXT]  [Action]  (Play  on  your  turn  or  in  showdowns.)  You  may  kill  a  gear.  Draw  1.     
+[OLD  TEXT]  [Action]  (Play  on  your  turn  or  in  showdowns.)  You  may  kill  a  gear.  Draw  1.   
+===== PAGE 9 =====
+  
  
  
 Sigil  of  the  Storm  
@@ -592,7 +610,9 @@ anything.)
 Sona,  Harmonious  
 [NEW  TEXT]   At  the  end  of  your  turn,  if  I'm  at  a  battleﬁeld,  ready  up  to  4  friendly  runes.  
 ▲  
-[OLD  TEXT]  While  I'm  at  a  battleﬁeld,  ready  4  friendly  runes  at  the  end  of  your  turn.     
+[OLD  TEXT]  While  I'm  at  a  battleﬁeld,  ready  4  friendly  runes  at  the  end  of  your  turn.   
+===== PAGE 10 =====
+  
  
  
 Targon's  Peak  
@@ -672,7 +692,9 @@ then
 recycle
  
 them.
-    
+  
+===== PAGE 11 =====
+  
 The  Boss  
 [NEW  TEXT]   If  a  buffed  unit  you  control  would  die,  you  may  pay  [C],  exhaust  me,  and  spend  its  
 buff
@@ -754,7 +776,9 @@ draw
 1.
  
 ▲  
-[OLD  TEXT]  The  ﬁrst  time  you  choose  a  friendly  unit  with  a  spell  here  each  turn,  draw  1.     
+[OLD  TEXT]  The  ﬁrst  time  you  choose  a  friendly  unit  with  a  spell  here  each  turn,  draw  1.   
+===== PAGE 12 =====
+  
  
  
  
@@ -789,7 +813,9 @@ my
 original
  
 location.
-    
+  
+===== PAGE 13 =====
+  
 Unforgiven  
 [NEW  TEXT]   [2],  [E]:  Move  a  friendly  unit  to  or  from  its  base.  
 ▲  
@@ -905,7 +931,9 @@ increased
 by
  
 1.)
-    
+ 
+===== PAGE 14 =====
+   
 Zhonya's  Hourglass  
 [NEW  TEXT]   [Hidden]  (Hide  now  for  [A]  to  react  with  later  for  [0].)  If  a  friendly  unit  would  die,  kill  this  instead.  Heal  that  unit,  exhaust  it,  and  recall  it.  
 (Send
